@@ -7,19 +7,19 @@
 /**
  * Implements theme_settings().
  */
-function nuboot_form_system_theme_settings_alter(&$form, &$form_state) {
+function nuboot_radix_form_system_theme_settings_alter(&$form, &$form_state) {
   // Ensure this include file is loaded when the form is rebuilt from the cache.
   $form_state['build_info']['files']['form'] = drupal_get_path('theme', 'default') . '/theme-settings.php';
 
   // Add theme settings here.
-  $form['nuboot_theme_settings'] = array(
+  $form['nuboot_radix_theme_settings'] = array(
     '#title' => t('Theme Settings'),
     '#type' => 'fieldset',
   );
 
   // Copyright.
   $copyright = theme_get_setting('copyright');
-  $form['nuboot_theme_settings']['copyright'] = array(
+  $form['nuboot_radix_theme_settings']['copyright'] = array(
     '#title' => t('Copyright'),
     '#type' => 'text_format',
     '#format' => 'html',
@@ -55,7 +55,7 @@ function nuboot_form_system_theme_settings_alter(&$form, &$form_state) {
     ),
   );
   // Attach custom submit handler to the form.
-  $form['#submit'][] = 'nuboot_settings_submit';
+  $form['#submit'][] = 'nuboot_radix_settings_submit';
 
   // Return the additional form widgets.
   return $form;
@@ -64,7 +64,7 @@ function nuboot_form_system_theme_settings_alter(&$form, &$form_state) {
 /**
  * Implements hook_setings_submit().
  */
-function nuboot_settings_submit($form, &$form_state) {
+function nuboot_radix_settings_submit($form, &$form_state) {
   $settings = array();
   // If the user entered a path relative to the system files directory for
   // for the hero unit, store a public:// URI so the theme system can handle it.
@@ -73,7 +73,7 @@ function nuboot_settings_submit($form, &$form_state) {
   }
   // Get the previous value.
   $previous = $form['hero']['hero_path']['#default_value'];
-  if ($previous !== 'profiles/dkan/themes/contrib/nuboot/assets/images/hero.jpg') {
+  if ($previous !== 'profiles/dkan/themes/contrib/nuboot_radix/assets/images/hero.jpg') {
     $previous = 'public://' . $previous;
   }
   else {

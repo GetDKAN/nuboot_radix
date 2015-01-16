@@ -7,7 +7,7 @@
 /**
  * Implements hook_css_alter().
  */
-function nuboot_css_alter(&$css) {
+function nuboot_radix_css_alter(&$css) {
   $radix_path = drupal_get_path('theme', 'radix');
 
   // Radix now includes compiled stylesheets for demo purposes.
@@ -23,7 +23,7 @@ function nuboot_css_alter(&$css) {
 /**
  * Implements template_preprocess_page().
  */
-function nuboot_preprocess_page(&$variables) {
+function nuboot_radix_preprocess_page(&$variables) {
   // Add copyright to theme.
   if ($copyright = theme_get_setting('copyright')) {
     $variables['copyright'] = isset($copyright['value']) ? check_markup($copyright['value'], $copyright['format']) : '';

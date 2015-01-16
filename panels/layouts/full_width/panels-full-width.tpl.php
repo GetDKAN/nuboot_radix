@@ -11,7 +11,7 @@
     if(!empty($uri)):
       $uri = $uri;
     else :
-      $uri = 'profiles/dkan/themes/contrib/nuboot/assets/images/hero.jpg';
+      $uri = 'profiles/dkan/themes/contrib/nuboot_radix/assets/images/hero.jpg';
     endif;
     $path = file_create_url($uri);
   ?>
