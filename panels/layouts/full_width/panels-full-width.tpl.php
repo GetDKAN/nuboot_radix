@@ -7,7 +7,7 @@
 <div class="panel-display panel-full-width clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
 
   <?php // Get the file path to the hero image.
-    theme_get_setting('hero_path');
+    $uri = theme_get_setting('hero_path');
     if(!empty($uri)):
       $uri = $uri;
     else :
