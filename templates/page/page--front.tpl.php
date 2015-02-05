@@ -17,7 +17,9 @@
         <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
       </a>
     <?php endif; ?>
-    <?php print $site_name; ?>
+    <?php if ($site_name): ?>
+       <span id="site-name"><?php print $site_name; ?></span>
+    <?php endif; ?>
     <nav class="navbar navbar-default" role="navigation">
       
       <!-- Brand and toggle get grouped for better mobile display -->
