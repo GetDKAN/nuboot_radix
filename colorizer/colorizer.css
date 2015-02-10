@@ -11,9 +11,9 @@ h1,h2,h3,h4,
 h2.block-title {
   
 }
-
 #featured .tint,
-#block-dkan-sitewide-demo-front-dkan-demo-front {
+.panel-top .tint,
+.pane-dkan-sitewide-demo-front-dkan-demo-front .pane-content {
   background-color: @tint;
 }
 

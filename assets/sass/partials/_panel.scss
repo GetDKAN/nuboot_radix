@@ -1,6 +1,10 @@
 //
 // Styles for panels and panes.
 // --------------------------------------------------
+.region-content {
+	margin: 0 15px;
+}
+
 #panels-choose-layout .form-type-radio input, 
 .panels-choose-layout .form-type-radio input {
 	width: 15px;

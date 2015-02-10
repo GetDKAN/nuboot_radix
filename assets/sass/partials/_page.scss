@@ -1,11 +1,8 @@
 //
 // Styles for individual pages
 // --------------------------------------------------
-.page-header {
-  border-bottom: none;
-}
-.front .page-header {
-  display: none;
+#page-header {
+  padding: 0 15px;
 }
 .main {
   padding:20px 0;

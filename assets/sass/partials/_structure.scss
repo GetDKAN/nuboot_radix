@@ -5,7 +5,18 @@ body {
   font-family:$font-family-sans-serif;
   line-height:1.35em;
 }
-
+.site-name {
+  display: inline-block;
+  float: left;
+  font-size: 2em;
+  line-height: 1.15em;
+  margin: 38px 20px 5px;
+  @media(max-width:460px) {
+    clear: left;
+    float: none;
+    margin: 10px 20px 5px 0;
+  }
+}
 h1 {
   font-size: 30px;
   line-height: 36px;
@@ -68,32 +79,31 @@ body[class*="panel-layout"] .breadcrumb {
   }
 }
 
-table,
-table.table {
+table.group_additional {
   border-collapse:collapse;
   margin:1em 0;
   width:100%;
   thead > tr > th {
-      @include background-image(linear-gradient(#F5F5F5, #F0F0F0));
-      border:1px solid $border !important;
-      padding:4px 8px;
-      font-weight: bold;
+    @include background-image(linear-gradient(#F5F5F5, #F0F0F0));
+    border: 1px solid $border !important;
+    padding: 4px 8px;
+    font-weight: bold;
   }
   thead th:first-child {
-      @inlclude border-top-left-radius(4px);
+    @inlclude border-top-left-radius(4px);
   }
   thead th:last-child,
   thead th:last-child {
-      @include border-top-right-radius(4px);
+    @include border-top-right-radius(4px);
   }
   tbody th,
   td {
-      border:1px solid $border;
-      padding:4px 8px;
-      vertical-align:top;
+    border:1px solid $border;
+    padding:4px 8px;
+    vertical-align:top;
   }
   tr:hover {
-      background:#FFFEEE;
+    background:#FFFEEE;
   }
 }
 
@@ -127,6 +137,11 @@ table.group_additional,
 }
 
 // Admin tables.
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tbody > tr > td {
+  border: none;
+}
 table thead > tr > th.checkbox, 
 table.table thead > tr > th.checkbox,
 .table-bordered > tbody > tr > th.checkbox,
