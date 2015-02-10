@@ -3293,8 +3293,6 @@ p, p:last-child { margin: 0 0 1.25em 0; }
 .breadcrumb li.home-link a { font-size: 1.3em; }
 .breadcrumb li.home-link a i { display: block; }
 
-body[class*="panel-layout"] .breadcrumb { padding: 0 15px; }
-
 .alert { margin: 15px 0; position: relative; }
 .alert .close { line-height: 18px; position: absolute; right: 10px; top: 5px; }
 
