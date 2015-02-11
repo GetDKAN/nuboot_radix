@@ -64,15 +64,15 @@
 }
 
 %button {
-  background:$brand-primary;
-  border-color:$brand-primary;
+  // background:$brand-primary;
+  // border-color:$brand-primary;
   color: white;
 }
 %button:hover, 
 %button:focus, 
 %button:active {
-  background:$brand-secondary;
-  border-color:$brand-secondary;
+  // background:$brand-secondary;
+  // border-color:$brand-secondary;
   color: white;
 }
 %button-attached {
