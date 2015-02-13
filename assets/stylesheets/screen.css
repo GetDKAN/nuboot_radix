@@ -1,5 +1,7 @@
 input[type="submit"] { background: #0A77BD; border-color: #0A77BD; color: white; }
 
+.modal-open { overflow: hidden; }
+
 input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:active { background: #D3AE7E; border-color: #D3AE7E; color: white; }
 
 .form-managed-file .input-group input, .form-managed-file .input-group-btn input, .image-widget-data input.btn { -moz-border-radius: 0 4px 4px 0; -webkit-border-radius: 0; border-radius: 0 4px 4px 0; margin-left: -1px; padding: 6px 10px 5px 10px; vertical-align: top; }
