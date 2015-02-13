@@ -1,7 +1,5 @@
 input[type="submit"] { background: #0A77BD; border-color: #0A77BD; color: white; }
 
-.modal-open { overflow: hidden; }
-
 input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:active { background: #D3AE7E; border-color: #D3AE7E; color: white; }
 
 .form-managed-file .input-group input, .form-managed-file .input-group-btn input, .image-widget-data input.btn { -moz-border-radius: 0 4px 4px 0; -webkit-border-radius: 0; border-radius: 0 4px 4px 0; margin-left: -1px; padding: 6px 10px 5px 10px; vertical-align: top; }
@@ -1815,8 +1813,6 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 .close:hover, .close:focus { color: #000; text-decoration: none; cursor: pointer; opacity: 0.5; filter: alpha(opacity=50); }
 
 button.close { padding: 0; cursor: pointer; background: transparent; border: 0; -webkit-appearance: none; }
-
-.modal-open { overflow: hidden; }
 
 .modal { display: none; overflow: hidden; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 1050; -webkit-overflow-scrolling: touch; outline: 0; }
 .modal.fade .modal-dialog { -webkit-transform: translate(0, -25%); -ms-transform: translate(0, -25%); -o-transform: translate(0, -25%); transform: translate(0, -25%); -webkit-transition: -webkit-transform 0.3s ease-out; -moz-transition: -moz-transform 0.3s ease-out; -o-transition: -o-transform 0.3s ease-out; transition: transform 0.3s ease-out; }
