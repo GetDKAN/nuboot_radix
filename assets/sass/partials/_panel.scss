@@ -65,3 +65,7 @@ body[class*='panel-layout'] {
 		}
 	}
 }
+
+body.modal-open {
+  overflow: visible !important;
+}
