@@ -13,6 +13,10 @@ body[class*='panel-layout'] {
     margin: 0 15px 15px;
   }
 }
+// Fixes scrolling for behat test.
+.modal-open {
+  overflow: hidden;
+}
 
 .radix-layouts-sidebar {
 	.pane-title {
