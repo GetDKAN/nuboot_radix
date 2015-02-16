@@ -41,8 +41,17 @@ div.vertical-tabs ul.vertical-tabs-list li a:hover {
   color: #ffffff;
 }
 
-.navbar-default .navbar-nav li > a { color: @link; }
-.navbar-default .navbar-nav li > a:hover { color: @linkhover; }
+.navigation-wrapper {
+  background: @top;
+}
+.navbar-default .navbar-nav li > a { color: #fff; }
+.navbar-default .navbar-nav li > a:hover { background:@bottom; color: #fff; }
+.navbar-default .navbar-nav li.active > a,
+.navbar-default .navbar-nav li.active > a:hover { background:@bottom; color: #fff; }
+.navbar-default .user-menu li > a { color: #fff; }
+.navbar-default .user-menu li > a:hover { background:@bottom; color: #fff; }
+.navbar-default .user-menu li.active > a,
+.navbar-default .user-menu li.active > a:hover { background:@bottom; color: #fff; }
 
 .nav-pills li a,
 .tabs--primary li a {
@@ -66,6 +75,7 @@ div.vertical-tabs ul.vertical-tabs-list li a:hover {
   color:#ffffff;
 }
 
+.pane-views-group-block-block .group-subscribe-message,
 #block-views-group-block-block .block-content .group-subscribe-message {
   background-color: @top;
 }
@@ -94,6 +104,15 @@ div.vertical-tabs ul.vertical-tabs-list li a:hover {
 .region-sidebar-first .block-facetapi ul li.leaf a:hover,
 .block-facetapi ul li.leaf a:hover {
   color:@top;
+}
+
+a.embed-link {
+  background: @top;
+}
+a.embed-link:hover, 
+a.embed-link:focus, 
+a.embed-link:active {
+  background: @bottom;
 }
 
 .footer {

@@ -2,16 +2,11 @@
 
 /**
  * @file
- * Default theme implementation to display a single Drupal page.
- *
- * @see template_preprocess()
- * @see template_preprocess_page()
- * @see template_process()
- * @see html.tpl.php
+ * Front page - no container class in main section.
  */
 ?>
 <header id="header" class="header" role="header">
-  <div class="container">
+  <div class="branding container">
     <?php if ($logo): ?>
       <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
         <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
@@ -22,48 +17,51 @@
         <?php print $site_name; ?>
       </div>
     <?php endif; ?>
-    <nav class="navbar navbar-default" role="navigation">
-      
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-          <span class="sr-only"><?php print t('Toggle navigation'); ?></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div> <!-- /.navbar-header -->
+    <!-- views exposed search -->
+    <?php
+      $block = block_load('dkan_sitewide', 'dkan_sitewide_search_bar');
+      if($block):
+        $search = _block_get_renderable_array(_block_render_blocks(array($block)));
+        print render($search);
+      endif;
+    ?>
+  </div>
+  <div class="navigation-wrapper">
+    <div class="container">
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only"><?php print t('Toggle navigation'); ?></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div> <!-- /.navbar-header -->
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="navbar-collapse">
-        <?php if ($main_menu): ?>
-          <ul id="main-menu" class="menu nav navbar-nav">
-            <?php print render($main_menu); ?>
-          </ul>
-        <?php endif; ?>
-        <!-- views exposed search -->
-        <?php
-          $block = block_load('dkan_sitewide', 'dkan_sitewide_search_bar');
-          if($block):
-            $search = _block_get_renderable_array(_block_render_blocks(array($block)));
-            print render($search);
-          endif;
-        ?>
-        <!-- dkan user menu -->
-        <?php
-          $block = block_load('dkan_sitewide', 'dkan_sitewide_user_menu');
-          if($block):
-            $search = _block_get_renderable_array(_block_render_blocks(array($block)));
-            print render($search);
-          endif;
-        ?>
-      </div><!-- /.navbar-collapse -->
-    </nav><!-- /.navbar -->
-  </div> <!-- /.container -->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <?php if ($main_menu): ?>
+            <ul id="main-menu" class="menu nav navbar-nav">
+              <?php print render($main_menu); ?>
+            </ul>
+          <?php endif; ?>
+          
+          <!-- user menu -->
+          <?php
+            print theme('links', array(
+              'links' => menu_navigation_links('user-menu'), 
+              'attributes' => array(
+                'class'=> array('links', 'user-menu')) 
+            ));
+          ?>
+        </div><!-- /.navbar-collapse -->
+      </nav><!-- /.navbar -->
+    </div><!-- /.container -->
+  </div> <!-- /.navigation -->
 </header>
 
-<div id="main-wrapper frontend">
-  <div id="main" class="main container">
+<div id="main-wrapper">
+  <div id="main" class="main">
 
     <header role="banner" id="page-header">
       <?php if (!empty($site_slogan)): ?>

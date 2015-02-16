@@ -28,7 +28,7 @@ $info = array(
       'base' => '#0A77BD',
       'colors' => array(
         'top' => '#0A77BD',
-        'bottom' => '#d3ae7e',
+        'bottom' => '#002245',
         'toolbarbtn' => '#ffffff',
         'toolbarborder' => '#cccccc',
         'bg' => '#ffffff',
@@ -39,7 +39,7 @@ $info = array(
         'text' => '#3b3b3b',
         'link' => '#0A77BD',
         'linkactive' => '#005584',
-        'linkhover' => '#d3ae7e',
+        'linkhover' => '#002245',
       ),
     ),
     'bluelagoon' => array(

@@ -11,9 +11,6 @@
   vertical-align: top;
 }
 
-.header {
-  border-bottom:1px solid $smoke;
-}
 .navbar.container {
   margin:0 auto;
   padding:0;
@@ -26,52 +23,36 @@
 .navbar-default {
   background:transparent;
   border:none;
-  display: block;
-  float: none;
-  margin: 15px 0 0 10px;
+  margin: 0;
   position:relative;
-  text-align: center;
   z-index:1;
-  @media(min-width:768px) {
-    float:right;
-    .navbar-nav {
-      float: none;
-      margin: 0;
-      display: inline-block;
-      vertical-align: middle;
-    }
-  }
 
-  .navbar-brand {
-    color:$brand-primary;
-    font-size:26px;
+  .navbar-nav,
+  .user-menu {
     margin:0;
-    padding:18px 15px 0 0;
-  }
-  .lead {
-    font-size:21px;
-    margin:0;
-    position:absolute;
-    top:42px;
-    left:50px;
-    whitespace:no-wrap;
-  }
-  .navbar-nav {
-    margin:8px 10px;
     position:relative;
     z-index:3;
     li > a {
-        color: $brand-primary;
-        font-size:12px;
-        padding:15px 6px;
-        &:hover,
-        &:focus {
-          text-decoration:underline;
-        }
+      display: block;
+      font-size:12px;
+      line-height: 20px;
+      padding:15px 10px;
+      &:hover,
+      &:focus {
+        text-decoration:underline;
+      }
     }
-    .active a,
-    .active a:hover {
-      background:transparent;
+  }
+  @media all and (min-width:768px) {
+    .user-menu {
+      float: right;
+    }
+    .navbar-nav li,
+    .user-menu li {
+      display: inline-block;
+      a {
+        display: inline-block;
+      }
     }
   }
   .navbar-nav.secondary li {
@@ -163,7 +144,7 @@
 
 a.embed-link {
   @include border-radius(4px);
-  background:$brand-primary;
+  //background:$brand-primary;
   color: #fff;
   display: inline-block;
   padding:5px 15px 5px 30px;
@@ -174,7 +155,7 @@ a.embed-link {
 a.embed-link:hover, 
 a.embed-link:focus, 
 a.embed-link:active {
-  background:$brand-secondary;
+  //background:$brand-secondary;
   color:#fff;
   text-decoration:none;
 }

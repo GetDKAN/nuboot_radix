@@ -32,6 +32,9 @@ function nuboot_radix_preprocess_page(&$variables) {
     $vars['title'] = '';
     unset($vars['page']['content']['system_main']['default_message']);
   }
+  if (arg(0) == 'admin' && arg(1) == 'appearance') {
+    drupal_set_message(t('For Colorizer to work you must set the Administration theme to <em>Default theme</em> in the options below.'), 'warning');
+  }
   // Remove title on dataset edit and creation pages.
   if (!empty($vars['node']) && in_array($vars['node']->type, array('dataset', 'resource')) || arg(1) == 'add') {
     $vars['title'] = '';

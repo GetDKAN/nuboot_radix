@@ -64,12 +64,11 @@ p:last-child {
     }
   }
 }
-// body[class*="panel-layout"] .breadcrumb {
-//   padding: 0 15px;
-// }
 
 .alert {
-  margin: 15px 0;
+  border: none;
+  margin: 10px 15px;
+  padding: 15px 35px;
   position: relative;
   .close {
     line-height: 18px;
@@ -77,6 +76,31 @@ p:last-child {
     right: 10px;
     top: 5px;
   }
+  &.alert-warning {
+    background: $brand-warning;
+  }
+  &:before {
+    font-family: $icon-fa;
+    font-size: 1.5em;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+  }
+  &.alert-danger:before {
+    content: '\f06a';
+    color: $brand-danger;
+  }
+  &.alert-warning:before {
+    content: '\f05a';
+    color: #8a6d3b;
+  }
+  &.alert-success:before {
+    content: '\f058';
+    color: $brand-success;
+  }
+}
+.page-admin .alert {
+  margin: 10px 0;
 }
 
 table.group_additional {
