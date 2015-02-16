@@ -21,6 +21,16 @@ function nuboot_radix_css_alter(&$css) {
 }
 
 /**
+ * Implements hook_js_alter().
+ */
+function nuboot_radix_js_alter(&$javascript) {
+  $radix_path = drupal_get_path('theme', 'radix');
+  // Remove radix-script.js.
+  // Hash usage in radix-script.js breaks with use of a hash map in URL. https://www.drupal.org/node/2426513.
+  unset($javascript[$radix_path . '/assets/javascripts/radix-script.js']);
+}
+
+/**
  * Implements template_preprocess_page().
  */
 function nuboot_radix_preprocess_page(&$variables) {
