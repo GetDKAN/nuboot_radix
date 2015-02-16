@@ -13,13 +13,13 @@
 	width: 15px;
 }
 
-body[class*='panel-layout'] {
+// body[class*='panel-layout'] {
 	.alert,
   .tabs--primary,
   .page-header {
     margin: 0 15px 15px;
   }
-}
+// }
 
 .radix-layouts-sidebar {
 	.pane-title {
