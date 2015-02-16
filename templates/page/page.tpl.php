@@ -22,6 +22,9 @@
         <?php print $site_name; ?>
       </div>
     <?php endif; ?>
+    <?php if (!empty($site_slogan)): ?>
+      <div class="site-slogan"><?php print $site_slogan; ?></div>
+    <?php endif; ?>
     <!-- views exposed search -->
     <?php
       $block = block_load('dkan_sitewide', 'dkan_sitewide_search_bar');
@@ -68,13 +71,7 @@
 <div id="main-wrapper">
   <div id="main" class="main container">
 
-    <header role="banner" id="page-header">
-      <?php if (!empty($site_slogan)): ?>
-        <p class="lead"><?php print $site_slogan; ?></p>
-      <?php endif; ?>
-    </header> <!-- /#page-header -->
-
-    <?php //if (!empty($breadcrumb)): print $breadcrumb; endif;?>
+    <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
     <?php print $messages; ?>
     <?php if (!empty($page['help'])): ?>
       <?php print render($page['help']); ?>

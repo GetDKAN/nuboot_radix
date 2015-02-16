@@ -4,22 +4,26 @@
 .region-content {
 	margin: 0 15px;
 }
-.front .region-content {
-	margin: 0;
+.breadcrumb,
+.alert,
+.tabs--primary,
+.page-header {
+  margin: 0 15px 15px;
+}
+
+.front {
+	.region-content {
+		margin: 0;
+	}
+	.alert {
+		margin: 10px 15px;
+	}
 }
 
 #panels-choose-layout .form-type-radio input, 
 .panels-choose-layout .form-type-radio input {
 	width: 15px;
 }
-
-// body[class*='panel-layout'] {
-	.alert,
-  .tabs--primary,
-  .page-header {
-    margin: 0 15px 15px;
-  }
-// }
 
 .radix-layouts-sidebar {
 	.pane-title {

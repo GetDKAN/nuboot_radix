@@ -3273,8 +3273,12 @@ section.col-sm-9 { padding-right: 0; }
 
 body { font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; line-height: 1.35em; }
 
+.branding { position: relative; }
+
 .site-name { display: inline-block; float: left; font-size: 2em; line-height: 1.15em; margin: 38px 20px 5px; }
 @media (max-width: 460px) { .site-name { clear: left; float: none; margin: 10px 20px 5px 0; } }
+
+.site-slogan { clear: left; padding-bottom: 10px; }
 
 h1 { font-size: 30px; line-height: 36px; margin-bottom: 15px; }
 
@@ -3287,13 +3291,13 @@ a:hover { color: #D3AE7E; }
 
 p, p:last-child { margin: 0 0 1.25em 0; }
 
-.breadcrumb { background: none; border: none; font-size: 20px; list-style: none; margin: 0 0 20px; padding: 0; position: relative; }
+.breadcrumb { background: none; border: none; font-size: 1em; list-style: none; padding: 0; position: relative; }
 .breadcrumb li { float: none; }
 .breadcrumb li a span { display: none; }
 .breadcrumb li.home-link a { font-size: 1.3em; }
 .breadcrumb li.home-link a i { display: block; }
 
-.alert { border: none; margin: 10px 15px; padding: 15px 35px; position: relative; }
+.alert { border: none; padding: 15px 35px; position: relative; }
 .alert .close { line-height: 18px; position: absolute; right: 10px; top: 5px; }
 .alert.alert-warning { background: #FFE285; }
 .alert:before { font-family: "FontAwesome"; font-size: 1.5em; position: absolute; top: 15px; left: 10px; }
@@ -3625,11 +3629,12 @@ div[class*="pane-facetapi"] a.facetapi-limit-link.open:before, .region-sidebar-f
 
 .region-content { margin: 0 15px; }
 
+.breadcrumb, .alert, .tabs--primary, .page-header { margin: 0 15px 15px; }
+
 .front .region-content { margin: 0; }
+.front .alert { margin: 10px 15px; }
 
 #panels-choose-layout .form-type-radio input, .panels-choose-layout .form-type-radio input { width: 15px; }
-
-.alert, .tabs--primary, .page-header { margin: 0 15px 15px; }
 
 .radix-layouts-sidebar .pane-title { background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y1ZjVmNSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2YwZjBmMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='); background-size: 100%; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f5f5f5), color-stop(100%, #f0f0f0)); background-image: -moz-linear-gradient(#f5f5f5, #f0f0f0); background-image: -webkit-linear-gradient(#f5f5f5, #f0f0f0); background-image: linear-gradient(#f5f5f5, #f0f0f0); -moz-border-radius: 3px 3px 0 0; -webkit-border-radius: 3px; border-radius: 3px 3px 0 0; border-bottom: 1px solid rgba(0, 0, 0, 0.15); color: #333333; font-size: 14px; line-height: 1.3; margin: 0; padding: 7px 10px; }
 .radix-layouts-sidebar .pane-block { -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); background-color: #ffffff; margin-bottom: 20px; padding: 0px; }
@@ -3660,7 +3665,7 @@ div[class*="pane-facetapi"] a.facetapi-limit-link.open:before, .region-sidebar-f
 
 #region-branding #block-dkan-sitewide-dkan-sitewide-search-bar label, #views-exposed-form-dataset-page label { display: none; }
 
-#block-dkan-sitewide-dkan-sitewide-search-bar { float: right; width: 172px; vertical-align: bottom; }
+#block-dkan-sitewide-dkan-sitewide-search-bar { position: absolute; top: 10px; right: 15px; width: 172px; }
 #block-dkan-sitewide-dkan-sitewide-search-bar form { display: block; margin: 8px 0; position: relative; width: 100%; }
 #block-dkan-sitewide-dkan-sitewide-search-bar input.form-text { padding-right: 30px; }
 #block-dkan-sitewide-dkan-sitewide-search-bar button[type="submit"], #block-dkan-sitewide-dkan-sitewide-search-bar input[type="submit"] { background: none !important; border: none; content: "\f002"; color: #555555; display: inline-block; font-size: 1.3em; font-family: "FontAwesome"; margin: 0; padding: 0; position: absolute; right: 10px; top: 5px; width: 25px; }
