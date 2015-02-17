@@ -4,11 +4,24 @@
 .region-content {
 	margin: 0 15px;
 }
+
 .breadcrumb,
 .alert,
 .tabs--primary,
 .page-header {
   margin: 0 15px 15px;
+}
+
+.page-admin {
+	.region-content {
+		margin: 0;
+	}
+	.breadcrumb,
+	.alert,
+	.tabs--primary,
+	.page-header {
+		margin: 0 0 15px;
+	}
 }
 
 .front {

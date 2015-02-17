@@ -4,12 +4,16 @@ body.overlay {
   color: @text;
 }
 #header,
-#page-wrapper {
+#main-wrapper,
+.panel {
   background-color: @bg;
 }
-h1,h2,h3,h4,
-h2.block-title {
-  
+.site-name,
+.site-slogan {
+  color: @titleslogan;
+}
+h1,h2,h3,h4 {
+  color: @text;
 }
 #featured .tint,
 .panel-top .tint,
@@ -32,17 +36,22 @@ a:active {
   color: @linkactive;
 }
 
-.lead {
-  color: @titleslogan;
+div.vertical-tabs {
+  border-color: @toolbarborder;
 }
-
+div.vertical-tabs ul.vertical-tabs-list li {
+  border-color: @bg @toolbarborder @bg @bg;
+}
+div.vertical-tabs ul.vertical-tabs-list li.selected {
+  border-color: @toolbarborder @bg @toolbarborder @toolbarborder;
+}
 div.vertical-tabs ul.vertical-tabs-list li a:hover {
   background: @bottom;
   color: #ffffff;
 }
 
 .navigation-wrapper {
-  background: @top;
+  background: @toolbarbtn;
 }
 .navbar-default .navbar-nav li > a,
 .navbar-default .user-menu li > a { color: #fff; }
@@ -62,7 +71,7 @@ div.vertical-tabs ul.vertical-tabs-list li a:hover {
 .nav-pills li a,
 .tabs--primary li a {
   border:1px solid @toolbarborder;
-  background: @toolbarbtn;
+  background: @bg;
   color:  @top;
 }
 
@@ -87,7 +96,8 @@ div.vertical-tabs ul.vertical-tabs-list li a:hover {
 }
 .view-group-block .views-field-nid a,
 .btn-default,
-.btn-primary {
+.btn-primary,
+.btn-small {
   background-color: @top;
   border:1px solid @top;
   color:#ffffff;
@@ -95,7 +105,8 @@ div.vertical-tabs ul.vertical-tabs-list li a:hover {
 
 .view-group-block .views-field-nid a:hover,
 .btn-default:hover,
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-small:hover {
   background:@bottom;
   border:1px solid @bottom;
   color:#ffffff;
@@ -119,6 +130,64 @@ a.embed-link:hover,
 a.embed-link:focus, 
 a.embed-link:active {
   background: @bottom;
+}
+
+.autocomplete-deluxe-container,
+div.autocomplete-deluxe-multiple,
+.chzn-container-multi .chzn-choices,
+.chzn-container-single .chzn-single,
+.form-control,
+.panel-default {
+  border-color: @toolbarborder;
+}
+
+.panel-default > .panel-heading {
+  color: @text;
+  background-color: @toolbarborder;
+  border-color: @toolbarborder;
+}
+
+.radix-layouts-sidebar .pane-block .pane-content,
+.radix-layouts-content .pane-content,
+.view-front-page-group-grid .span6 span, 
+.view-front-page-group-grid .col-lg-6 span,
+.horizontal-tabs ul.horizontal-tabs-list li.selected a {
+  background-color: @bg;
+}
+.radix-layouts-sidebar .pane-title {
+  background: @toolbarborder;
+  color: @text;
+}
+.radix-layouts-sidebar div[class*="pane-facetapi"] .pane-title {
+  background: #dddddd;
+  color: #333333;
+}
+.radix-layouts-sidebar div[class*="pane-facetapi"] .pane-content {
+  background: #fff;
+}
+
+.horizontal-tabs ul.horizontal-tabs-list .selected strong {
+  color: @text;
+}
+
+#url-edit-prefix {
+  background-color: @bg;
+  border-color: @toolbarborder; 
+}
+#url-slug,
+#field-tags-wrapper .path-form .add-on {
+  background-color: @linkactive;
+  border-color: @toolbarborder;
+  color: @bg;
+}
+
+table.group_additional thead > tr > th {
+  background-color: @toolbarborder;
+}
+
+.node-dataset #data-and-resources ul.resource-list li .heading, 
+.node-dataset #data-and-resources ul.resource-list li .heading:hover {
+  color: @text;
 }
 
 .footer {
