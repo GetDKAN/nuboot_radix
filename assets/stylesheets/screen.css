@@ -3352,7 +3352,7 @@ dt:nth-of-type(2n), dd:nth-of-type(2n) { background: #F3F3F3; }
 .navbar-default { background: transparent; border: none; margin: 0; position: relative; z-index: 1; }
 .navbar-default .navbar-nav, .navbar-default .user-menu { margin: 0; position: relative; z-index: 3; }
 .navbar-default .navbar-nav li > a, .navbar-default .user-menu li > a { display: block; font-size: 12px; line-height: 20px; padding: 15px 10px; }
-.navbar-default .navbar-nav li > a:hover, .navbar-default .navbar-nav li > a:focus, .navbar-default .user-menu li > a:hover, .navbar-default .user-menu li > a:focus { text-decoration: underline; }
+.navbar-default .navbar-nav li > a:hover, .navbar-default .navbar-nav li > a:focus, .navbar-default .user-menu li > a:hover, .navbar-default .user-menu li > a:focus { color: #FFFFFF; text-decoration: none; }
 @media all and (min-width: 768px) { .navbar-default .user-menu { float: right; }
   .navbar-default .navbar-nav li, .navbar-default .user-menu li { display: inline-block; }
   .navbar-default .navbar-nav li a, .navbar-default .user-menu li a { display: inline-block; } }

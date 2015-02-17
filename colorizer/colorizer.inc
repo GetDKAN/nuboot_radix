@@ -38,7 +38,7 @@ $info = array(
         'titleslogan' => '#999',
         'text' => '#3b3b3b',
         'link' => '#0A77BD',
-        'linkactive' => '#005584',
+        'linkactive' => '#005489',
         'linkhover' => '#002245',
       ),
     ),
