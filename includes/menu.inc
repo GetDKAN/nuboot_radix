@@ -9,7 +9,7 @@
  */
 function nuboot_radix_menu() {
   $items['user/login'] = array(
-    'title'           => 'Git in',
+    'title'           => 'Log in',
     'description'     => t('Log in link'),
     'menu_name'       => 'user-menu',
     'weight'          => 0,
