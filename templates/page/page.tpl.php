@@ -17,7 +17,11 @@
         <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
       </a>
     <?php endif; ?>
-    <?php print $site_name; ?>
+    <?php if ($site_name): ?>
+      <div class="site-name">
+        <?php print $site_name; ?>
+      </div>
+    <?php endif; ?> 
     <nav class="navbar navbar-default" role="navigation">
       
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -67,7 +71,7 @@
       <?php endif; ?>
     </header> <!-- /#page-header -->
 
-    <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
+    <?php //if (!empty($breadcrumb)): print $breadcrumb; endif;?>
     <?php print $messages; ?>
     <?php if (!empty($page['help'])): ?>
       <?php print render($page['help']); ?>
