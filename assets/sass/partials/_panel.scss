@@ -92,3 +92,13 @@
 		}
 	}
 }
+
+.panel-full-width .panel-bottom {
+	.panel-col-first,
+	.panel-col-second,
+	.panel-col-third {
+		inside {
+			//padding: 15px;
+		}
+	}
+}
