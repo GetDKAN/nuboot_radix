@@ -3871,4 +3871,5 @@ div.vertical-tabs #edit-path-alias { position: relative; top: auto; }
 
 @media all and (max-width: 768px) { aside[class|='col'], section[class|='col'] { padding: 0; }
   .container { width: 100%; }
-  .panel-full-width .panel-top .panel-col-first, .panel-full-width .panel-top .panel-col-second { width: 100%; float: none; } }
+  .panel-full-width .panel-top .panel-col-first, .panel-full-width .panel-top .panel-col-second, .panel-full-width .panel-bottom .panel-col-first, .panel-full-width .panel-bottom .panel-col-second, .panel-full-width .panel-bottom .panel-col-third { width: 100%; float: none; }
+  .panel-full-width .panel-top .panel-col-first .inside, .panel-full-width .panel-top .panel-col-second .inside, .panel-full-width .panel-bottom .panel-col-first .inside, .panel-full-width .panel-bottom .panel-col-second .inside, .panel-full-width .panel-bottom .panel-col-third .inside { margin: 20px 15px; } }
