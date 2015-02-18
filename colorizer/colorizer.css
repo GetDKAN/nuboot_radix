@@ -68,6 +68,10 @@ div.vertical-tabs ul.vertical-tabs-list li a:hover {
 .navbar-default .user-menu li.active > a:hover,
 .navbar-default .user-menu li.active > a:focus { background:@linkactive; color: #fff; }
 
+#block-dkan-sitewide-dkan-sitewide-user-menu .links a:hover, 
+#block-dkan-sitewide-dkan-sitewide-user-menu .links a:focus { background-color:@bottom; color: #fff; }
+
+
 .nav-pills li a,
 .tabs--primary li a {
   border:1px solid @toolbarborder;

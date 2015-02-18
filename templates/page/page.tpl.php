@@ -56,11 +56,11 @@
           
           <!-- user menu -->
           <?php
-            print theme('links', array(
-              'links' => menu_navigation_links('user-menu'), 
-              'attributes' => array(
-                'class'=> array('links', 'user-menu')) 
-            ));
+            $block = block_load('dkan_sitewide', 'dkan_sitewide_user_menu');
+            if($block):
+              $user_menu = _block_get_renderable_array(_block_render_blocks(array($block)));
+              print render($user_menu);
+            endif;
           ?>
         </div><!-- /.navbar-collapse -->
       </nav><!-- /.navbar -->

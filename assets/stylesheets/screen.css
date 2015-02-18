@@ -3361,6 +3361,11 @@ dt:nth-of-type(2n), dd:nth-of-type(2n) { background: #F3F3F3; }
 .navbar-default .navbar-nav.secondary li { float: none; }
 .navbar-default .navbar-nav.secondary li a { font-size: .7em; line-height: 1.5em; padding: 4px; }
 
+#block-dkan-sitewide-dkan-sitewide-user-menu .links a { color: #FFFFFF; display: block; font-size: 12px; line-height: 20px; padding: 15px 10px; }
+#block-dkan-sitewide-dkan-sitewide-user-menu .links a:hover, #block-dkan-sitewide-dkan-sitewide-user-menu .links a:focus { background: #D3AE7E; color: #FFFFFF; text-decoration: none; }
+@media all and (min-width: 768px) { #block-dkan-sitewide-dkan-sitewide-user-menu { float: right; }
+  #block-dkan-sitewide-dkan-sitewide-user-menu .links a { display: inline-block; } }
+
 .navbar .nav > li > a { text-shadow: none; }
 
 @media (min-width: 768px) { .container > .navbar-header { margin-left: 0; }
@@ -3578,6 +3583,8 @@ div.horizontal-tabs { border: none; }
 
 table.group_additional th:nth-of-type(1n), table.group_additional td:nth-of-type(1n), .field-name-field-additional-info table th:nth-of-type(1n), .field-name-field-additional-info table td:nth-of-type(1n) { width: 30%; }
 table.group_additional th:nth-of-type(2n), table.group_additional td:nth-of-type(2n), .field-name-field-additional-info table th:nth-of-type(2n), .field-name-field-additional-info table td:nth-of-type(2n) { width: 70%; }
+
+#block-dkan-sitewide-dkan-sitewide-user-menu img { margin: 0 10px; }
 
 .pane-dkan-sitewide-dkan-sitewide-social .pane-content, .pane-dkan-sitewide-dkan-sitewide-social .content, #block-dkan-sitewide-dkan-sitewide-social .pane-content, #block-dkan-sitewide-dkan-sitewide-social .content { padding: 0; }
 .pane-dkan-sitewide-dkan-sitewide-social .social-links, #block-dkan-sitewide-dkan-sitewide-social .social-links { margin: 0; list-style: none; padding: 0; }

@@ -5,20 +5,6 @@
  */
 
 /**
- * Implements hook_menu().
- */
-function nuboot_radix_menu() {
-  $items['user/login'] = array(
-    'title'           => 'Log in',
-    'description'     => t('Log in link'),
-    'menu_name'       => 'user-menu',
-    'weight'          => 0,
-    'type' => MENU_NORMAL_ITEM,
-   );
-  return $items;
-}
-
-/**
  * Overrides theme_menu_local_tasks().
  */
 function nuboot_radix_menu_local_tasks(&$variables) {

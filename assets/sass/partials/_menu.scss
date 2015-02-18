@@ -66,6 +66,28 @@
   }
 }
 
+#block-dkan-sitewide-dkan-sitewide-user-menu {
+  .links a {
+    color: #FFFFFF;
+    display: block;
+    font-size:12px;
+    line-height: 20px;
+    padding:15px 10px;
+    &:hover,
+    &:focus {
+      background: $brand-secondary;
+      color: #FFFFFF;
+      text-decoration:none;
+    }
+  }
+  @media all and (min-width:768px) {
+    float: right;
+    .links a {
+      display: inline-block;
+    }
+  }
+}
+
 //override bootstrap
 .navbar .nav > li > a {
   text-shadow:none;
