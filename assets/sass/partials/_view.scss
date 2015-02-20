@@ -127,6 +127,7 @@
       margin: 0;
       position:relative;
     }
+    &.views-reset-button,
     &.views-submit-button {
       margin: 0;
       padding: .5em .5em 0 0;
@@ -144,3 +145,5 @@
     top: 10px;
   }
 }
+
+#views-exposed-form-dkan-datasets-panel-pane-1 .views-exposed-form .description { display: none;}

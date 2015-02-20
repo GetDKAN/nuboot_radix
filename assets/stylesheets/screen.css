@@ -3455,9 +3455,11 @@ ul.action-links { margin: 1em 15px; }
 .views-exposed-form { position: relative; }
 .views-exposed-form .views-exposed-widget { display: inline; padding: .5em .5em 0 0; }
 .views-exposed-form .views-exposed-widget .views-widget-filter-search_api_views_fulltext, .views-exposed-form .views-exposed-widget .views-widget-sort-by, .views-exposed-form .views-exposed-widget .views-widget-sort-order, .views-exposed-form .views-exposed-widget .views-submit-button, .views-exposed-form .views-exposed-widget .form-submit { display: inline; float: none; margin: 0; position: relative; }
-.views-exposed-form .views-exposed-widget.views-submit-button { margin: 0; padding: .5em .5em 0 0; }
+.views-exposed-form .views-exposed-widget.views-reset-button, .views-exposed-form .views-exposed-widget.views-submit-button { margin: 0; padding: .5em .5em 0 0; }
 .views-exposed-form label { display: none; }
 .views-exposed-form .description { text-shadow: none; position: absolute; color: #999999; font-size: 12px; left: 7px; top: 10px; }
+
+#views-exposed-form-dkan-datasets-panel-pane-1 .views-exposed-form .description { display: none; }
 
 input.use-ajax-submit { margin-right: 10px; }
 
