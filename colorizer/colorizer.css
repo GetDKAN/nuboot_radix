@@ -115,6 +115,14 @@ div.vertical-tabs ul.vertical-tabs-list li a:hover {
   border:1px solid @bottom;
   color:#ffffff;
 }
+.view-group-block .views-field-nid a:focus,
+.btn-default:focus,
+.btn-primary:focus,
+.btn-small:focus {
+  background: @linkactive;
+  border:1px solid @linkactive;
+  color:#ffffff;
+}
 #edit-submit:hover,
 #edit-submit:focus, 
 #edit-submit:active {
