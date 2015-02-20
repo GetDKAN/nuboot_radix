@@ -28,7 +28,7 @@
 .panel-full-width .panel-bottom .panel-col-first,
 .panel-full-width .panel-bottom .panel-col-second,
 .panel-full-width .panel-bottom .panel-col-third {
-  width:33%;
+  width:33.333%;
   float:left;
 }
 

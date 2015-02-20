@@ -3669,8 +3669,6 @@ div[class*="pane-facetapi"] a.facetapi-limit-link.open:before, .region-sidebar-f
 .page-manager-wrapper .panel-region .panel-pane-collapsible .pane-content { -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; -webkit-box-shadow: none; box-shadow: none; margin: 0; padding: 0; }
 .page-manager-wrapper .panel-region .panel-pane-collapsible .pane-content { padding: 10px 15px; }
 
-body.modal-open { overflow: visible !important; }
-
 .search-form, #dkan-sitewide-dataset-search-form, #dkan-sitewide-dataset-search-form--2 { position: relative; }
 .search-form form, #dkan-sitewide-dataset-search-form form, #dkan-sitewide-dataset-search-form--2 form { display: block; margin: 8px 0; position: relative; width: 100%; }
 .search-form input.form-text, #dkan-sitewide-dataset-search-form input.form-text, #dkan-sitewide-dataset-search-form--2 input.form-text { padding-right: 30px; }
