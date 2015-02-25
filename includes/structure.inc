@@ -39,16 +39,13 @@ function nuboot_radix_preprocess_page(&$variables) {
     $variables['copyright'] = isset($copyright['value']) ? check_markup($copyright['value'], $copyright['format']) : '';
   }
   if (drupal_is_front_page()) {
-    $vars['title'] = '';
-    unset($vars['page']['content']['system_main']['default_message']);
+    $variables['title'] = '';
+    unset($variables['page']['content']['system_main']['default_message']);
+    drupal_set_message(t('For Colorizer to work you must set the Administration theme to <em>Default theme</em> at the bottom of the <a href="/admin/appearance">theme list</a> page. '), 'warning');
   }
-  // if (arg(0) == 'admin' && arg(1) == 'appearance') {
-  //   global $base_url;
-  //   drupal_set_message(t('For Colorizer to work you must set the Administration theme to <em>Default theme</em> at the bottom of the <a href="' . $base_url . '/admin/appearance">theme list</a> page.'), 'warning');
-  // }
   // Remove title on dataset edit and creation pages.
-  if (!empty($vars['node']) && in_array($vars['node']->type, array('dataset', 'resource')) || arg(1) == 'add') {
-    $vars['title'] = '';
+  if (!empty($variables['node']) && in_array($variables['node']->type, array('dataset', 'resource')) || arg(1) == 'add') {
+    $variables['title'] = '';
   }
   // Add external css files.
   $external_css = array(
