@@ -41,6 +41,7 @@ function nuboot_radix_preprocess_page(&$variables) {
   if (drupal_is_front_page()) {
     $variables['title'] = '';
     unset($variables['page']['content']['system_main']['default_message']);
+  }
   // Remove title on dataset edit and creation pages.
   if (!empty($variables['node']) && in_array($variables['node']->type, array('dataset', 'resource')) || arg(1) == 'add') {
     $variables['title'] = '';
