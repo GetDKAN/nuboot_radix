@@ -231,9 +231,9 @@ div.vertical-tabs #edit-path-alias {
   padding: 7px 6px 7px 0;
   margin-left: -1px;
   margin-right: 8px;
-} 
-#url-edit-prefix, 
-#url-slug, 
+}
+#url-edit-prefix,
+#url-slug,
 #url-edit-preview .btn-small {
   float: left;
 }
@@ -283,6 +283,9 @@ div.vertical-tabs #edit-path-alias {
   color:#617AAD;
 }
 
+.label[data-format] {
+  background-color: olive;
+}
 .label[data-format=HTML],
 .label[data-format=html],
 .label[data-format*=html] {
@@ -425,35 +428,35 @@ div.vertical-tabs #edit-path-alias {
   color:#70C6E5;
   &:before {
     content: "\e6a1";
-    color:#70C6E5;  
+    color:#70C6E5;
   }
 }
 .format-label[data-format=xls] {
   color: #2db55d;
   &:before {
     content: "\e6af";
-    color: #2db55d;  
+    color: #2db55d;
   }
 }
 .format-label[data-format=xlsx] {
   color:#70C6E5;
   &:before {
     content: "\e6b0";
-    color:#70C6E5;  
+    color:#70C6E5;
   }
 }
 .format-label[data-format=xml] {
   color: #ef7100;
   &:before {
     content: "\e6b1";
-    color: #ef7100;  
+    color: #ef7100;
   }
 }
 .format-label[data-format=zip] {
   color: #686868;
   &:before {
     content: "\e6b3";
-    color: #686868;  
+    color: #686868;
   }
 }
 
