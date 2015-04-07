@@ -199,6 +199,7 @@
 }
 
 .data-and-resources .label {
+  background-color: rgb(200, 200, 200);
   display: inline;
   padding: 1px 4px 2px;
   @include border-radius($border-radius-base);
