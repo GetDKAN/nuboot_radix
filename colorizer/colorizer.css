@@ -16,8 +16,7 @@ h1,h2,h3,h4 {
   color: @text;
 }
 #featured .tint,
-.panel-top .tint,
-.pane-dkan-sitewide-demo-front-dkan-demo-front .pane-content {
+.panel-top .tint {
   background-color: @top_rgb;
 }
 
@@ -113,6 +112,7 @@ div.vertical-tabs ul.vertical-tabs-list li a:hover {
 #block-views-group-block-block .block-content .group-subscribe-message {
   background-color: @top;
 }
+.btn,
 .view-group-block .views-field-nid a,
 .btn-primary,
 .links .btn,
@@ -122,6 +122,8 @@ input.btn {
   color:#ffffff;
 }
 
+.btn:hover,
+.btn:focus,
 .view-group-block .views-field-nid a:hover,
 .btn-primary:hover,
 .links .btn:hover,
@@ -131,6 +133,7 @@ input[type="submit"]:hover {
   border:1px solid @bottom;
   color:#ffffff;
 }
+
 
 .btn-primary:focus, 
 .btn-primary:active, 
@@ -174,6 +177,9 @@ div.autocomplete-deluxe-multiple,
   border-color: @toolbarborder;
 }
 
+.panel-full-width .panel-top {
+  background:@bottom;
+}
 .radix-layouts-sidebar .pane-block .pane-content,
 .radix-layouts-content .pane-content,
 .view-front-page-group-grid .span6 span, 
