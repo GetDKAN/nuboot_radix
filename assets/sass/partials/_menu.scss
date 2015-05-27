@@ -54,6 +54,10 @@
       padding: 0;
       li {
         display: block;
+        a {
+          display: block;
+          color: #ffffff;
+        }
       }
     }
   }
@@ -82,9 +86,30 @@
     }
   }
 }
-.nav > li > a:hover, 
-.nav > li > a:focus {
-  //background: $brand-secondary;
+@media all and (max-width:767px) {
+  .nav > li {
+    clear: both;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu,
+  .navbar-default .navbar-nav .dropdown-menu {
+    @include box-shadow(none);
+    border: none;
+    display: block;
+    width: 100%;
+    position: relative;
+    li > a {
+      color: #ffffff;
+      display: block;
+      padding:15px 10px 15px 35px;
+      &:hover,
+      &:focus,
+      &:active {
+        background: $brand-secondary;
+        color: #ffffff;
+        clear: both;
+      }
+    }
+  }
 }
 
 #block-dkan-sitewide-dkan-sitewide-user-menu {

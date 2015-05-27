@@ -59,6 +59,9 @@ div.vertical-tabs ul.vertical-tabs-list li a:hover {
 .navbar-default .navbar-nav li.open > a,
 .navbar-default .navbar-nav .dropdown-menu { background: @top; }
 
+.navbar-default .navbar-nav .open .dropdown-menu li > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu li > a:focus,
+.navbar-default .navbar-nav .open .dropdown-menu li > a:active { background-color:@bottom; }
 
 .navbar-default .navbar-nav li.open > a:hover,
 .navbar-default .navbar-nav li.open > a:focus,
