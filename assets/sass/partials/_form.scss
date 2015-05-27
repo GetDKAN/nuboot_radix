@@ -104,7 +104,15 @@ fieldset.group-primary {
   @extend %button-attached;
 }
 .btn {
+  color: #fff;
   padding: 5px 12px;
+  text-decoration: none;
+  a,
+  a:hover,
+  a:focus {
+    color: #fff;
+    text-decoration: none;
+  }
 }
 
 .path-form.panel-default {

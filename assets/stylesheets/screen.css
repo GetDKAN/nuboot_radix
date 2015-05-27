@@ -3733,7 +3733,8 @@ fieldset.collapsible { padding-top: 0; }
 .form-managed-file .input-group, .form-managed-file .input-group-btn { display: inline-block; height: 34px; }
 .form-managed-file #edit-field-upload-und-0-remove-button { margin: 0 0 10px 10px; }
 
-.btn { padding: 5px 12px; }
+.btn { color: #fff; padding: 5px 12px; text-decoration: none; }
+.btn a, .btn a:hover, .btn a:focus { color: #fff; text-decoration: none; }
 
 .path-form.panel-default { border-color: transparent; }
 .path-form.panel-default .panel-body { padding: 0; }
