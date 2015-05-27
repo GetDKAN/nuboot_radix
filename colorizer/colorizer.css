@@ -16,8 +16,7 @@ h1,h2,h3,h4 {
   color: @text;
 }
 #featured .tint,
-.panel-top .tint,
-.pane-dkan-sitewide-demo-front-dkan-demo-front .pane-content {
+.panel-top .tint {
   background-color: @top_rgb;
 }
 
@@ -174,6 +173,9 @@ div.autocomplete-deluxe-multiple,
   border-color: @toolbarborder;
 }
 
+.panel-full-width .panel-top {
+  background:@bottom;
+}
 .radix-layouts-sidebar .pane-block .pane-content,
 .radix-layouts-content .pane-content,
 .view-front-page-group-grid .span6 span, 
