@@ -81,7 +81,6 @@ function _background_option_setting($element, &$form, &$form_state) {
     }
     else {
       form_error($element, t('Must be a valid hexadecimal CSS color value.'));
-      drupal_set_message($element['#value'], 'status', FALSE);
     }
   }
 }
