@@ -3702,6 +3702,9 @@ ul.action-links { margin: 1em 15px; }
 
 #views-exposed-form-dkan-datasets-panel-pane-1 .views-exposed-form .description { display: none; }
 
+.pane-dkan-groups-featured .row { text-align: center; }
+.pane-dkan-groups-featured .row div[class*='views-column'] { margin-bottom: 1.25em; }
+
 input.use-ajax-submit { margin-right: 10px; }
 
 .ctools-dropbutton input[type="submit"] { color: #666; }
