@@ -4,7 +4,7 @@
  * Template for a 4 row panel layout.
  */
 $fid = theme_get_setting('hero_file');
-$file = file_load($fid);
+$file = !empty($fid) ? file_load($fid) : FALSE;
 if($file):
   $uri = $file->uri;
   $tint = 'tint';
