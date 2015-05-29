@@ -1,7 +1,7 @@
 @charset "UTF-8";
-input[type="submit"] { color: white; }
+input[type="submit"], .btn-primary { background: #0A77BD; border-color: #0A77BD; color: white; font-weight: normal; text-align: center; vertical-align: middle; cursor: pointer; white-space: nowrap; padding: 6px 12px; line-height: 1.42857143; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
 
-input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:active { color: white; }
+input[type="submit"]:hover, .btn-primary:hover, input[type="submit"]:focus, .btn-primary:focus, input[type="submit"]:active, .btn-primary:active { background: #002245; border-color: #002245; color: white; text-decoration: none; }
 
 .form-managed-file .input-group input, .form-managed-file .input-group-btn input, .image-widget-data input.btn { -moz-border-radius: 0 4px 4px 0; -webkit-border-radius: 0; border-radius: 0 4px 4px 0; margin-left: -1px; padding: 6px 10px 5px 10px; vertical-align: top; }
 
@@ -3744,9 +3744,6 @@ fieldset.collapsible { padding-top: 0; }
 .form-managed-file input.form-file { -moz-border-radius: 4px 0 0 4px; -webkit-border-radius: 4px; border-radius: 4px 0 0 4px; border: 1px solid #ddd; padding: 6px; margin: 0 0 10px 0; }
 .form-managed-file .input-group, .form-managed-file .input-group-btn { display: inline-block; height: 34px; }
 .form-managed-file #edit-field-upload-und-0-remove-button { margin: 0 0 10px 10px; }
-
-.btn { color: #fff; padding: 5px 12px; text-decoration: none; }
-.btn a, .btn a:hover, .btn a:focus { color: #fff; text-decoration: none; }
 
 .path-form.panel-default { border-color: transparent; }
 .path-form.panel-default .panel-body { padding: 0; }
