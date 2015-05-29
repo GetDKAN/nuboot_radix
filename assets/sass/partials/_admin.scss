@@ -5,3 +5,11 @@
     vertical-align: top;
   }
 }
+.views-edit-view { 
+	input.btn:hover, 
+	input[type="submit"]:hover {
+		background: inherit;
+		border: inherit;
+		color: inherit;
+	}
+}
