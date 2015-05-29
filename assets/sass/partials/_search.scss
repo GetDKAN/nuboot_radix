@@ -34,10 +34,8 @@
       margin: 0;
     }
   }
-  form {
-    clear: both;
-  }
   @include searchbox;
+  clear: both;
   .views-exposed-form .form-submit {
     margin:22px 0 0;
     text-shadow: none;
