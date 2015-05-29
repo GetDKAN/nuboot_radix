@@ -113,7 +113,7 @@ div.vertical-tabs ul.vertical-tabs-list li a:hover {
 #block-views-group-block-block .block-content .group-subscribe-message {
   background-color: @top;
 }
-.btn,
+.btn-pop,
 .view-group-block .views-field-nid a,
 .btn-primary,
 .links .btn,
@@ -123,8 +123,8 @@ input.btn {
   color:#ffffff;
 }
 
-.btn:hover,
-.btn:focus,
+.btn-pop:hover,
+.btn-pop:focus,
 .view-group-block .views-field-nid a:hover,
 .btn-primary:hover,
 .links .btn:hover,
