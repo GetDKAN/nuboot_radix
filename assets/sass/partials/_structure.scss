@@ -218,6 +218,9 @@ table thead > tr > th {
 
 // Admin tables.
 .page-admin {
+  .container.main {
+    width: 100%;
+  }
   .table-bordered > thead > tr > th,
   .table-bordered > tbody > tr > th,
   .table-bordered > tbody > tr > td {
