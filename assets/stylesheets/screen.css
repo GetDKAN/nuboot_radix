@@ -3420,7 +3420,7 @@ form .description { margin: 2px 0; color: #555555; }
 fieldset legend { float: left; line-height: 1em; margin: 0; }
 fieldset .panel-body { clear: both; }
 
-html.js input.form-autocomplete { background: url('../images/throbber.gif?1432849553') no-repeat right 8px #fff !important; }
+html.js input.form-autocomplete { background: url('../images/throbber.gif?1433178184') no-repeat right 8px #fff !important; }
 html.js input.throbbing { background-position: right -122px !important; }
 html.js fieldset.collapsed { height: auto; border-left-width: 1px; border-right-width: 1px; }
 
@@ -3549,8 +3549,14 @@ table thead > tr > th, table.group_additional thead > tr > th { background-color
 table tbody th, table td, table.group_additional tbody th, table.group_additional td { border: 1px solid #ddd; padding: 4px 8px; vertical-align: top; }
 table tr:hover, table.group_additional tr:hover { background: #FFFEEE; }
 
-table.group_additional th:nth-of-type(1n), table.group_additional td:nth-of-type(1n), .field-name-field-additional-info table th:nth-of-type(1n), .field-name-field-additional-info table td:nth-of-type(1n) { width: 30%; border-right: 1px solid #ddd; }
-table.group_additional th:nth-of-type(2n), table.group_additional td:nth-of-type(2n), .field-name-field-additional-info table th:nth-of-type(2n), .field-name-field-additional-info table td:nth-of-type(2n) { width: 70%; }
+@media screen and (max-width: 1024px) { .table-responsive > .table > thead > tr > th, .table-responsive > .table > thead > tr > td, .table-responsive > .table > tbody > tr > th, .table-responsive > .table > tbody > tr > td, .table-responsive > .table > tfoot > tr > th, .table-responsive > .table > tfoot > tr > td { white-space: normal; } }
+.field-name-field-additional-info .field-label { margin-bottom: 1em; }
+
+.group_additional, .field-name-field-additional-info table, .field-name-field-additional-info .table-responsive { margin: 0; }
+.group_additional td, .group_additional th, .field-name-field-additional-info table td, .field-name-field-additional-info table th, .field-name-field-additional-info .table-responsive td, .field-name-field-additional-info .table-responsive th { white-space: normal; width: auto; }
+.group_additional td:nth-of-type(2n), .field-name-field-additional-info table td:nth-of-type(2n), .field-name-field-additional-info .table-responsive td:nth-of-type(2n) { white-space: pre; /* CSS 2.0 */ white-space: pre-wrap; /* CSS 2.1 */ white-space: pre-line; /* CSS 3.0 */ white-space: -pre-wrap; /* Opera 4-6 */ white-space: -o-pre-wrap; /* Opera 7 */ white-space: -moz-pre-wrap; /* Mozilla */ white-space: -hp-pre-wrap; /* HP Printers */ word-wrap: break-word; /* IE 5+ */ word-break: break-word; }
+@media all and (min-width: 768px) { .group_additional th:nth-of-type(1n), .group_additional td:nth-of-type(1n), .field-name-field-additional-info table th:nth-of-type(1n), .field-name-field-additional-info table td:nth-of-type(1n), .field-name-field-additional-info .table-responsive th:nth-of-type(1n), .field-name-field-additional-info .table-responsive td:nth-of-type(1n) { width: 30%; border-right: 1px solid #ddd; }
+  .group_additional th:nth-of-type(2n), .group_additional td:nth-of-type(2n), .field-name-field-additional-info table th:nth-of-type(2n), .field-name-field-additional-info table td:nth-of-type(2n), .field-name-field-additional-info .table-responsive th:nth-of-type(2n), .field-name-field-additional-info .table-responsive td:nth-of-type(2n) { width: 70%; } }
 
 .node-form table.group_additional th, .node-form table.group_additional td, .node-form table.group_additional th:nth-of-type(1n), .node-form table.group_additional td:nth-of-type(1n), .node-form table.group_additional th:nth-of-type(2n), .node-form table.group_additional td:nth-of-type(2n), .node-form .field-name-field-additional-info table th, .node-form .field-name-field-additional-info table td, .node-form .field-name-field-additional-info table th:nth-of-type(1n), .node-form .field-name-field-additional-info table td:nth-of-type(1n), .node-form .field-name-field-additional-info table th:nth-of-type(2n), .node-form .field-name-field-additional-info table td:nth-of-type(2n) { width: auto; }
 .node-form table.group_additional th .form-control, .node-form table.group_additional td .form-control, .node-form table.group_additional th:nth-of-type(1n) .form-control, .node-form table.group_additional td:nth-of-type(1n) .form-control, .node-form table.group_additional th:nth-of-type(2n) .form-control, .node-form table.group_additional td:nth-of-type(2n) .form-control, .node-form .field-name-field-additional-info table th .form-control, .node-form .field-name-field-additional-info table td .form-control, .node-form .field-name-field-additional-info table th:nth-of-type(1n) .form-control, .node-form .field-name-field-additional-info table td:nth-of-type(1n) .form-control, .node-form .field-name-field-additional-info table th:nth-of-type(2n) .form-control, .node-form .field-name-field-additional-info table td:nth-of-type(2n) .form-control { display: inline; width: auto; }
@@ -3559,10 +3565,14 @@ table.group_additional th:nth-of-type(2n), table.group_additional td:nth-of-type
 
 .table-bordered > thead > tr > th, .calendar-calendar table.mini > thead > tr > th, table thead > tr > th { background-color: #e7e7e7; border: 1px solid #ddd; padding: 4px 8px; }
 
+.table-striped > tbody > tr:nth-child(odd) { background-color: #f9f9f9; }
+
+.table tbody tr:hover td, .table tbody tr:hover th, .table-striped > tbody > tr:nth-child(odd):hover { background-color: #FFFEEE; }
+
+.page-admin .container.main { width: 100%; }
 .page-admin .table-bordered > thead > tr > th, .page-admin .calendar-calendar table.mini > thead > tr > th, .calendar-calendar .page-admin table.mini > thead > tr > th, .page-admin .table-bordered > tbody > tr > th, .page-admin .calendar-calendar table.mini > tbody > tr > th, .calendar-calendar .page-admin table.mini > tbody > tr > th, .page-admin .table-bordered > tbody > tr > td, .page-admin .calendar-calendar table.mini > tbody > tr > td, .calendar-calendar .page-admin table.mini > tbody > tr > td { border: none; }
 .page-admin table thead > tr > th.checkbox, .page-admin table.table thead > tr > th.checkbox, .page-admin .table-bordered > tbody > tr > th.checkbox, .page-admin .calendar-calendar table.mini > tbody > tr > th.checkbox, .calendar-calendar .page-admin table.mini > tbody > tr > th.checkbox, .page-admin .table-bordered > tbody > tr > td.checkbox, .page-admin .calendar-calendar table.mini > tbody > tr > td.checkbox, .calendar-calendar .page-admin table.mini > tbody > tr > td.checkbox, .page-admin .table-striped > tbody > tr:nth-child(odd) > td.checkbox, .page-admin .table-striped > tbody > tr:nth-child(odd) > th.checkbox { background-color: transparent; border: none; margin: 0; display: table-cell; position: relative; }
-.page-admin .table-striped > tbody > tr:nth-child(odd) { background-color: #f9f9f9; }
-.page-admin .table tbody tr:hover td, .page-admin .table tbody tr:hover th, .page-admin .table tbody tr:hover td.checkbox, .page-admin .table tbody tr:hover th.checkbox, .page-admin .table-striped tbody tr:nth-child(odd):hover td, .page-admin .table-striped tbody tr:nth-child(odd):hover td.checkbox { background-color: #FFFEEE; }
+.page-admin .table tbody tr:hover td.checkbox, .page-admin .table tbody tr:hover th.checkbox { background-color: #FFFEEE; }
 .page-admin table th.checkbox label, .page-admin table td.checkbox label { line-height: 0; padding: 4px; vertical-align: top; }
 .page-admin table th.checkbox input[type="checkbox"], .page-admin table th.checkbox input, .page-admin table td.checkbox input[type="checkbox"], .page-admin table td.checkbox input { float: none !important; margin: 0 !important; position: relative; }
 .page-admin table .checkbox input[type="checkbox"] { position: relative; }
@@ -3792,6 +3802,8 @@ div.horizontal-tabs { border: none; }
 #action-info { color: #C90409; margin: 1em 0; }
 #action-info:before { color: #C90409; content: "\f071"; font-family: "FontAwesome"; font-size: 1.5em; font-style: normal; margin-right: 5px; vertical-align: middle; }
 
+.resource-list a, .field-name-body a { overflow-wrap: break-word; }
+
 .field-name-body ul { list-style-type: disc; margin: 10px 20px; }
 .field-name-body ul li { margin: 6px 10px; }
 
@@ -3909,7 +3921,7 @@ div[class*="pane-facetapi"] a.facetapi-limit-link.open:before, .region-sidebar-f
 @media all and (max-width: 768px) { .node-dataset .resource-list li { padding-right: 0; }
   .node-dataset .resource-list li span.links { position: relative; top: auto; right: auto; margin: 10px 0; display: block; padding: 0; }
   .node-dataset .resource-list li a.btn { margin: 0 5px 10px 0; } }
-@media all and (max-width: 768px) { aside[class|='col'], section[class|='col'] { padding: 0; }
+@media all and (max-width: 767px) { aside[class|='col'], section[class|='col'] { padding: 0; }
   .container { width: 100%; }
   .panel-full-width .panel-top .panel-col-first, .panel-full-width .panel-top .panel-col-second, .panel-full-width .panel-bottom .panel-col-first, .panel-full-width .panel-bottom .panel-col-second, .panel-full-width .panel-bottom .panel-col-third { width: 100%; float: none; }
   .panel-full-width .panel-top .panel-col-first .inside, .panel-full-width .panel-top .panel-col-second .inside, .panel-full-width .panel-bottom .panel-col-first .inside, .panel-full-width .panel-bottom .panel-col-second .inside, .panel-full-width .panel-bottom .panel-col-third .inside { margin: 20px 15px; } }
