@@ -186,6 +186,10 @@ div[class*="pane-facetapi"],
     content:"\f151";
   }
 }
+// Wrap long value strings.
+.facetapi-facet-field-license a {
+  @include wrap;
+}
 
 // Groups
 .pane-views-group-block-block,
