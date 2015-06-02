@@ -3420,7 +3420,7 @@ form .description { margin: 2px 0; color: #555555; }
 fieldset legend { float: left; line-height: 1em; margin: 0; }
 fieldset .panel-body { clear: both; }
 
-html.js input.form-autocomplete { background: url('../images/throbber.gif?1433178184') no-repeat right 8px #fff !important; }
+html.js input.form-autocomplete { background: url('../images/throbber.gif?1433276134') no-repeat right 8px #fff !important; }
 html.js input.throbbing { background-position: right -122px !important; }
 html.js fieldset.collapsed { height: auto; border-left-width: 1px; border-right-width: 1px; }
 
@@ -3712,8 +3712,8 @@ ul.action-links { margin: 1em 15px; }
 
 #views-exposed-form-dkan-datasets-panel-pane-1 .views-exposed-form .description { display: none; }
 
-.pane-dkan-groups-featured .row { text-align: center; }
-.pane-dkan-groups-featured .row div[class*='views-column'] { margin-bottom: 1.25em; }
+.view-dkan-groups-featured .row, .pane-dkan-groups-featured .row { text-align: center; }
+.view-dkan-groups-featured .row div[class*='views-column'], .pane-dkan-groups-featured .row div[class*='views-column'] { margin-bottom: 1.25em; }
 
 input.use-ajax-submit { margin-right: 10px; }
 
@@ -3927,4 +3927,4 @@ div[class*="pane-facetapi"] a.facetapi-limit-link.open:before, .region-sidebar-f
   .panel-full-width .panel-top .panel-col-first .inside, .panel-full-width .panel-top .panel-col-second .inside, .panel-full-width .panel-bottom .panel-col-first .inside, .panel-full-width .panel-bottom .panel-col-second .inside, .panel-full-width .panel-bottom .panel-col-third .inside { margin: 20px 15px; } }
 .admin-list dt, .admin-list dd { display: inline-block; float: none; vertical-align: top; }
 
-.views-edit-view input.btn:hover, .views-edit-view input[type="submit"]:hover { background: inherit; border: inherit; color: inherit; }
+.views-edit-view input.btn, .views-edit-view input.btn:active, .views-edit-view input.btn:focus, .views-edit-view input.btn:hover, .views-edit-view input[type="submit"]:hover { background: inherit; border: inherit; color: inherit; }

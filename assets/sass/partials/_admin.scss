@@ -5,7 +5,10 @@
     vertical-align: top;
   }
 }
-.views-edit-view { 
+.views-edit-view {
+	input.btn,
+	input.btn:active,
+	input.btn:focus,
 	input.btn:hover, 
 	input[type="submit"]:hover {
 		background: inherit;
