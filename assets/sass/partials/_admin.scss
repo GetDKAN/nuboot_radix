@@ -5,14 +5,27 @@
     vertical-align: top;
   }
 }
-.views-edit-view {
+.views-edit-view .action-list {
 	input.btn,
 	input.btn:active,
 	input.btn:focus,
 	input.btn:hover, 
 	input[type="submit"]:hover {
 		background: inherit;
-		border: inherit;
+		border: none;
 		color: inherit;
 	}
+}
+
+.modal-content {
+	.panels-root-content-box a.btn {
+		white-space: normal;
+	}
+	.panel-title {
+		padding-right: 55px;
+	}
+}
+
+.views-displays .secondary .open > a:hover {
+	color: #666;
 }
