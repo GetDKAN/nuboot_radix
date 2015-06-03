@@ -195,8 +195,12 @@ div[class*="pane-facetapi"],
 .pane-views-group-block-block,
 #block-views-group-block-block {
   overflow:hidden;
-  .view-content {
-    padding:0;
+  .views-field-title a {
+    display: block;
+    padding: .5em 0;
+  }
+  .views-field-body p {
+    margin: .5em 0 1em;
   }
   .group-subscribe-message {
     @include border-bottom-radius(4px);
