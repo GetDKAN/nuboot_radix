@@ -20,6 +20,7 @@
   position:relative;
   z-index:3;
 }
+
 .navbar-default {
   background:transparent;
   border:none;
@@ -37,6 +38,7 @@
     }
     .open > a,
     li > a {
+      color: #FFFFFF;
       display: block;
       font-size:12px;
       line-height: 20px;
@@ -176,19 +178,17 @@
 .nav-tabs {
   li a {
     color:$brand-primary;
-    &:hover {
-      //color:darken($brand-primary,10%);
-    }
   }
 }
 
-.nav-pills li a.active,
-.nav-pills li.active a:hover,
-.nav-pills li.active a:focus,
-.tabs--primary li a.active {
-  border:1px solid $brand-primary;
-  background: $brand-primary;
-  color:#ffffff;
+.tabs--primary {
+  .nav-pills li a.active,
+  .nav-pills li.active a:hover,
+  .nav-pills li.active a:focus {
+    border:1px solid $brand-primary;
+    background: $brand-primary;
+    color:#ffffff;
+  }
 }
 .btn-primary {
   background:$brand-primary;

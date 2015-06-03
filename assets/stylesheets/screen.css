@@ -3596,7 +3596,7 @@ dt:nth-of-type(2n), dd:nth-of-type(2n) { background: #F3F3F3; }
 .navbar-default { background: transparent; border: none; margin: 0; position: relative; z-index: 1; }
 .navbar-default .navbar-nav, .navbar-default .user-menu { margin: 0; position: relative; z-index: 3; }
 .navbar-default .navbar-nav a.dropdown-toggle, .navbar-default .user-menu a.dropdown-toggle { color: #FFFFFF; }
-.navbar-default .navbar-nav .open > a, .navbar-default .navbar-nav li > a, .navbar-default .user-menu .open > a, .navbar-default .user-menu li > a { display: block; font-size: 12px; line-height: 20px; padding: 15px 10px; }
+.navbar-default .navbar-nav .open > a, .navbar-default .navbar-nav li > a, .navbar-default .user-menu .open > a, .navbar-default .user-menu li > a { color: #FFFFFF; display: block; font-size: 12px; line-height: 20px; padding: 15px 10px; }
 .navbar-default .navbar-nav .open > a:active, .navbar-default .navbar-nav .open > a:hover, .navbar-default .navbar-nav .open > a:focus, .navbar-default .navbar-nav li > a:active, .navbar-default .navbar-nav li > a:hover, .navbar-default .navbar-nav li > a:focus, .navbar-default .user-menu .open > a:active, .navbar-default .user-menu .open > a:hover, .navbar-default .user-menu .open > a:focus, .navbar-default .user-menu li > a:active, .navbar-default .user-menu li > a:hover, .navbar-default .user-menu li > a:focus { background: #002245; color: #FFFFFF; text-decoration: none; }
 .navbar-default .navbar-nav .dropdown-menu, .navbar-default .user-menu .dropdown-menu { background: #0A77BD; padding: 0; }
 .navbar-default .navbar-nav .dropdown-menu li, .navbar-default .user-menu .dropdown-menu li { display: block; }
@@ -3630,7 +3630,7 @@ dt:nth-of-type(2n), dd:nth-of-type(2n) { background: #F3F3F3; }
 
 .nav-tabs li a { color: #0A77BD; }
 
-.nav-pills li a.active, .nav-pills li.active a:hover, .nav-pills li.active a:focus, .tabs--primary li a.active { border: 1px solid #0A77BD; background: #0A77BD; color: #ffffff; }
+.tabs--primary .nav-pills li a.active, .tabs--primary .nav-pills li.active a:hover, .tabs--primary .nav-pills li.active a:focus { border: 1px solid #0A77BD; background: #0A77BD; color: #ffffff; }
 
 .btn-primary { background: #0A77BD; border-color: #0A77BD; }
 

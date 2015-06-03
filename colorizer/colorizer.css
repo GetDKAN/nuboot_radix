@@ -54,7 +54,7 @@ div.vertical-tabs ul.vertical-tabs-list li a:hover {
   background: @toolbarbtn;
 }
 .navbar-default .navbar-nav li > a,
-.navbar-default .user-menu li > a { color: #fff; }
+.navbar-default .user-menu li > a { color: #FFFFFF; }
 
 .navbar-default .navbar-nav li.open > a,
 .navbar-default .navbar-nav .dropdown-menu { background: @top; }
@@ -84,24 +84,24 @@ div.vertical-tabs ul.vertical-tabs-list li a:hover {
 #block-dkan-sitewide-dkan-sitewide-user-menu .links a:focus { background-color:@bottom; color: #fff; }
 
 
-.nav.nav-pills li a,
+.tabs--primary.nav-pills li a,
 .tabs--primary li a {
   border:1px solid @toolbarborder;
   background: @bg;
   color:  @top;
 }
 
-.nav.nav-pills li a:hover,
+.tabs--primary.nav-pills li a:hover,
 .tabs--primary li a:hover {
   border:1px solid @bottom;
   background: @bottom;
   color: #ffffff;
 }
 
-.nav.nav-pills > li > a.active,
-.nav.nav-pills > li > a:focus
-.nav.nav-pills li.active a:hover,
-.nav.nav-pills li.active a:focus,
+.tabs--primary.nav-pills > li > a.active,
+.tabs--primary.nav-pills > li > a:focus
+.tabs--primary.nav-pills li.active a:hover,
+.tabs--primary.nav-pills li.active a:focus,
 .tabs--primary li a.active
 .tabs--primary li a:focus {
   border:1px solid @linkactive;
