@@ -5,15 +5,20 @@
     vertical-align: top;
   }
 }
-.views-edit-view .action-list {
-	input.btn,
-	input.btn:active,
-	input.btn:focus,
-	input.btn:hover, 
-	input[type="submit"]:hover {
+.views-edit-view {
+	.action-list {
+		input.btn,
+		input.btn:active,
+		input.btn:focus,
+		input.btn:hover, 
+		input[type="submit"]:hover {
+			background: inherit;
+			border: none;
+			color: inherit;
+		}
+	}
+	.footer {
 		background: inherit;
-		border: none;
-		color: inherit;
 	}
 }
 

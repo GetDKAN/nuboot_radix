@@ -3717,7 +3717,8 @@ ul.action-links { margin: 1em 15px; }
 
 input.use-ajax-submit { margin-right: 10px; }
 
-.ctools-dropbutton input[type="submit"] { color: #666; }
+.ctools-dropbutton .ctools-content a, .ctools-dropbutton input.btn, .ctools-dropbutton input[type="submit"] { border: 1px solid #fff; color: #666; }
+.ctools-dropbutton .ctools-content a:hover, .ctools-dropbutton .ctools-content a:focus, .ctools-dropbutton .ctools-content a:active, .ctools-dropbutton input.btn:hover, .ctools-dropbutton input.btn:focus, .ctools-dropbutton input.btn:active, .ctools-dropbutton input[type="submit"]:hover, .ctools-dropbutton input[type="submit"]:focus, .ctools-dropbutton input[type="submit"]:active { background-color: #eee; border-color: #ccc; color: #333; }
 
 .field-type-file input[type="submit"], .input-group-addon, .input-group-btn { width: auto; }
 
@@ -3933,6 +3934,7 @@ div[class*="pane-facetapi"] a.facetapi-limit-link.open:before, .region-sidebar-f
 .admin-list dt, .admin-list dd { display: inline-block; float: none; vertical-align: top; }
 
 .views-edit-view .action-list input.btn, .views-edit-view .action-list input.btn:active, .views-edit-view .action-list input.btn:focus, .views-edit-view .action-list input.btn:hover, .views-edit-view .action-list input[type="submit"]:hover { background: inherit; border: none; color: inherit; }
+.views-edit-view .footer { background: inherit; }
 
 .modal-content .panels-root-content-box a.btn { white-space: normal; }
 .modal-content .panel-title { padding-right: 55px; }
