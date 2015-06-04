@@ -10,8 +10,16 @@ input.use-ajax-submit {
 }
 
 .ctools-dropbutton {
+  .ctools-content a,
+  input.btn,
   input[type="submit"] {
     color: #666;
+    &:hover,
+    &:focus,
+    &:active {
+      border:none;
+      color: $brand-primary;
+    }
   }
 }
 .field-type-file input[type="submit"],
