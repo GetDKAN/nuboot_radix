@@ -3715,6 +3715,12 @@ ul.action-links { margin: 1em 15px; }
 .view-dkan-groups-featured .row, .pane-dkan-groups-featured .row { text-align: center; }
 .view-dkan-groups-featured .row div[class*='views-column'], .pane-dkan-groups-featured .row div[class*='views-column'] { margin-bottom: 1.25em; }
 
+.view-latest-stories .views-field-field-image img { margin: 0 0 .75em; max-width: 320px; }
+.view-latest-stories .views-field-title { font-size: 1.5em; font-weight: bold; line-height: 1.25em; margin-bottom: .5em; }
+.view-latest-stories .views-field-body { margin-bottom: 1.5em; }
+.view-latest-stories .more-link { clear: both; }
+@media (min-width: 768px) and (max-width: 991px) { .view-latest-stories .views-row-odd { clear: both; } }
+
 input.use-ajax-submit { margin-right: 10px; }
 
 .ctools-dropbutton .ctools-content a, .ctools-dropbutton input.btn, .ctools-dropbutton input[type="submit"] { color: #666; }
