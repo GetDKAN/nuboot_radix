@@ -30,6 +30,14 @@ function nuboot_radix_js_alter(&$javascript) {
 }
 
 /**
+ * Implements hook_preprocess().
+ */
+function nuboot_radix_preprocess(&$variables, $hook) {
+  // Panel heading tag.
+  $variables['title_heading'] = 'h2';
+}
+
+/**
  * Implements template_preprocess_page().
  */
 function nuboot_radix_preprocess_page(&$variables) {
