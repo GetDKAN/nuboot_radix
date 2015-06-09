@@ -23,7 +23,7 @@ function nuboot_radix_form_system_theme_settings_alter(&$form, &$form_state) {
     '#title' => t('Copyright'),
     '#type' => 'text_format',
     '#format' => 'html',
-    '#default_value' => isset($copyright['value']) ? $copyright['value'] : t('Powered by <a href="http://nucivic.com/dkan">DKAN</a>, a project of <a href="http://nucivic.com">NuCivic</a>'),
+    '#default_value' => isset($copyright['value']) ? $copyright['value'] : t('Powered by <a href="http://nucivic.com/dkan">DKAN</a>, a project of <a href="http://nucivic.com">NüCivic</a>'),
   );
 
   // Hero fieldset.
@@ -34,8 +34,8 @@ function nuboot_radix_form_system_theme_settings_alter(&$form, &$form_state) {
   );
   // Upload field.
   $form['hero']['hero_file'] = array(
-    '#type'     => 'managed_file',
-    '#title'    => t('Upload a new photo for the hero section background'),
+    '#type' => 'managed_file',
+    '#title' => t('Upload a new photo for the hero section background'),
     '#description' => t('<p>The hero unit is the large featured area located on the front page. 
       This theme supplies a default background image for this area. You may upload a different 
       photo here and it will replace the default background image.</p><p>Max. file size: 2 MB
@@ -47,6 +47,7 @@ function nuboot_radix_form_system_theme_settings_alter(&$form, &$form_state) {
       'file_validate_extensions' => array('gif png jpg jpeg'),
     ),
   );
+
   // Solid color background.
   $form['hero']['background_option'] = array(
     '#type' => 'textfield',
