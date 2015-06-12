@@ -13,12 +13,14 @@ input.use-ajax-submit {
   .ctools-content a,
   input.btn,
   input[type="submit"] {
+    border: 1px solid #fff;
     color: #666;
     &:hover,
     &:focus,
     &:active {
-      border:none;
-      color: $brand-primary;
+      background-color: #eee;
+      border-color: #ccc;
+      color: #333;
     }
   }
 }
