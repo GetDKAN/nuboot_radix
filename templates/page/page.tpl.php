@@ -77,10 +77,15 @@
       <?php print render($page['help']); ?>
     <?php endif; ?>
 
+    <?php if (!empty($page['administration'])): ?>
+      <aside class="col-sm-3" role="complementary">
+        <?php print render($page['administration']); ?>
+      </aside>  <!-- /#sidebar-first -->
+    <?php endif; ?>
 
     <div class="main-row">
 
-      <section>
+      <section class="<?php if (!empty($page['administration'])) { print 'col-sm-9'; } else { print 'col-sm-12'; } ?>">
         <a id="main-content"></a>
         <?php print render($title_prefix); ?>
         <?php if (!empty($title) && empty($is_panel)): ?>
