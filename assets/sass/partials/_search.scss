@@ -7,16 +7,16 @@
 #dkan-sitewide-dataset-search-form,
 #dkan-sitewide-dataset-search-form--2 {
   input[type="submit"] { 
-    top: 5px;
+    top: 8px;
   }
   label {
-    display: none;
+    @extend %screenreader;
   }
 } 
 
 #region-branding #block-dkan-sitewide-dkan-sitewide-search-bar label,
 #views-exposed-form-dataset-page label {
-  display: none;
+  @extend %screenreader;
 }
 
 #block-dkan-sitewide-dkan-sitewide-search-bar {
@@ -39,6 +39,9 @@
   .views-exposed-form .form-submit {
     margin:22px 0 0;
     text-shadow: none;
+  }
+  input[type="submit"] {
+    top: 3px;
   }
 }
 
