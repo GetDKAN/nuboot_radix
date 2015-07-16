@@ -4,6 +4,8 @@
 body {
   font-family:$font-family-sans-serif;
   line-height:1.35em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 body.modal-open {
   overflow: visible !important;
@@ -276,6 +278,7 @@ dl {
   overflow:hidden;
 }
 dt {
+  clear: both;
   margin:0;
   padding:8px 5px;
   float:left;

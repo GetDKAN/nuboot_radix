@@ -103,6 +103,9 @@ fieldset.group-primary {
 .horizontal-tabs fieldset.horizontal-tabs-pane {
   padding: 0;
 }
+div.horizontal-tabs {
+  border: none;
+}
 
 .form-managed-file {
   input.form-file {
@@ -156,6 +159,4 @@ fieldset.group-primary {
     padding: 0;
   }
 }
-div.horizontal-tabs {
-  border: none;
-}
+
