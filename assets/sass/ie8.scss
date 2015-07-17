@@ -3,6 +3,15 @@
 // --------------------------------------------------
 @import "global/variable";
 
+.panel-top {
+	-ms-behavior: url(/backgroundsize.min.htc);
+	.tint {
+		background: $brand-primary;
+		opacity:0.5;
+		filter:alpha(opacity=50);
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	}
+}
 .format-label {
 	font-size:0;
 }
