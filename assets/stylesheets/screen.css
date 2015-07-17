@@ -3276,7 +3276,7 @@ body { font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 body.modal-open { overflow: visible !important; }
 
-.branding { position: relative; }
+.branding { position: relative; min-height: 70px; }
 
 .site-name { display: inline-block; float: left; font-size: 2em; line-height: 1.15em; margin: 38px 20px 5px; }
 @media (max-width: 460px) { .site-name { clear: left; float: none; margin: 10px 20px 5px 0; } }
