@@ -3692,6 +3692,8 @@ div[class*="pane-facetapi"] a.facetapi-limit-link.open:before, .region-sidebar-f
 @media all and (max-width: 768px) { .node-dataset .resource-list li { padding-right: 0; }
   .node-dataset .resource-list li span.links { position: relative; top: auto; right: auto; margin: 10px 0; display: block; padding: 0; }
   .node-dataset .resource-list li a.btn { margin: 0 5px 10px 0; } }
+.node-dataset .resource-list li.last .links i { padding: 0; }
+
 @media all and (max-width: 767px) { aside[class|='col'], section[class|='col'] { padding: 0; }
   .container { width: 100%; }
   .panel-full-width .panel-top .panel-col-first, .panel-full-width .panel-top .panel-col-second, .panel-full-width .panel-bottom .panel-col-first, .panel-full-width .panel-bottom .panel-col-second, .panel-full-width .panel-bottom .panel-col-third { width: 100%; float: none; }
