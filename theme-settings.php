@@ -24,7 +24,7 @@ function nuboot_radix_form_system_theme_settings_alter(&$form, &$form_state) {
     '#title' => t('Copyright'),
     '#type' => 'text_format',
     '#format' => 'html',
-    '#default_value' => isset($copyright['value']) ? $copyright['value'] : t('Powered by <a href="http://nucivic.com/dkan">DKAN</a>, a project of <a href="http://nucivic.com">NuCivic</a>'),
+    '#default_value' => isset($copyright['value']) ? $copyright['value'] : t('Powered by <a href="http://nucivic.com/dkan">DKAN</a>, a project of <a href="http://nucivic.com">NüCivic</a>'),
   );
 
   // Hero fieldset.
@@ -48,6 +48,7 @@ function nuboot_radix_form_system_theme_settings_alter(&$form, &$form_state) {
       'file_validate_extensions' => array('gif png jpg jpeg'),
     ),
   );
+
   // Solid color background.
   $form['hero']['background_option'] = array(
     '#type' => 'textfield',

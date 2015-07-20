@@ -1,12 +1,25 @@
 //
 // Styles for Forms
 // --------------------------------------------------
+
 input[type="submit"],
-.btn-primary {
+.btn-primary,
+.btn.btn-primary {
   @extend %button;
 }
 input.use-ajax-submit {
   margin-right: 10px;
+}
+button.btn,
+.form-control {
+  line-height: 1.4em;
+}
+.form-text.form-control,
+select.form-control {
+  min-height: 36px;
+  &[multiple="multiple"] {
+    height: auto;
+  }
 }
 
 .ctools-dropbutton {
@@ -90,20 +103,23 @@ fieldset.group-primary {
 .horizontal-tabs fieldset.horizontal-tabs-pane {
   padding: 0;
 }
+div.horizontal-tabs {
+  border: none;
+}
+
 .form-managed-file {
   input.form-file {
     @include border-radius($border-radius-base 0 0 $border-radius-base);
     border: 1px solid $border;
-    padding: 6px;
+    padding: 5px;
     margin: 0 0 10px 0;
   }
-  .input-group,
+  input.form-submit {
+    @extend %button-attached;
+  }
   .input-group-btn {
     display: inline-block;
-    height: 34px;
-    input {
-      @extend %button-attached;
-    }
+    vertical-align: top;
   }
   #edit-field-upload-und-0-remove-button {
     margin: 0 0 10px 10px;
@@ -120,12 +136,10 @@ fieldset.group-primary {
   }
 }
 
-.header .recline-pager .pagination input {
-  height: 20px;
-  font-size: .8em;
-}
-.input-prepend .add-on {
-  height: 34px;
+#field-tags-wrapper .path-form .add-on {
+  height: 46px;
+  line-height: 46px;
+  padding: 0 6px;
 }
 
 // OG.
@@ -145,6 +159,4 @@ fieldset.group-primary {
     padding: 0;
   }
 }
-div.horizontal-tabs {
-  border: none;
-}
+
