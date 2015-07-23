@@ -5,7 +5,7 @@ input[type="submit"]:hover, .btn-primary:hover, input[type="submit"]:focus, .btn
 
 .form-managed-file input.form-submit, .image-widget-data input.btn { -moz-border-radius: 0 4px 4px 0; -webkit-border-radius: 0; border-radius: 0 4px 4px 0; margin-left: -1px; padding: 5px 12px; line-height: 1.4em; vertical-align: top; }
 
-#dkan-sitewide-dataset-search-form label, #dkan-sitewide-dataset-search-form--2 label, #region-branding #block-dkan-sitewide-dkan-sitewide-search-bar label, #views-exposed-form-dataset-page label { position: absolute; top: 0; left: -9999px; }
+#dkan-sitewide-dataset-search-form label, #dkan-sitewide-dataset-search-form--2 label, #region-branding #block-dkan-sitewide-dkan-sitewide-search-bar label { position: absolute; top: 0; left: -9999px; }
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html { font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
@@ -3264,7 +3264,6 @@ section.col-sm-9 { padding-right: 0; }
 #featured, .panel-top { background-position: 50% 50%; background-size: cover !important; overflow: hidden; position: relative; z-index: 0; }
 #featured .tint, .panel-top .tint { position: absolute; height: 900px; width: 100%; z-index: -1; }
 #featured .pane-dkan-sitewide-demo-front-dkan-demo-front .pane-title, #featured .pane-views-popular-tags-block .pane-title, #featured .pane-dkan-sitewide-demo-front-dkan-add-front .pane-title, .panel-top .pane-dkan-sitewide-demo-front-dkan-demo-front .pane-title, .panel-top .pane-views-popular-tags-block .pane-title, .panel-top .pane-dkan-sitewide-demo-front-dkan-add-front .pane-title { display: none; }
-#featured .pane-title, .panel-top .pane-title { color: #ffffff; }
 #featured .container, .panel-top .container { padding: 30px 0; position: relative; z-index: 5; }
 #featured .pane-block, #featured .panel-pane, #featured .block-content, .panel-top .pane-block, .panel-top .panel-pane, .panel-top .block-content { color: #ffffff; line-height: 1.33em; margin: 0 15px; }
 #featured a, .panel-top a { color: #ffffff; }
@@ -3476,8 +3475,7 @@ ul.action-links { margin: 1em 15px; }
 .views-exposed-form { position: relative; }
 .views-exposed-form .views-exposed-widget { display: inline; padding: .5em .5em 0 0; }
 .views-exposed-form .views-exposed-widget .views-widget-filter-search_api_views_fulltext, .views-exposed-form .views-exposed-widget .views-widget-sort-by, .views-exposed-form .views-exposed-widget .views-widget-sort-order, .views-exposed-form .views-exposed-widget .views-submit-button, .views-exposed-form .views-exposed-widget .form-submit { display: inline; float: none; margin: 0; position: relative; }
-.views-exposed-form .views-exposed-widget.views-reset-button, .views-exposed-form .views-exposed-widget.views-submit-button { margin: 0; padding: .5em .5em 0 0; }
-.views-exposed-form label { display: none; }
+.views-exposed-form .views-exposed-widget.views-reset-button, .views-exposed-form .views-exposed-widget.views-submit-button { margin: 0; padding: 2.1em .5em 0 0; }
 .views-exposed-form .description { text-shadow: none; position: absolute; color: #999999; font-size: 12px; left: 7px; top: 10px; }
 
 #views-exposed-form-dkan-datasets-panel-pane-1 .views-exposed-form .description { display: none; }
@@ -3487,10 +3485,10 @@ ul.action-links { margin: 1em 15px; }
 
 input.use-ajax-submit { margin-right: 10px; }
 
-button.btn, .form-control { line-height: 1.4em; }
+button.btn, .form-control { line-height: 1.4em; height: 36px; }
 
-.form-text.form-control, select.form-control { min-height: 36px; }
-.form-text.form-control[multiple="multiple"], select.form-control[multiple="multiple"] { height: auto; }
+select.form-control { min-height: 36px; }
+select.form-control[multiple="multiple"] { height: auto; }
 
 .ctools-dropbutton .ctools-content a, .ctools-dropbutton input.btn, .ctools-dropbutton input[type="submit"] { color: #666; }
 .ctools-dropbutton .ctools-content a:hover, .ctools-dropbutton .ctools-content a:focus, .ctools-dropbutton .ctools-content a:active, .ctools-dropbutton input.btn:hover, .ctools-dropbutton input.btn:focus, .ctools-dropbutton input.btn:active, .ctools-dropbutton input[type="submit"]:hover, .ctools-dropbutton input[type="submit"]:focus, .ctools-dropbutton input[type="submit"]:active { border: none; color: #0A77BD; }
@@ -3535,8 +3533,6 @@ div.horizontal-tabs { border: none; }
 
 .path-form.panel-default { border-color: transparent; }
 .path-form.panel-default .panel-body { padding: 0; }
-
-#field-tags-wrapper .path-form .add-on { height: 46px; line-height: 46px; padding: 0 6px; }
 
 .list-group-item { background-color: transparent; border: none; color: #333333; padding: 0; }
 
@@ -3685,7 +3681,7 @@ div[class*="pane-facetapi"] a.facetapi-limit-link.open:before, .region-sidebar-f
 .search-form input.form-text, #dkan-sitewide-dataset-search-form input.form-text, #dkan-sitewide-dataset-search-form--2 input.form-text { padding-right: 30px; }
 .search-form button[type="submit"], .search-form input[type="submit"], #dkan-sitewide-dataset-search-form button[type="submit"], #dkan-sitewide-dataset-search-form input[type="submit"], #dkan-sitewide-dataset-search-form--2 button[type="submit"], #dkan-sitewide-dataset-search-form--2 input[type="submit"] { background: none !important; border: none; content: "\f002"; color: #555555; display: inline-block; font-size: 1.3em; font-family: "FontAwesome"; margin: 0; padding: 0; position: absolute; right: 10px; top: 3px; width: 25px; }
 
-#dkan-sitewide-dataset-search-form input[type="submit"], #dkan-sitewide-dataset-search-form--2 input[type="submit"] { top: 8px; }
+#dkan-sitewide-dataset-search-form input[type="submit"], #dkan-sitewide-dataset-search-form--2 input[type="submit"] { top: 3px; }
 
 #block-dkan-sitewide-dkan-sitewide-search-bar { clear: both; }
 @media all and (min-width: 768px) { #block-dkan-sitewide-dkan-sitewide-search-bar { position: absolute; top: 10px; right: 15px; width: 172px; }

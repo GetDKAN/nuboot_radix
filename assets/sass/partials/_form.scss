@@ -13,8 +13,9 @@ input.use-ajax-submit {
 button.btn,
 .form-control {
   line-height: 1.4em;
+  height: 36px;
 }
-.form-text.form-control,
+
 select.form-control {
   min-height: 36px;
   &[multiple="multiple"] {
@@ -134,12 +135,6 @@ div.horizontal-tabs {
   .panel-body {
     padding:0;
   }
-}
-
-#field-tags-wrapper .path-form .add-on {
-  height: 46px;
-  line-height: 46px;
-  padding: 0 6px;
 }
 
 // OG.
