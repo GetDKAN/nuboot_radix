@@ -41,14 +41,15 @@ function nuboot_radix_preprocess(&$variables, $hook) {
  * Implements template_preprocess_page().
  */
 function nuboot_radix_preprocess_page(&$variables) {
-  // Logo file.
+  // Logo file -- assumes default file is logo.svg.
   $logo = theme_get_setting('toggle_logo');
+  $theme = variable_get('theme_default');
   $default = theme_get_setting('default_logo');
   $logo_fid = theme_get_setting('svg_logo');
   $logo_file = !empty($logo_fid) ? file_load($logo_fid) : FALSE;
   if ($logo) {
     if ($default) {
-      $variables['logo'] = '/profiles/dkan/themes/contrib/nuboot_radix/logo.svg';
+      $variables['logo'] = '/' . drupal_get_path('theme', $theme ) . '/logo.svg';
     }
     elseif($logo_file) {
       $logo_uri = $logo_file->uri;
