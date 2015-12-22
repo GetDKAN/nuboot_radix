@@ -66,10 +66,14 @@
 		padding:0;
 	}
 	.pane-content {
-		@include popblock;
 		@include border-radius(0);
 		@include box-shadow(none);
 		margin-bottom: 3em;
+		padding:0px;
+		.pane-content {
+			margin: 0;
+			padding: 15px;
+		}
 	}
 	.pane-page-breadcrumb {
 		@include block-plain;
