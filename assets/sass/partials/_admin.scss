@@ -37,3 +37,45 @@
 input.form-submit.features-refresh-button {
 	background: $brand-primary;
 }
+
+#module-toggler-list {
+  h2 {
+    margin: 0;
+    font-size: 24px;
+  }
+  article.module-toggler-module {
+    width: 33%;
+    display: inline-block;
+    padding: 15px;
+    vertical-align: top;
+
+    figure {
+      width: 120px;
+      height: 120px;
+      background-color: #00b3ee;
+      float: left;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 16px;
+      margin-top: 0;
+    }
+
+    .btn-group {
+      float: left;
+      clear: left;
+    }
+  }
+  @media all and (max-width:1199px) {
+    article.module-toggler-module {
+      width: 50%;
+    }
+  }
+  @media all and (max-width:767px) {
+    article.module-toggler-module {
+      width: 100%;
+    }
+  }
+}
