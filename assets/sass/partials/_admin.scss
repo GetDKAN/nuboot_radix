@@ -1,4 +1,4 @@
-.admin-list {
+.admi--list {
   dt, dd{
     display:inline-block;
     float:none;
@@ -58,9 +58,26 @@ input.form-submit.features-refresh-button {
       margin-bottom: 10px;
     }
 
-    h3 {
-      font-size: 16px;
+    header {
+      display: inline-block;
+      margin-bottom: .5em;
+      h3 {
+        font-size: 16px;
+        margin: 0;
+      }
+    }
+
+    ul.module-metadata {
       margin-top: 0;
+      display: inline-block;
+      float: right;
+      padding-left: 0;
+      li {
+        list-style-type: none;
+        .label {
+          text-transform: uppercase;
+        }
+      }
     }
 
     .btn-group {
@@ -79,3 +96,4 @@ input.form-submit.features-refresh-button {
     }
   }
 }
+
