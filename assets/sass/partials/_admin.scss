@@ -1,4 +1,4 @@
-.admin-list {
+.admi--list {
   dt, dd{
     display:inline-block;
     float:none;
@@ -37,3 +37,63 @@
 input.form-submit.features-refresh-button {
 	background: $brand-primary;
 }
+
+#module-toggler-list {
+  h2 {
+    margin: 0;
+    font-size: 24px;
+  }
+  article.module-toggler-module {
+    width: 33%;
+    display: inline-block;
+    padding: 15px;
+    vertical-align: top;
+
+    figure {
+      width: 120px;
+      height: 120px;
+      background-color: #00b3ee;
+      float: left;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    header {
+      display: inline-block;
+      margin-bottom: .5em;
+      h3 {
+        font-size: 16px;
+        margin: 0;
+      }
+    }
+
+    ul.module-metadata {
+      margin-top: 0;
+      display: inline-block;
+      float: right;
+      padding-left: 0;
+      li {
+        list-style-type: none;
+        .label {
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .btn-group {
+      float: left;
+      clear: left;
+    }
+  }
+  @media all and (max-width:1199px) {
+    article.module-toggler-module {
+      width: 50%;
+    }
+  }
+  @media all and (max-width:767px) {
+    article.module-toggler-module {
+      width: 100%;
+    }
+  }
+}
+
