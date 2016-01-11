@@ -13,6 +13,16 @@ require_once dirname(__FILE__) . '/includes/panel.inc';
 require_once dirname(__FILE__) . '/includes/user.inc';
 require_once dirname(__FILE__) . '/includes/view.inc';
 
+/**
+ * Theme function icons
+ */
+function nuboot_radix_icon($variables) {
+  $attributes = (isset($variables['attributes']))? $variables['attributes'] : array();
+  $classes = (isset($variables['class']))? $variables['class'] : array();
+  $classes[] = 'icon-dkan-' .  $variables['type'];
+  $classes = implode(' ', $classes);
+  return '<span class="icon-dkan ' . $classes . '" '. drupal_attributes($attributes) .'></span>';
+}
 
 /**
  * Theme function for iframe link.
