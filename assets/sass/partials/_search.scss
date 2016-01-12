@@ -6,13 +6,13 @@
 }
 #dkan-sitewide-dataset-search-form,
 #dkan-sitewide-dataset-search-form--2 {
-  input[type="submit"] { 
+  input[type="submit"] {
     top: 3px;
   }
   label {
     @extend %screenreader;
   }
-} 
+}
 
 #region-branding #block-dkan-sitewide-dkan-sitewide-search-bar label {
   @extend %screenreader;
@@ -48,7 +48,7 @@
 .facet-icon {
   font-size: 1.7em;
   padding-right: .3em;
-  vertical-align: bottom;
+  vertical-align: middle;
 }
 
 .search-result-icon {

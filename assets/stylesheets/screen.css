@@ -3717,7 +3717,7 @@ div[class*="pane-facetapi"] a.facetapi-limit-link.open:before, .region-sidebar-f
 #block-dkan-sitewide-dkan-sitewide-search-bar .views-exposed-form .form-submit { margin: 22px 0 0; text-shadow: none; }
 #block-dkan-sitewide-dkan-sitewide-search-bar input[type="submit"] { top: 3px; }
 
-.facet-icon { font-size: 1.7em; padding-right: .3em; vertical-align: bottom; }
+.facet-icon { font-size: 1.7em; padding-right: .3em; vertical-align: middle; }
 
 .search-result-icon { font-size: 2.6em; margin-top: 0.7em; display: block; }
 
