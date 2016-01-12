@@ -45,6 +45,10 @@ function nuboot_radix_breadcrumb($variables) {
     $breadcrumb = array_filter($breadcrumb);
     $i = 1;
     foreach ($breadcrumb as $value) {
+      //Remove items with tag <none>
+      if (!strip_tags($value)) {
+        continue;
+      }
       if ($i == count($breadcrumb)) {
         $crumbs .= '<li class="active-trail">' . $value . '</li>';
       }
