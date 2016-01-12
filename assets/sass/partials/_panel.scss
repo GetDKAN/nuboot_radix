@@ -44,6 +44,7 @@
 	}
 	.pane-block {
 		@include popblock;
+		@include box-shadow(0 0 1px rgba(0, 0, 0, 0.3));
 	}
 	// facet blocks.
 	div[class*="pane-facetapi"] .pane-content,
@@ -65,9 +66,14 @@
 		padding:0;
 	}
 	.pane-content {
-		@include popblock;
-		padding: 20px;
+		@include border-radius(0);
+		@include box-shadow(none);
 		margin-bottom: 3em;
+		padding:0px;
+		.pane-content {
+			margin: 0;
+			padding: 15px;
+		}
 	}
 	.pane-page-breadcrumb {
 		@include block-plain;
