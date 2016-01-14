@@ -21,7 +21,9 @@ if(!empty($groups['node'])) {
    <div class="col-md-10 col-lg-11 col-xs-10 search-result-description">
        <h2 class="node-title"><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title ?></a></h2>
        <div class="group-membership"><?php print $group_list ?></div>
-       <div class="node-description"><?php print text_summary($wrapper->body->value->value(), 'plain_text', 250) ?></div>
+       <?php if(!empty($wrapper->body->value())): ?>
+           <div class="node-description"><?php print text_summary($wrapper->body->value->value(), 'plain_text', 250) ?></div>
+       <?php endif; ?>
        <?php print render($content['resources']); ?>
    </div>
 </article>
