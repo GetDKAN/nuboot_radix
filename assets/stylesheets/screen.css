@@ -3189,7 +3189,7 @@ form .description { margin: 2px 0; color: #555555; }
 fieldset legend { float: left; line-height: 1em; margin: 0; }
 fieldset .panel-body { clear: both; }
 
-html.js input.form-autocomplete { background: url('../images/throbber.gif?1452632568') no-repeat right 8px #fff !important; }
+html.js input.form-autocomplete { background: url('../images/throbber.gif?1446755567') no-repeat right 8px #fff !important; }
 html.js input.throbbing { background-position: right -122px !important; }
 html.js fieldset.collapsed { height: auto; border-left-width: 1px; border-right-width: 1px; }
 
@@ -3267,6 +3267,9 @@ section.col-sm-9 { padding-right: 0; }
 #featured .container, .panel-top .container { padding: 30px 0; position: relative; z-index: 5; }
 #featured .pane-block, #featured .panel-pane, #featured .block-content, .panel-top .pane-block, .panel-top .panel-pane, .panel-top .block-content { color: #ffffff; line-height: 1.33em; margin: 0 15px; }
 #featured a, .panel-top a { color: #ffffff; }
+
+.page-admin .panel-top { background-image: none !important; background-color: none; overflow: visible; }
+.page-admin .panel-top .tint { display: none; }
 
 #top-content { margin: 20px; }
 #top-content .block { padding: 10px; text-align: center; }
