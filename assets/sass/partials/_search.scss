@@ -6,9 +6,6 @@
 }
 #dkan-sitewide-dataset-search-form,
 #dkan-sitewide-dataset-search-form--2 {
-  input[type="submit"] { 
-    top: 3px;
-  }
   label {
     @extend %screenreader;
   }
@@ -38,9 +35,6 @@
   .views-exposed-form .form-submit {
     margin:22px 0 0;
     text-shadow: none;
-  }
-  input[type="submit"] {
-    top: 3px;
   }
 }
 
