@@ -91,4 +91,4 @@
     </div>
 <?php endif; ?>
 
-    </div><?php /* class vi
+    </div><?php /* class view */ ?>
