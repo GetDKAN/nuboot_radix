@@ -39,13 +39,13 @@
     </div>
 <?php endif; ?>
 
-<?php if ($exposed): ?>
+<?php if ($exposed && $rows): ?>
     <div class="view-filters">
         <?php print $exposed; ?>
     </div>
 <?php endif; ?>
 
-<?php if(count($rows)): ?>
+<?php if($rows): ?>
     <div class="dkan-group-search-count"><?php print count($rows) ?> datasets</div>
 <?php endif; ?>
 
