@@ -45,10 +45,6 @@
     </div>
 <?php endif; ?>
 
-<?php if($rows): ?>
-    <div class="dkan-group-search-count"><?php print count($view->result) ?> datasets</div>
-<?php endif; ?>
-
 <?php if ($attachment_before): ?>
     <div class="attachment attachment-before">
         <?php print $attachment_before; ?>
@@ -57,6 +53,7 @@
 
 <?php if ($rows): ?>
     <div class="view-content">
+        <div class="dkan-group-search-count"><?php print count($view->result) ?> datasets</div>
         <?php print $rows; ?>
     </div>
 <?php elseif ($empty): ?>
