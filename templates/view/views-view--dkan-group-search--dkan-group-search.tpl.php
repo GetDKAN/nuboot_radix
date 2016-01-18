@@ -39,14 +39,14 @@
     </div>
 <?php endif; ?>
 
-<?php if ($exposed && $rows): ?>
+<?php if ($exposed): ?>
     <div class="view-filters">
         <?php print $exposed; ?>
     </div>
 <?php endif; ?>
 
 <?php if($rows): ?>
-    <div class="dkan-group-search-count"><?php print count($rows) ?> datasets</div>
+    <div class="dkan-group-search-count"><?php print count($view->result) ?> datasets</div>
 <?php endif; ?>
 
 <?php if ($attachment_before): ?>
@@ -91,4 +91,4 @@
     </div>
 <?php endif; ?>
 
-    </div><?php /* class view */ ?>
+    </div><?php /* class vi
