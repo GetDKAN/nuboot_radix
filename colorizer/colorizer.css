@@ -245,3 +245,7 @@ ul.resource-list li .heading:hover {
   background-color: @bottom;
   border-color: @bottom;   
 }
+
+.icon-dkan {
+  color: @top;
+}
