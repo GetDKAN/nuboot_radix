@@ -44,6 +44,7 @@
 	}
 	.pane-block {
 		@include popblock;
+
 	}
 	// facet blocks.
 	div[class*="pane-facetapi"] .pane-content,
