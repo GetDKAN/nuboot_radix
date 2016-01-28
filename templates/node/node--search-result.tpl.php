@@ -15,7 +15,7 @@ if(!empty($groups['node'])) {
    <div class="col-md-2 col-lg-1 col-xs-2 icon-container">
         <?php
         $icon = array('type'=> $type, 'class' => array('search-result-icon'));
-        print nuboot_radix_icon($icon);
+        print theme_icon($icon);
         ?>
    </div>
    <div class="col-md-10 col-lg-11 col-xs-10 search-result-description">
