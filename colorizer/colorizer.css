@@ -4,8 +4,7 @@ body.overlay {
   color: @text;
 }
 #header,
-#main-wrapper,
-.panel {
+#main-wrapper {
   background-color: @bg;
 }
 .site-name,
@@ -141,7 +140,6 @@ input[type="submit"]:hover {
   color:#ffffff;
 }
 
-
 .btn-primary:focus,
 .btn-primary:active,
 .btn-primary.active,
@@ -153,6 +151,9 @@ input[type="submit"]:active {
   background: @linkactive;
   border-color: @linkactive;
   color: #ffffff;
+}
+input.form-submit.features-refresh-button {
+  background: @top;
 }
 
 .region-sidebar-first .block-facetapi ul li.leaf a:hover,
@@ -187,13 +188,7 @@ div.autocomplete-deluxe-multiple,
 .panel-full-width .panel-top {
   background:@bottom;
 }
-.radix-layouts-sidebar .pane-block .pane-content,
-.radix-layouts-content .pane-content,
-.view-front-page-group-grid .span6 span,
-.view-front-page-group-grid .col-lg-6 span,
-.horizontal-tabs ul.horizontal-tabs-list li.selected a {
-  background-color: @bg;
-}
+
 .radix-layouts-sidebar .pane-title {
   background: @toolbarborder;
   color: @title;
@@ -201,16 +196,11 @@ div.autocomplete-deluxe-multiple,
 
 .radix-layouts-sidebar div[class*="pane-facetapi"] .pane-title {
   background: @toolbarbtn;
-  color: #fff;
 }
 
 .radix-layouts-sidebar div[class*="pane-facetapi"] .facetapi-active {
   background: @toolbarbtn;
   color: @toolbarborder;
-}
-
-.radix-layouts-sidebar div[class*="pane-facetapi"] .pane-content {
-  background: #fff;
 }
 
 .horizontal-tabs ul.horizontal-tabs-list .selected strong {
