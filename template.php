@@ -252,3 +252,45 @@ function nuboot_radix_user_picture(&$variables) {
     }
   }
 }
+
+/**
+ * Theme function implementation.
+ *
+ * Implements main theme function from the facet_icons module. Depends on
+ * assets/stylesheets/dkan-dataset-search-icons.css
+ */
+function nuboot_radix_facet_icons($variables) {
+  // Icon styles variables.
+  $attributes = (isset($variables['attributes']))? $variables['attributes'] : array();
+  $classes = (isset($variables['class']))? $variables['class'] : array();
+  $classes[] = 'icon-dkan-' .  $variables['type'];
+  $classes = implode(' ', $classes);
+  return '<span class="icon-dkan ' . $classes . '" '. drupal_attributes($attributes) .'></span>';
+}
+/**
+ * Preprocess variables for node--search-result.tpl.php.
+ *
+ * Search results formatting for DKAN search page. Relies on facet_icons module.
+ */
+function nuboot_radix_preprocess_node(&$variables) {
+  if ($variables['view_mode'] == 'search_result') {
+    $variables['result_icon'] = array(
+      '#theme' => 'facet_icons',
+      '#type' => $variables['type'],
+      '#class' => array('search-result-icon'),
+    );
+    $wrapper = entity_metadata_wrapper('node', $variables['nid']);
+    $groups = og_get_entity_groups('node', $wrapper->value());
+    $variables['group_list'] = NULL;
+    $variables['body'] = empty($wrapper->body->value()) ? '' : $wrapper->body->value->value();
+    $variables['node_url'] = drupal_lookup_path('alias', "node/" . $wrapper->getIdentifier());
+    if(!empty($groups['node'])) {
+      $groups = array_map(function($gid){
+        $g_wrapper = entity_metadata_wrapper('node', $gid);
+        return $g_wrapper->label();
+      }, array_values($groups['node']));
+      $group_list = implode(',', $groups);
+      $variables['group_list'] = $group_list;
+    }
+  }
+}
