@@ -7,9 +7,34 @@ To start a new Nuboot Radix subtheme, run this command
 
 ```drush radix "MyThemeName" --kit=https://github.com/NuCivic/radix-kit-nuboot/archive/master.zip```
 
-**Important:** the Radix theme must be enabled for the command to work.
+The new subtheme will be placed in to the /sites/all/themes/ directory, it will contain a few  files to get you started.
 
-The new subtheme will be placed in to the /sites/all/themes/ directory, it will contain a few  files to get you started. 
+
+To upgrade an older NuBoot Radix subtheme to use the new Radix 7.x-3.3 process run this command in the root of your subtheme
+
+```drush radix-upgrade-33 my_theme```
+
+## Installation and Use
+
+Your theme will use [Gulp](http://gulpjs.com) to compile Sass. Gulp needs Node.
+
+#### Step 1
+Make sure you have Node and npm installed. 
+You can read a guide on how to install node here: https://docs.npmjs.com/getting-started/installing-node
+
+#### Step 2
+Install bower: `npm install -g bower`.
+
+#### Step 3
+Go to the root of your theme and run the following commands: `npm run setup`.
+
+#### Step 4
+Update `browserSyncProxy` in **config.json**.
+
+#### Step 5
+Edit the files under the **scss** and **js** directory, these will be compiled into the **assets** directory.
+Run the following command to compile Sass and watch for changes: `gulp`.
+
 
 
 ## Contributing
