@@ -8990,6 +8990,13 @@ div.horizontal-tabs {
 #body-add-more-wrapper .panel-body {
   padding: 0; }
 
+.node-resource-form .field-name-field-upload .form-type-managed-file {
+  display: table; }
+  .node-resource-form .field-name-field-upload .form-type-managed-file .file-widget {
+    display: table-footer-group; }
+  .node-resource-form .field-name-field-upload .form-type-managed-file .file-resup-wrapper {
+    display: table-header-group; }
+
 aside.col-sm-3 {
   padding-left: 0; }
 
@@ -10135,6 +10142,7 @@ dd {
   box-sizing: border-box;
   border-radius: 2px;
   background-clip: padding-box;
+  text-align: center;
   display: block;
   overflow: hidden;
   padding: 10px;
@@ -10144,12 +10152,13 @@ dd {
     display: block;
     margin: 0 auto; }
   .view-front-page-group-grid .row span h2 {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin: .75em 1em;
     text-align: center; }
   .view-front-page-group-grid .row span .content {
-    margin-left: 15px;
-    margin-right: 15px; }
+    margin-left: 1em;
+    margin-right: 1em; }
+  .view-front-page-group-grid .row span .btn-primary, .view-front-page-group-grid .row span body.maintenance-page .form-actions .btn:first-child, body.maintenance-page .form-actions .view-front-page-group-grid .row span .btn:first-child {
+    margin: 0 auto 1.5em; }
   .view-front-page-group-grid .row span .media-content {
     padding: 0 10px 10px 120px; }
   .view-front-page-group-grid .row span .media-image {
@@ -10175,17 +10184,19 @@ dd {
   margin-top: 10px;
   box-sizing: border-box;
   border-radius: 2px;
-  background-clip: padding-box; }
+  background-clip: padding-box;
+  text-align: center; }
   .view-dkan-groups .node-teaser img {
     display: block;
     margin: 0 auto; }
   .view-dkan-groups .node-teaser h2 {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin: .75em 1em;
     text-align: center; }
   .view-dkan-groups .node-teaser .content {
-    margin-left: 15px;
-    margin-right: 15px; }
+    margin-left: 1em;
+    margin-right: 1em; }
+  .view-dkan-groups .node-teaser .btn-primary, .view-dkan-groups .node-teaser body.maintenance-page .form-actions .btn:first-child, body.maintenance-page .form-actions .view-dkan-groups .node-teaser .btn:first-child {
+    margin: 0 auto 1.5em; }
 
 .view-groups-page .views-column {
   float: left;
