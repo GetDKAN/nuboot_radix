@@ -8,7 +8,6 @@
  * Implements theme_settings().
  */
 function nuboot_radix_form_system_theme_settings_alter(&$form, &$form_state) {
-  //drupal_set_message('<pre>' . print_r($form, TRUE) . '</pre>');
   // Ensure this include file is loaded when the form is rebuilt from the cache.
   $form_state['build_info']['files']['form'] = drupal_get_path('theme', 'nuboot_radix') . '/theme-settings.php';
 
@@ -34,6 +33,7 @@ function nuboot_radix_form_system_theme_settings_alter(&$form, &$form_state) {
     '#group' => 'general',
   );
   // Upload field.
+  $hero = theme_get_setting('hero_file', 'nuboot_radix');
   $form['hero']['hero_file'] = array(
     '#type' => 'managed_file',
     '#title' => t('Upload a new photo for the hero section background'),
@@ -44,6 +44,7 @@ function nuboot_radix_form_system_theme_settings_alter(&$form, &$form_state) {
     '#required' => FALSE,
     '#upload_location' => file_default_scheme() . '://theme/backgrounds/',
     '#default_value' => theme_get_setting('hero_file', 'nuboot_radix'),
+    '#default_value' => !empty($hero) ? $hero : NULL,
     '#upload_validators' => array(
       'file_validate_extensions' => array('gif png jpg jpeg'),
     ),
