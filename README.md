@@ -10,9 +10,8 @@ To start a new Nuboot Radix subtheme, run this command
 The new subtheme will be placed in to the /sites/all/themes/ directory, it will contain a few  files to get you started.
 
 
-To upgrade an older NuBoot Radix subtheme to use the new Radix 7.x-3.3 process run this command in the root of your subtheme
-
-```drush radix-upgrade-33 my_theme```
+To upgrade an older NuBoot Radix subtheme to use the new Radix 7.x-3.3 compiling process, it will need to be done manually, follow the steps outlined here:
+http://www.radixtheme.org/articles/update-rc4-to-3/ 
 
 ## Installation and Use
 
