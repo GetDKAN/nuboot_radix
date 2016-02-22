@@ -267,6 +267,7 @@ function nuboot_radix_facet_icons($variables) {
   $classes = implode(' ', $classes);
   return '<span class="icon-dkan ' . $classes . '" '. drupal_attributes($attributes) .'></span>';
 }
+
 /**
  * Preprocess variables for node--search-result.tpl.php.
  *
