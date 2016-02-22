@@ -28,7 +28,10 @@ select.form-control {
     height: auto;
   }
 }
-
+.form-control,
+div.autocomplete-deluxe-multiple {
+  padding: 0 12px;
+}
 .ctools-dropbutton {
   .ctools-content a,
   input.btn,
@@ -70,7 +73,6 @@ select.form-control {
 // Chosen.
 .form-control.chosen-processed {
   line-height: 34px;
-  min-height: 34px;
   height: auto;
   padding: 0;
   border: none;

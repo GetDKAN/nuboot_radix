@@ -4,7 +4,9 @@
 .region-content {
 	margin: 0 15px;
 }
-
+.panel-body {
+	overflow: visible;
+}
 .pane-content {
   .field-name-body {
     line-height: 2em;

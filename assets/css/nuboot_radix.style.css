@@ -8798,6 +8798,9 @@ body.maintenance-page .form-actions .btn:active:first-child {
   .radix-layouts-sidebar .pane-dkan-sitewide-dkan-sitewide-social.pane-block .pane-content li.last a:hover {
     border-radius: 0 0 3px 3px; }
 
+.pane-dkan-sitewide-dkan-sitewide-resource-add table {
+  margin-top: 0; }
+
 @media all and (max-width: 768px) {
   .node-dataset .resource-list li {
     padding-right: 0; }
@@ -8843,6 +8846,9 @@ body.maintenance-page .form-actions .btn:active:first-child {
 #edit-path-alias {
   height: 34px; }
 
+.node-dataset .resource-list li {
+  padding: 0 260px 0 45px; }
+
 input.use-ajax-submit {
   margin-right: 10px; }
 
@@ -8862,6 +8868,10 @@ select.form-control {
   min-height: 36px; }
   select.form-control[multiple="multiple"] {
     height: auto; }
+
+.form-control,
+div.autocomplete-deluxe-multiple {
+  padding: 0 12px; }
 
 .ctools-dropbutton .ctools-content a,
 .ctools-dropbutton input.btn,
@@ -8899,7 +8909,6 @@ select.form-control {
 
 .form-control.chosen-processed {
   line-height: 34px;
-  min-height: 34px;
   height: auto;
   padding: 0;
   border: none; }
@@ -9471,6 +9480,9 @@ ul.action-links {
 .region-content {
   margin: 0 15px; }
 
+.panel-body {
+  overflow: visible; }
+
 .pane-content .field-name-body {
   line-height: 2em; }
 
@@ -9883,11 +9895,17 @@ table.group_additional {
   @media all and (min-width: 768px) {
     .group_additional th:nth-of-type(1n),
     .group_additional td:nth-of-type(1n),
+    .group_additional th:nth-of-type(4n),
+    .group_additional td:nth-of-type(4n),
     .field-name-field-additional-info table th:nth-of-type(1n),
     .field-name-field-additional-info table td:nth-of-type(1n),
+    .field-name-field-additional-info table th:nth-of-type(4n),
+    .field-name-field-additional-info table td:nth-of-type(4n),
     .field-name-field-additional-info .table-responsive th:nth-of-type(1n),
-    .field-name-field-additional-info .table-responsive td:nth-of-type(1n) {
-      width: 30%;
+    .field-name-field-additional-info .table-responsive td:nth-of-type(1n),
+    .field-name-field-additional-info .table-responsive th:nth-of-type(4n),
+    .field-name-field-additional-info .table-responsive td:nth-of-type(4n) {
+      width: 5%;
       border-right: 1px solid #ddd; }
     .group_additional th:nth-of-type(2n),
     .group_additional td:nth-of-type(2n),
@@ -9895,36 +9913,46 @@ table.group_additional {
     .field-name-field-additional-info table td:nth-of-type(2n),
     .field-name-field-additional-info .table-responsive th:nth-of-type(2n),
     .field-name-field-additional-info .table-responsive td:nth-of-type(2n) {
-      width: 70%; } }
+      width: 90%; }
+      .group_additional th:nth-of-type(2n) .form-control,
+      .group_additional td:nth-of-type(2n) .form-control,
+      .field-name-field-additional-info table th:nth-of-type(2n) .form-control,
+      .field-name-field-additional-info table td:nth-of-type(2n) .form-control,
+      .field-name-field-additional-info .table-responsive th:nth-of-type(2n) .form-control,
+      .field-name-field-additional-info .table-responsive td:nth-of-type(2n) .form-control {
+        min-width: 40%; } }
 
-.node-form table.group_additional th,
-.node-form table.group_additional td,
-.node-form table.group_additional th:nth-of-type(1n),
-.node-form table.group_additional td:nth-of-type(1n),
-.node-form table.group_additional th:nth-of-type(2n),
-.node-form table.group_additional td:nth-of-type(2n),
-.node-form .field-name-field-additional-info table th,
-.node-form .field-name-field-additional-info table td,
-.node-form .field-name-field-additional-info table th:nth-of-type(1n),
-.node-form .field-name-field-additional-info table td:nth-of-type(1n),
-.node-form .field-name-field-additional-info table th:nth-of-type(2n),
-.node-form .field-name-field-additional-info table td:nth-of-type(2n) {
-  width: auto; }
-  .node-form table.group_additional th .form-control,
-  .node-form table.group_additional td .form-control,
-  .node-form table.group_additional th:nth-of-type(1n) .form-control,
-  .node-form table.group_additional td:nth-of-type(1n) .form-control,
-  .node-form table.group_additional th:nth-of-type(2n) .form-control,
-  .node-form table.group_additional td:nth-of-type(2n) .form-control,
-  .node-form .field-name-field-additional-info table th .form-control,
-  .node-form .field-name-field-additional-info table td .form-control,
-  .node-form .field-name-field-additional-info table th:nth-of-type(1n) .form-control,
-  .node-form .field-name-field-additional-info table td:nth-of-type(1n) .form-control,
-  .node-form .field-name-field-additional-info table th:nth-of-type(2n) .form-control,
-  .node-form .field-name-field-additional-info table td:nth-of-type(2n) .form-control {
-    display: inline-block;
-    width: auto;
-    vertical-align: top; }
+table.group_additional,
+.field-name-field-additional-info table {
+  margin-top: 0; }
+  table.group_additional th,
+  table.group_additional td,
+  table.group_additional th:nth-of-type(1n),
+  table.group_additional td:nth-of-type(1n),
+  table.group_additional th:nth-of-type(2n),
+  table.group_additional td:nth-of-type(2n),
+  .field-name-field-additional-info table th,
+  .field-name-field-additional-info table td,
+  .field-name-field-additional-info table th:nth-of-type(1n),
+  .field-name-field-additional-info table td:nth-of-type(1n),
+  .field-name-field-additional-info table th:nth-of-type(2n),
+  .field-name-field-additional-info table td:nth-of-type(2n) {
+    width: auto; }
+    table.group_additional th .form-control,
+    table.group_additional td .form-control,
+    table.group_additional th:nth-of-type(1n) .form-control,
+    table.group_additional td:nth-of-type(1n) .form-control,
+    table.group_additional th:nth-of-type(2n) .form-control,
+    table.group_additional td:nth-of-type(2n) .form-control,
+    .field-name-field-additional-info table th .form-control,
+    .field-name-field-additional-info table td .form-control,
+    .field-name-field-additional-info table th:nth-of-type(1n) .form-control,
+    .field-name-field-additional-info table td:nth-of-type(1n) .form-control,
+    .field-name-field-additional-info table th:nth-of-type(2n) .form-control,
+    .field-name-field-additional-info table td:nth-of-type(2n) .form-control {
+      display: inline-block;
+      width: auto;
+      vertical-align: top; }
 
 .table > thead:first-child > tr:first-child > th,
 table thead:first-child tr:first-child th {
