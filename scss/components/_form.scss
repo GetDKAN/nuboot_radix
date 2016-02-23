@@ -15,7 +15,6 @@ button.btn,
 .btn.btn-primary,
 .tabs--primary.nav-pills li a,
 .form-control {
-  height: 36px;
   line-height: 1.5em;
 }
 .btn, .btn-sm {
@@ -193,5 +192,11 @@ div.horizontal-tabs {
     .file-resup-wrapper {
       display: table-header-group;
     }
+  }
+}
+
+#search-api-admin-index-status-form {
+  input {
+    margin-bottom: 1em;
   }
 }

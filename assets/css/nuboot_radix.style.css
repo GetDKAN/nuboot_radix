@@ -8858,7 +8858,6 @@ button.btn,
 body.maintenance-page .form-actions .btn:first-child,
 .tabs--primary.nav-pills li a,
 .form-control {
-  height: 36px;
   line-height: 1.5em; }
 
 .btn, .btn-sm, .btn-group-sm > .btn {
@@ -9005,6 +9004,9 @@ div.horizontal-tabs {
     display: table-footer-group; }
   .node-resource-form .field-name-field-upload .form-type-managed-file .file-resup-wrapper {
     display: table-header-group; }
+
+#search-api-admin-index-status-form input {
+  margin-bottom: 1em; }
 
 aside.col-sm-3 {
   padding-left: 0; }
@@ -9308,6 +9310,13 @@ ul.action-links {
   .radix-layouts-sidebar ul.menu > li > ul.menu li a {
     padding: 10px 15px 10px 30px; }
 
+.pane-dkan-sitewide-profile-page-dkan-user-summary .menu.nav li.leaf,
+.pane-dkan-sitewide-profile-page-dkan-user-summary .menu.nav li.expanded {
+  font-weight: bold; }
+  .pane-dkan-sitewide-profile-page-dkan-user-summary .menu.nav li.leaf .menu.nav li,
+  .pane-dkan-sitewide-profile-page-dkan-user-summary .menu.nav li.expanded .menu.nav li {
+    font-weight: normal; }
+
 .field-name-field-tags .field-label,
 .field-name-field-topic .field-label,
 .field-name-field-preview-thumbail .field-label {
@@ -9561,6 +9570,9 @@ ul.action-links {
 .page-manager-wrapper .panel-region .panel-pane-collapsible .pane-content {
   padding: 10px 15px; }
 
+#panelizer-edit-content-form input {
+  margin-right: 1em; }
+
 @media (max-width: 768px) {
   .panel-full-width .panel-bottom .panel-col-first,
   .panel-full-width .panel-bottom .panel-col-second,
@@ -9648,7 +9660,7 @@ ul.action-links {
     position: absolute;
     right: 10px;
     width: 25px;
-    top: 0; }
+    top: 4px; }
 
 #block-dkan-sitewide-dkan-sitewide-search-bar {
   clear: both; }
@@ -9685,7 +9697,7 @@ ul.action-links {
     position: absolute;
     right: 10px;
     width: 25px;
-    top: 0; }
+    top: 4px; }
   #block-dkan-sitewide-dkan-sitewide-search-bar .views-exposed-form .form-submit {
     margin: 22px 0 0;
     text-shadow: none; }

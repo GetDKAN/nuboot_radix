@@ -269,3 +269,13 @@ ul.action-links {
     }
   }
 }
+
+.pane-dkan-sitewide-profile-page-dkan-user-summary .menu.nav {
+  li.leaf,
+  li.expanded {
+    font-weight: bold;
+    .menu.nav li {
+      font-weight: normal;
+    }
+  }
+}
