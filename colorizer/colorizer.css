@@ -134,6 +134,7 @@ input.btn {
 .btn-primary:hover,
 .links .btn:hover,
 input.btn:hover,
+input.btn-default:active:hover,
 input[type="submit"]:hover {
   background:@bottom;
   border:1px solid @bottom;
@@ -145,6 +146,8 @@ input[type="submit"]:hover {
 .btn-primary.active,
 .links .btn:focus,
 .links .btn.focus,
+input.btn:active,
+input.btn:active:focus,
 input.btn:focus,
 input[type="submit"]:focus,
 input[type="submit"]:active {

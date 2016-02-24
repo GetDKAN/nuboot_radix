@@ -57,4 +57,7 @@
 .node-dataset .resource-list li {
   padding: 0 260px 0 45px;
 }
-    
+// Move this to dkan_sitewide_profile_page.css.
+p.dkan-profile-page-user-name {
+  display: inline-block;
+}   

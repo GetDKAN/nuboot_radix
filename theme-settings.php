@@ -43,7 +43,6 @@ function nuboot_radix_form_system_theme_settings_alter(&$form, &$form_state) {
       <br>Recommended pixel size: 1920 x 400<br>Allowed extensions: .png .jpg .jpeg</p>'),
     '#required' => FALSE,
     '#upload_location' => file_default_scheme() . '://theme/backgrounds/',
-    '#default_value' => theme_get_setting('hero_file', 'nuboot_radix'),
     '#default_value' => !empty($hero) ? $hero : NULL,
     '#upload_validators' => array(
       'file_validate_extensions' => array('gif png jpg jpeg'),

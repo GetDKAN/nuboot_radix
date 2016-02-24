@@ -8849,6 +8849,9 @@ body.maintenance-page .form-actions .btn:active:first-child {
 .node-dataset .resource-list li {
   padding: 0 260px 0 45px; }
 
+p.dkan-profile-page-user-name {
+  display: inline-block; }
+
 input.use-ajax-submit {
   margin-right: 10px; }
 
@@ -9560,6 +9563,14 @@ ul.action-links {
 .radix-layouts-content .pane-page-breadcrumb .breadcrumb {
   display: block;
   margin: 0 0 15px 0; }
+
+@media (max-width: 991px) {
+  .node-type-group .radix-layouts-content .pane-title {
+    margin-top: 2em; } }
+
+.node-type-group .radix-layouts-content .pane-content {
+  padding: 20px 0 0;
+  margin-bottom: 0; }
 
 .page-manager-wrapper .panel-region .pane-title {
   background-image: none;

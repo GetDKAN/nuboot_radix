@@ -81,6 +81,17 @@
 		}
 	}
 }
+.node-type-group .radix-layouts-content {
+	@media (max-width: 991px) {
+		.pane-title {
+			margin-top: 2em;
+		}
+	}
+	.pane-content {
+		padding: 20px 0 0;
+		margin-bottom: 0;
+	}
+}
 
 .page-manager-wrapper .panel-region {
 	.pane-title {
