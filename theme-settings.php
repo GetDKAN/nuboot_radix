@@ -71,6 +71,9 @@ function nuboot_radix_form_system_theme_settings_alter(&$form, &$form_state) {
       'file_validate_extensions' => array('svg'),
     ),
   );
+  
+  $form['#submit'][] = 'nuboot_radix_hero_system_theme_settings_form_submit';
+
   // Return the additional form widgets.
   return $form;
 }
@@ -96,5 +99,23 @@ function _background_option_setting($element, &$form, &$form_state) {
     else {
       form_error($element, t('Must be a valid hexadecimal CSS color value.'));
     }
+  }
+}
+
+/**
+ * Submit function for theme settings form.
+ */
+function nuboot_radix_hero_system_theme_settings_form_submit(&$form, &$form_state) {
+  if ($form_state['values']['hero_file']) {
+    $fid = $form_state['values']['hero_file'];
+    $file = file_load($fid);
+    $file->status = FILE_STATUS_PERMANENT;
+    file_save($file);
+  }
+  if ($form_state['values']['svg_logo']) {
+    $fid = $form_state['values']['svg_logo'];
+    $file = file_load($fid);
+    $file->status = FILE_STATUS_PERMANENT;
+    file_save($file);
   }
 }
