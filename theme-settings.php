@@ -108,18 +108,18 @@ function _background_option_setting($element, &$form, &$form_state) {
 function nuboot_radix_hero_system_theme_settings_form_submit(&$form, &$form_state) {
   if ($form_state['values']['hero_file']) {
     $fid = $form_state['values']['hero_file'];
-    _nuboo_radix_file_set_permanent($fid);
+    _nuboot_radix_file_set_permanent($fid);
   }
   if ($form_state['values']['svg_logo']) {
     $fid = $form_state['values']['svg_logo'];
-    _nuboo_radix_file_set_permanent($fid);
+    _nuboot_radix_file_set_permanent($fid);
   }
 }
 
 /**
  *  Sets file to FILE_STATUS_PERMANENT so it won't be erased by cron.
  */
-function _nuboo_radix_file_set_permanent($fid) {
+function _nuboot_radix_file_set_permanent($fid) {
   $file = file_load($fid);
   $file->status = FILE_STATUS_PERMANENT;
   file_save($file);
