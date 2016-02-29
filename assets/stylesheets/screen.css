@@ -3189,7 +3189,7 @@ form .description { margin: 2px 0; color: #555555; }
 fieldset legend { float: left; line-height: 1em; margin: 0; }
 fieldset .panel-body { clear: both; }
 
-html.js input.form-autocomplete { background: url('../images/throbber.gif?1446755567') no-repeat right 8px #fff !important; }
+html.js input.form-autocomplete { background: url('../images/throbber.gif?1452554001') no-repeat right 8px #fff !important; }
 html.js input.throbbing { background-position: right -122px !important; }
 html.js fieldset.collapsed { height: auto; border-left-width: 1px; border-right-width: 1px; }
 
@@ -3550,6 +3550,10 @@ div.horizontal-tabs { border: none; }
 .filter-wrapper { padding: 10px; }
 
 #body-add-more-wrapper .panel-body { padding: 0; }
+
+.node-resource-form .field-name-field-upload .form-type-managed-file { display: table; }
+.node-resource-form .field-name-field-upload .form-type-managed-file .file-widget { display: table-footer-group; }
+.node-resource-form .field-name-field-upload .form-type-managed-file .file-resup-wrapper { display: table-header-group; }
 
 .field-name-field-tags .field-item { display: inline-block; }
 
