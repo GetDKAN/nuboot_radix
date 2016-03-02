@@ -8634,10 +8634,11 @@ body.maintenance-page .form-actions .btn:active:first-child {
   .radix-layouts-sidebar .block-facetapi ul li.leaf a {
     color: #333333;
     display: block;
-    padding: 4px 20px 4px 10px;
+    padding: 6px 20px 6px 10px;
     position: relative;
     line-height: 22px; }
-    .radix-layouts-sidebar div[class*="pane-facetapi"] ul li.leaf a:hover,
+    .radix-layouts-sidebar div[class*="pane-facetapi"] ul li.leaf a:focus, .radix-layouts-sidebar div[class*="pane-facetapi"] ul li.leaf a:hover,
+    .radix-layouts-sidebar .block-facetapi ul li.leaf a:focus,
     .radix-layouts-sidebar .block-facetapi ul li.leaf a:hover {
       color: #1a1a1a;
       background: rgba(0, 0, 0, 0.03);
@@ -8648,7 +8649,7 @@ body.maintenance-page .form-actions .btn:active:first-child {
       color: #5cb85c;
       font-family: "FontAwesome";
       position: absolute;
-      top: 4px;
+      top: 8px;
       right: 6px; }
     .radix-layouts-sidebar div[class*="pane-facetapi"] ul li.leaf a img,
     .radix-layouts-sidebar .block-facetapi ul li.leaf a img {
@@ -8665,7 +8666,7 @@ body.maintenance-page .form-actions .btn:active:first-child {
     content: '';
     position: absolute;
     border-style: solid;
-    border-width: 15px 0 15px 15px;
+    border-width: 17px 0 17px 15px;
     border-color: transparent #ccc;
     display: block;
     width: 0;
@@ -8677,7 +8678,7 @@ body.maintenance-page .form-actions .btn:active:first-child {
     content: "\f00d";
     font-family: "FontAwesome";
     position: absolute;
-    top: 3px;
+    top: 6px;
     right: 6px; }
   .radix-layouts-sidebar div[class*="pane-facetapi"] ul li.leaf a.facetapi-active:hover:after,
   .radix-layouts-sidebar .block-facetapi ul li.leaf a.facetapi-active:hover:after {
@@ -9313,13 +9314,6 @@ ul.action-links {
   .radix-layouts-sidebar ul.menu > li > ul.menu li a {
     padding: 10px 15px 10px 30px; }
 
-.pane-dkan-sitewide-profile-page-dkan-user-summary .menu.nav li.leaf,
-.pane-dkan-sitewide-profile-page-dkan-user-summary .menu.nav li.expanded {
-  font-weight: bold; }
-  .pane-dkan-sitewide-profile-page-dkan-user-summary .menu.nav li.leaf .menu.nav li,
-  .pane-dkan-sitewide-profile-page-dkan-user-summary .menu.nav li.expanded .menu.nav li {
-    font-weight: normal; }
-
 .field-name-field-tags .field-label,
 .field-name-field-topic .field-label,
 .field-name-field-preview-thumbail .field-label {
@@ -9746,6 +9740,7 @@ ul.action-links {
 
 body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
   line-height: 1.35em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
