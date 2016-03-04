@@ -9012,6 +9012,9 @@ div.horizontal-tabs {
 #search-api-admin-index-status-form input {
   margin-bottom: 1em; }
 
+#font-icon-select-font-library-form input[type=submit] {
+  margin-right: 1em; }
+
 aside.col-sm-3 {
   padding-left: 0; }
 
@@ -9631,6 +9634,9 @@ ul.action-links {
     .panel-full-width .panel-bottom .panel-col-second .inside,
     .panel-full-width .panel-bottom .panel-col-third .inside {
       margin: 20px 15px; } }
+
+#views-exposed-form-dkan-datasets-panel-pane-1 .views-exposed-form .views-widget-filter-search_api_views_fulltext {
+  max-width: 400px; }
 
 .search-form,
 #dkan-sitewide-dataset-search-form,
