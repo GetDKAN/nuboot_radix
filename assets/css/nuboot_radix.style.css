@@ -9012,7 +9012,7 @@ div.horizontal-tabs {
 #search-api-admin-index-status-form input {
   margin-bottom: 1em; }
 
-#font-icon-select-font-library-form input[type=submit] {
+.page-admin form input[type=submit] {
   margin-right: 1em; }
 
 aside.col-sm-3 {
