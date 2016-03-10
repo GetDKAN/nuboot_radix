@@ -197,7 +197,8 @@ div.autocomplete-deluxe-multiple,
   color: @title;
 }
 
-.radix-layouts-sidebar div[class*="pane-facetapi"] .pane-title {
+.radix-layouts-sidebar div[class*="pane-facetapi"] .pane-title,
+.radix-layouts-sidebar .pane-title.ctools-collapsible-handle {
   background: @toolbarbtn;
 }
 
