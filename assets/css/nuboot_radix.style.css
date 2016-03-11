@@ -8673,9 +8673,9 @@ body.maintenance-page .form-actions .btn:active:first-child {
     .radix-layouts-sidebar .ctools-collapsible-container ul li.leaf a img,
     .radix-layouts-sidebar div[class*="pane-facetapi"] ul li.leaf a img,
     .radix-layouts-sidebar .block-facetapi ul li.leaf a img {
-      height: 1.5em;
-      width: 1.5;
-      margin-right: 0.5em; }
+      height: 25px;
+      width: 25px;
+      margin: 0 16px 0 0; }
   .radix-layouts-sidebar .ctools-collapsible-container ul li.leaf a.facetapi-active,
   .radix-layouts-sidebar div[class*="pane-facetapi"] ul li.leaf a.facetapi-active,
   .radix-layouts-sidebar .block-facetapi ul li.leaf a.facetapi-active {
