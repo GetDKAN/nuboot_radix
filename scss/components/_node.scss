@@ -3,6 +3,11 @@
 // --------------------------------------------------
 
 // Dataset field labels.
+.node-type-dataset h4 {
+  @include h4;
+}
+.field-name-field-related-content,
+.field-name-field-topic,
 .field-name-field-tags,
 .field-name-field-topic,
 .field-name-field-preview-thumbail {
@@ -168,4 +173,7 @@
 }
 .field-name-field-additional-info {
   margin-top: 2em;
+}
+.field-name-field-related-content .field-item {
+  @include item-list;
 }

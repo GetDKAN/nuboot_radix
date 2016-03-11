@@ -130,3 +130,23 @@
     margin: 0 auto 1.5em;
   }
 }
+
+@mixin item-list {
+  a {
+    border: 1px solid $border;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    &:hover {
+      color: #ffffff;
+      text-decoration: none;
+      background: $brand-primary;
+    }
+  }
+  &:first-of-type a {
+    @include border-radius(4px 4px 0px 0px);
+  }
+  &:last-of-type a {
+    @include border-radius(0px 0px 4px 4px);
+  }
+}

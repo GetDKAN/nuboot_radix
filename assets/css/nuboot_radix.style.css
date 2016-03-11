@@ -9111,8 +9111,16 @@ section.col-sm-9 {
   #top-content .row {
     overflow: hidden; }
 
+@media all and (max-width: 767px) {
+  .branding.container {
+    padding-left: 15px;
+    padding-right: 15px; } }
+
 .navigation-wrapper .container {
-  overflow: visible; }
+  overflow: visible;
+  padding: 0; }
+  .navigation-wrapper .container .navbar-collapse {
+    overflow: visible; }
 
 .container > .navbar-header, .container > .navbar-collapse {
   margin-left: 10px;
@@ -9175,6 +9183,12 @@ section.col-sm-9 {
         .navbar-default .user-menu .dropdown-menu li a {
           display: block;
           color: #ffffff; }
+  .navbar-default .navbar-toggle {
+    border-color: #ffffff; }
+    .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+      background-color: rgba(0, 0, 0, 0.25); }
+    .navbar-default .navbar-toggle .icon-bar {
+      background-color: #ffffff; }
   @media all and (min-width: 768px) {
     .navbar-default .user-menu {
       float: right; }
@@ -9344,6 +9358,14 @@ ul.action-links {
   .radix-layouts-sidebar ul.menu > li > ul.menu li a {
     padding: 10px 15px 10px 30px; }
 
+.node-type-dataset h4 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 2em;
+  margin-bottom: .5em; }
+
+.field-name-field-related-content .field-label,
+.field-name-field-topic .field-label,
 .field-name-field-tags .field-label,
 .field-name-field-topic .field-label,
 .field-name-field-preview-thumbail .field-label {
@@ -9485,6 +9507,22 @@ ul.action-links {
 .field-name-field-additional-info {
   margin-top: 2em; }
 
+.field-name-field-related-content .field-item a {
+  border: 1px solid #ddd;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px; }
+  .field-name-field-related-content .field-item a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background: #0A77BD; }
+
+.field-name-field-related-content .field-item:first-of-type a {
+  border-radius: 4px 4px 0px 0px; }
+
+.field-name-field-related-content .field-item:last-of-type a {
+  border-radius: 0px 0px 4px 4px; }
+
 .page-header {
   border: none; }
 
@@ -9607,6 +9645,9 @@ ul.action-links {
 
 #panelizer-edit-content-form input {
   margin-right: 1em; }
+
+.panel-full-width .panel-top {
+  margin-bottom: 15px; }
 
 @media (max-width: 768px) {
   .panel-full-width .panel-bottom .panel-col-first,
@@ -9744,6 +9785,9 @@ ul.action-links {
   font-size: 2.6em;
   margin-top: 0.7em;
   display: block; }
+
+.node-search-result .resource-list li {
+  display: inline-block; }
 
 .node-search-result .icon-container {
   text-align: center; }
@@ -10125,13 +10169,13 @@ dd {
 .field-name-field-tags .field-item {
   display: inline-block; }
 
-.field-type-taxonomy-term-reference label {
+.field-name-field-tags label {
   display: block; }
 
-.field-type-taxonomy-term-reference input.form-control {
+.field-name-field-tags input.form-control {
   height: auto; }
 
-.field-type-taxonomy-term-reference .field-item a {
+.field-name-field-tags .field-item a {
   display: inline-block;
   padding: 2px 10px 2px;
   font-size: 12px;
@@ -10144,7 +10188,7 @@ dd {
   border: 1px solid #ddd;
   border-left: 0;
   z-index: 2; }
-  .field-type-taxonomy-term-reference .field-item a:after {
+  .field-name-field-tags .field-item a:after {
     content: "";
     width: 20px;
     height: 20px;
@@ -10159,7 +10203,7 @@ dd {
     border: 1px solid #ddd;
     border-top: none;
     border-right: none; }
-  .field-type-taxonomy-term-reference .field-item a:before {
+  .field-name-field-tags .field-item a:before {
     content: "";
     width: 2px;
     height: 2px;
@@ -10169,8 +10213,8 @@ dd {
     left: -5px;
     border-radius: 0; }
 
-.field-type-taxonomy-term-reference .field-item a:hover,
-.field-type-taxonomy-term-reference .field-item a:after:hover {
+.field-name-field-tags .field-item a:hover,
+.field-name-field-tags .field-item a:after:hover {
   color: #000;
   text-decoration: none; }
 

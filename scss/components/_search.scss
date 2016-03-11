@@ -56,8 +56,13 @@
   display: block;
 }
 
-.node-search-result .icon-container {
-  text-align: center;
+.node-search-result {
+  .resource-list li {
+    display: inline-block;
+  }
+  .icon-container {
+    text-align: center;
+  }
 }
 
 .search-result-description {
