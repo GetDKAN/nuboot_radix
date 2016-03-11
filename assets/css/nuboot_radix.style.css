@@ -10214,7 +10214,8 @@ dd {
     border-radius: 0; }
 
 .field-name-field-tags .field-item a:hover,
-.field-name-field-tags .field-item a:after:hover {
+.field-name-field-tags .field-item a:hover:after {
+  background: #fff;
   color: #000;
   text-decoration: none; }
 

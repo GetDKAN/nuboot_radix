@@ -53,7 +53,8 @@
       }
     }
     a:hover,
-    a:after:hover {
+    a:hover:after {
+      background: #fff;
       color:#000;
       text-decoration:none;
     }
