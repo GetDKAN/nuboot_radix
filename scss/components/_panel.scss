@@ -72,7 +72,10 @@
 	}
 	.pane-content {
 		padding: 20px 0;
-		margin-bottom: 3em;
+		margin-bottom: 1em;
+	}
+	.pane-node-field-topic .pane-content {
+		padding: 0
 	}
 	.pane-page-breadcrumb {
 		.breadcrumb {

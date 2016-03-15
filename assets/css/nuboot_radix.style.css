@@ -9358,17 +9358,23 @@ ul.action-links {
   .radix-layouts-sidebar ul.menu > li > ul.menu li a {
     padding: 10px 15px 10px 30px; }
 
+.node-type-dataset .field-name-field-tags {
+  margin: 1em 0; }
+
+.node-type-dataset .field-name-field-topic {
+  margin: -20px 0 15px 0; }
+
 .node-type-dataset h4 {
   font-size: 20px;
   font-weight: bold;
   margin-top: 2em;
   margin-bottom: .5em; }
 
-.field-name-field-related-content .field-label,
-.field-name-field-topic .field-label,
-.field-name-field-tags .field-label,
-.field-name-field-topic .field-label,
-.field-name-field-preview-thumbail .field-label {
+.node-type-dataset .field-name-field-related-content .field-label,
+.node-type-dataset .field-name-field-topic .field-label,
+.node-type-dataset .field-name-field-tags .field-label,
+.node-type-dataset .field-name-field-topic .field-label,
+.node-type-dataset .field-name-field-preview-thumbail .field-label {
   font-size: 20px;
   font-weight: bold;
   margin-top: 2em;
@@ -9540,7 +9546,7 @@ ul.action-links {
   margin-bottom: 20px; }
   .page-groups article.node-teaser h2.node-title {
     font-size: 1.25em;
-    margin: .75em 0; }
+    margin: .75em; }
   .page-groups article.node-teaser .view-og-count {
     margin: 8px 0; }
 
@@ -9620,7 +9626,10 @@ ul.action-links {
 
 .radix-layouts-content .pane-content {
   padding: 20px 0;
-  margin-bottom: 3em; }
+  margin-bottom: 1em; }
+
+.radix-layouts-content .pane-node-field-topic .pane-content {
+  padding: 0; }
 
 .radix-layouts-content .pane-page-breadcrumb .breadcrumb {
   display: block;
