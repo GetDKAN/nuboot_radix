@@ -47,3 +47,10 @@ NuCivic/dkan#issue_id
 ``` 
 
 to any commit message or comment replacing **issue_id** with the corresponding issue id.
+
+
+
+## Credits for icon assets used in this project
+
+*Streamline Icons* http://www.streamlineicons.com/index.html
+*Flaticons* by Freepik http://www.flaticon.com/packs/file-formats-icons

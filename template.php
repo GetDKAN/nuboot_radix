@@ -278,7 +278,7 @@ function nuboot_radix_preprocess_node(&$variables) {
     $variables['result_icon'] = array(
       '#theme' => 'facet_icons',
       '#type' => $variables['type'],
-      '#class' => array('search-result-icon'),
+      '#class' => array('facet-icon'),
     );
     $wrapper = entity_metadata_wrapper('node', $variables['nid']);
     $groups = og_get_entity_groups('node', $wrapper->value());
