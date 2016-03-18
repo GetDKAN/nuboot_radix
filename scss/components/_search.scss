@@ -43,19 +43,13 @@
   }
 }
 
-
+.facetapi-terms span[class*=font-icon-select]:before,
 .icon-dkan.facet-icon:before {
   font-family: 'DKAN-Topics';
   font-size: 1.7em;
   padding-right: .3em;
   vertical-align: middle;
 }
-
-// .search-result-icon {
-//   font-size: 2.6em;
-//   margin-top: 0.7em;
-//   display: block;
-// }
 
 .node-search-result {
   .icon-dkan.facet-icon:before {

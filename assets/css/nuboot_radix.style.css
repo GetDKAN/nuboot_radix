@@ -9790,6 +9790,7 @@ ul.action-links {
     margin: 22px 0 0;
     text-shadow: none; }
 
+.facetapi-terms span[class*=font-icon-select]:before,
 .icon-dkan.facet-icon:before {
   font-family: 'DKAN-Topics';
   font-size: 1.7em;

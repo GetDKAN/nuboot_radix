@@ -247,6 +247,7 @@ ul.resource-list li .heading:hover {
   border-color: @bottom;
 }
 
+.facetapi-terms a span,
 .icon-dkan {
   color: @top;
 }

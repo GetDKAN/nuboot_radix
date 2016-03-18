@@ -6,11 +6,11 @@
  */
 @font-face {
     font-family: 'DKAN-Topics';
-    src:    url('../fonts/DKAN-Topics.eot?fxuk5q');
-    src:    url('../fonts/DKAN-Topics.eot?fxuk5q#iefix') format('embedded-opentype'),
-        url('../fonts/DKAN-Topics.ttf?fxuk5q') format('truetype'),
-        url('../fonts/DKAN-Topics.woff?fxuk5q') format('woff'),
-        url('../fonts/DKAN-Topics.svg?fxuk5q#DKAN-Topics') format('svg');
+    src:    url('../fonts/dkan-topics.eot?fxuk5q');
+    src:    url('../fonts/dkan-topics.eot?fxuk5q#iefix') format('embedded-opentype'),
+        url('../fonts/dkan-topics.ttf?fxuk5q') format('truetype'),
+        url('../fonts/dkan-topics.woff?fxuk5q') format('woff'),
+        url('../fonts/dkan-topics.svg?fxuk5q#dkan-topics') format('svg');
     font-weight: normal;
     font-style: normal;
 }
