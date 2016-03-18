@@ -10235,6 +10235,11 @@ dd {
   color: #000;
   text-decoration: none; }
 
+.field-name-field-topic .field-item {
+  margin: 0 1.5em .5em 0; }
+  .field-name-field-topic .field-item .field-item {
+    margin: 0; }
+
 .front .view-popular-tags {
   margin-top: 20px; }
 
