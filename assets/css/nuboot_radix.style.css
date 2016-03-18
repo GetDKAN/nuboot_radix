@@ -8505,6 +8505,11 @@ body.maintenance-page .form-actions .btn:active:first-child {
 .media-thumbnails-select {
   padding: 0 0 40px; }
 
+.page-admin-structure .main.container,
+.page-admin-structure .container-fluid,
+.page-admin-structure .row {
+  overflow: visible; }
+
 .pane-dkan-sitewide-dkan-sitewide-other-access a.btn,
 #block-dkan-sitewide-dkan-sitewide-other-access a.btn {
   background-image: auto;

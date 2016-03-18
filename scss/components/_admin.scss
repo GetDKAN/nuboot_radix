@@ -41,3 +41,12 @@
 .media-thumbnails-select {
 	padding: 0 0 40px;
 }
+
+// Allow overflow on page manager screens.
+.page-admin-structure {
+	.main.container,
+	.container-fluid,
+	.row {
+		overflow: visible;
+	}
+}
