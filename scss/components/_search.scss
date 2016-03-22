@@ -55,21 +55,50 @@
   text-align: center;
 }
 
-.search-result-description {
+.search-result {
   ul.resource-list {
     margin-top: 0.9em;
+
+    li {
+      display: inline-block;
+      a,
+      &:first-child {
+        margin-left: 0px;
+      }
+    }
   }
-  .resource-list li:first-child {
-    margin-left: 0px;
+  .dataset-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      font-size: 0.9em;
+      font-style: italic;
+      color: #999;
+      margin-bottom: 0.5em;
+      &:before {
+        content: "\e905";
+        font-family: dkan-dataset-search;
+        font-style: normal;
+        margin-right: .5em;
+      }
+    }
   }
-  .resource-list li a{
-    margin-left: 0px;
-  }
-  .group-membership{
+  .group-membership {
     font-size: 0.9em;
     font-style: italic;
     color: #999;
     margin-bottom: 0.5em;
+    &:before {
+      content: "\e902";
+      font-family: dkan-dataset-search;
+      font-style: normal;
+      margin-right: .5em;
+    }
+  }
+  &.search-result-group .group-membership {
+    display: none;
   }
   p {
     margin-bottom: 0px;
