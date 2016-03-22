@@ -9857,22 +9857,44 @@ ul.action-links {
 .node-search-result .icon-container {
   text-align: center; }
 
-.search-result-description ul.resource-list {
+.search-result ul.resource-list {
   margin-top: 0.9em; }
+  .search-result ul.resource-list li {
+    display: inline-block; }
+    .search-result ul.resource-list li a, .search-result ul.resource-list li:first-child {
+      margin-left: 0px; }
 
-.search-result-description .resource-list li:first-child {
-  margin-left: 0px; }
+.search-result .dataset-list {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .search-result .dataset-list li {
+    list-style: none;
+    font-size: 0.9em;
+    font-style: italic;
+    color: #999;
+    margin-bottom: 0.5em; }
+    .search-result .dataset-list li:before {
+      content: "\e97e";
+      font-family: 'DKAN-Topics';
+      font-style: normal;
+      margin-right: .5em; }
 
-.search-result-description .resource-list li a {
-  margin-left: 0px; }
-
-.search-result-description .group-membership {
+.search-result .group-membership {
   font-size: 0.9em;
   font-style: italic;
   color: #999;
   margin-bottom: 0.5em; }
+  .search-result .group-membership:before {
+    content: "\e981";
+    font-family: 'DKAN-Topics';
+    font-style: normal;
+    margin-right: .5em; }
 
-.search-result-description p {
+.search-result.search-result-group .group-membership {
+  display: none; }
+
+.search-result p {
   margin-bottom: 0px; }
 
 body {
