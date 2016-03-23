@@ -8722,7 +8722,7 @@ body.maintenance-page .form-actions .btn:active:first-child {
       color: #5cb85c;
       font-family: "FontAwesome";
       position: absolute;
-      top: 8px;
+      top: 6px;
       right: 6px; }
     .radix-layouts-sidebar .ctools-collapsible-container ul li.leaf a img,
     .radix-layouts-sidebar div[class*="pane-facetapi"] ul li.leaf a img,
@@ -8782,6 +8782,49 @@ body.maintenance-page .form-actions .btn:active:first-child {
 .radix-layouts-sidebar div[class*="pane-facetapi"] a.facetapi-limit-link.open:before,
 .radix-layouts-sidebar .block-facetapi a.facetapi-limit-link.open:before {
   content: "\f151"; }
+
+.radix-layouts-sidebar div[class*="pane-facetapi"]:first-of-type h2.pane-title {
+  border-radius: 5px 5px 0 0; }
+
+.radix-layouts-sidebar div[class*="pane-facetapi"]:last-of-type .item-list {
+  border-radius: 0 0 5px 5px; }
+
+.facetapi-facet-changed li.expanded a.facetapi-active {
+  background: #ccc;
+  border-bottom: 1px dotted #eee;
+  color: #333;
+  line-height: 22px;
+  padding: 6px 20px 6px 10px; }
+  .facetapi-facet-changed li.expanded a.facetapi-active:hover {
+    background: #ccc;
+    color: #333;
+    text-decoration: none; }
+    .facetapi-facet-changed li.expanded a.facetapi-active:hover:after {
+      color: red; }
+  .facetapi-facet-changed li.expanded a.facetapi-active:before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 17px 0 17px 15px;
+    border-color: transparent #ccc;
+    display: block;
+    width: 0;
+    z-index: 1;
+    right: -15px;
+    top: 0; }
+  .facetapi-facet-changed li.expanded a.facetapi-active:after {
+    content: "\f00d";
+    font-family: "FontAwesome";
+    position: absolute;
+    top: 6px;
+    right: 6px; }
+
+.facetapi-facet-changed li.expanded ul.expanded li.leaf a,
+.facetapi-facet-changed li.expanded li.expanded a {
+  padding: 6px 20px 6px 20px; }
+
+.facetapi-facet-changed li.expanded .item-list {
+  border: none; }
 
 .facetapi-facet-field-license a {
   white-space: pre;
