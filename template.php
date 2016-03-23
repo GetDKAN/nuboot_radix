@@ -257,7 +257,7 @@ function nuboot_radix_user_picture(&$variables) {
  * Theme function implementation.
  *
  * Implements main theme function from the facet_icons module. Depends on
- * assets/stylesheets/dkan-dataset-search-icons.css
+ * assets/stylesheets/dkan-topics.css
  */
 function nuboot_radix_facet_icons($variables) {
   // Icon styles variables.
@@ -278,7 +278,7 @@ function nuboot_radix_preprocess_node(&$variables) {
     $variables['result_icon'] = array(
       '#theme' => 'facet_icons',
       '#type' => $variables['type'],
-      '#class' => array('search-result-icon'),
+      '#class' => array('facet-icon'),
     );
     $wrapper = entity_metadata_wrapper('node', $variables['nid']);
 

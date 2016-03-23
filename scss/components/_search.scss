@@ -1,4 +1,9 @@
-.search-form,
+#views-exposed-form-dkan-datasets-panel-pane-1 {
+  .views-exposed-form .views-widget-filter-search_api_views_fulltext {
+    max-width: 400px;
+  }
+}
+
 #dkan-sitewide-dataset-search-form,
 #dkan-sitewide-dataset-search-form--2 {
   @include searchbox;
@@ -38,21 +43,26 @@
   }
 }
 
-
-.facet-icon {
+.facetapi-terms span[class*=font-icon-select]:before,
+.icon-dkan.facet-icon:before {
+  font-family: 'DKAN-Topics';
   font-size: 1.7em;
   padding-right: .3em;
   vertical-align: middle;
 }
 
-.search-result-icon {
-  font-size: 2.6em;
-  margin-top: 0.7em;
-  display: block;
-}
-
-.node-search-result .icon-container {
-  text-align: center;
+.node-search-result {
+  .icon-dkan.facet-icon:before {
+    font-size: 2.6em;
+    margin-top: 0.7em;
+    display: block;
+  }
+  .resource-list li {
+    display: inline-block;
+  }
+  .icon-container {
+    text-align: center;
+  }
 }
 
 .search-result {
@@ -78,8 +88,8 @@
       color: #999;
       margin-bottom: 0.5em;
       &:before {
-        content: "\e905";
-        font-family: dkan-dataset-search;
+        content: "\e97e";
+        font-family: 'DKAN-Topics';
         font-style: normal;
         margin-right: .5em;
       }
@@ -91,8 +101,8 @@
     color: #999;
     margin-bottom: 0.5em;
     &:before {
-      content: "\e902";
-      font-family: dkan-dataset-search;
+      content: "\e981";
+      font-family: 'DKAN-Topics';
       font-style: normal;
       margin-right: .5em;
     }

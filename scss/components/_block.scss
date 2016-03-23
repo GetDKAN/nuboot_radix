@@ -55,6 +55,7 @@
 
 // FACET Blocks
 .radix-layouts-sidebar {
+  .ctools-collapsible-container,
   div[class*="pane-facetapi"],
   .block-facetapi {
     &.pane-block,
@@ -80,7 +81,7 @@
       font-size: 16px;
       font-weight: normal;
       position: relative;
-      padding: 9px 16px;
+      padding: 9px 21px;
       border-bottom-color: rgba(255, 255, 255, 0.1);
       &:after {
         font-family: "fontawesome";
@@ -147,9 +148,9 @@
           right:6px;
         }
         img {
-          height: 1.5em;
-          width: 1.5;
-          margin-right: 0.5em;
+          height: 25px;
+          width: 25px;
+          margin: 0 16px 0 0;
         }
       }
       a.facetapi-active {

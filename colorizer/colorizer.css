@@ -197,7 +197,8 @@ div.autocomplete-deluxe-multiple,
   color: @title;
 }
 
-.radix-layouts-sidebar div[class*="pane-facetapi"] .pane-title {
+.radix-layouts-sidebar div[class*="pane-facetapi"] .pane-title,
+.radix-layouts-sidebar .pane-title.ctools-collapsible-handle {
   background: @toolbarbtn;
 }
 
@@ -246,6 +247,7 @@ ul.resource-list li .heading:hover {
   border-color: @bottom;
 }
 
+.facetapi-terms a span,
 .icon-dkan {
   color: @top;
 }
