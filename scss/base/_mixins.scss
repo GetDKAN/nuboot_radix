@@ -150,3 +150,16 @@
     @include border-radius(0px 0px 4px 4px);
   }
 }
+
+@mixin pointer {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 17px 0 17px 15px;
+  border-color: transparent $smoke;
+  display: block;
+  width: 0;
+  z-index: 1;
+  right: -15px;
+  top: 0;
+}

@@ -1,5 +1,6 @@
 7.x-1.x
 --------------------------
+- Make date facets consistant with other facets styling
 - Upgraded to use Radix 3.3. See README.md for updated use instructions
 
 7.x-1.11 2016-02-02
