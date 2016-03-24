@@ -76,17 +76,20 @@ function nuboot_radix_form_element($variables) {
     elseif ($element['#type'] == "checkbox") {
       $attributes['class'][] = 'checkbox';
       $is_checkbox = TRUE;
-      $name = strtr($element['#name'], array(
-        ' ' => '-',
-        '_' => '-',
-        '[' => '',
-        ']' => '',
-        'und' => '',
-      ));
-      // Target font-icon-select fields.
-      if($name == 'field-topic-icon') {
-        $is_topic = TRUE;
+      if(!empty($element['#name'])) {
+        $name = strtr($element['#name'], array(
+          ' ' => '-',
+          '_' => '-',
+          '[' => '',
+          ']' => '',
+          'und' => '',
+        ));
+        // Target font-icon-select fields.
+        if($name == 'field-topic-icon') {
+          $is_topic = TRUE;
+        }
       }
+      
     }
     else {
       $attributes['class'][] = 'form-group';

@@ -8642,7 +8642,7 @@ body.maintenance-page .form-actions .btn:active:first-child {
   font-size: 16px;
   font-weight: normal;
   position: relative;
-  padding: 9px 21px;
+  padding: 9px 21px 9px 12px;
   border-bottom-color: rgba(255, 255, 255, 0.1); }
   .radix-layouts-sidebar .ctools-collapsible-container h2.pane-title:after,
   .radix-layouts-sidebar div[class*="pane-facetapi"] h2.pane-title:after,
@@ -8783,11 +8783,8 @@ body.maintenance-page .form-actions .btn:active:first-child {
 .radix-layouts-sidebar .block-facetapi a.facetapi-limit-link.open:before {
   content: "\f151"; }
 
-.radix-layouts-sidebar div[class*="pane-facetapi"]:first-of-type h2.pane-title {
-  border-radius: 5px 5px 0 0; }
-
-.radix-layouts-sidebar div[class*="pane-facetapi"]:last-of-type .item-list {
-  border-radius: 0 0 5px 5px; }
+.radix-layouts-sidebar .ctools-collapsible-container .ctools-toggle {
+  width: 12px; }
 
 .facetapi-facet-changed li.expanded a.facetapi-active {
   background: #ccc;
@@ -8925,6 +8922,15 @@ body.maintenance-page .form-actions .btn:active:first-child {
 
 .pane-dkan-sitewide-dkan-sitewide-resource-add table {
   margin-top: 0; }
+
+.radix-layouts-sidebar .panel-panel-inner .panels-ipe-portlet-wrapper:first-child h2.pane-title,
+.radix-layouts-sidebar .panel-panel-inner > div[class*="pane-facetapi"]:first-child h2.pane-title {
+  border-radius: 5px 5px 0 0; }
+
+.radix-layouts-sidebar .panel-panel-inner .panels-ipe-portlet-wrapper:last-child .ctools-collapsed h2.pane-title, .radix-layouts-sidebar .panel-panel-inner .panels-ipe-portlet-wrapper:last-child.ctools-collapsed h2.pane-title,
+.radix-layouts-sidebar .panel-panel-inner > div[class*="pane-facetapi"]:last-child .ctools-collapsed h2.pane-title,
+.radix-layouts-sidebar .panel-panel-inner > div[class*="pane-facetapi"]:last-child.ctools-collapsed h2.pane-title {
+  border-radius: 0 0 5px 5px; }
 
 @media all and (max-width: 768px) {
   .node-dataset .resource-list li {
@@ -9885,12 +9891,12 @@ ul.action-links {
 .facetapi-terms span[class*=font-icon-select]:before,
 .icon-dkan.facet-icon:before {
   font-family: 'DKAN-Topics';
-  font-size: 1.7em;
+  font-size: 24px;
   padding-right: .3em;
   vertical-align: middle; }
 
 .node-search-result .icon-dkan.facet-icon:before {
-  font-size: 2.6em;
+  font-size: 42px;
   margin-top: 0.7em;
   display: block; }
 
@@ -10303,6 +10309,10 @@ dd {
   margin: 0 1.5em .5em 0; }
   .field-name-field-topic .field-item .field-item {
     margin: 0; }
+
+.field-name-field-topic-icon span::before,
+.view-dkan-datasets .field-name-field-topic-icon span::before {
+  font-size: 18px; }
 
 .front .view-popular-tags {
   margin-top: 20px; }

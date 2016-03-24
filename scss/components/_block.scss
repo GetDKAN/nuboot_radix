@@ -81,7 +81,7 @@
       font-size: 16px;
       font-weight: normal;
       position: relative;
-      padding: 9px 21px;
+      padding: 9px 21px 9px 12px;
       border-bottom-color: rgba(255, 255, 255, 0.1);
       &:after {
         font-family: "fontawesome";
@@ -189,11 +189,14 @@
     }
   }
   // Corners.
-  div[class*="pane-facetapi"]:first-of-type h2.pane-title {
-    @include border-radius(5px 5px 0 0);
-  }
-  div[class*="pane-facetapi"]:last-of-type .item-list {
-    @include border-radius(0 0 5px 5px);
+  // div[class*="pane-facetapi"]:first-of-type h2.pane-title {
+  //   @include border-radius(5px 5px 0 0);
+  // }
+  // div[class*="pane-facetapi"]:last-of-type .item-list {
+  //   @include border-radius(0 0 5px 5px);
+  // }
+  .ctools-collapsible-container .ctools-toggle {
+    width: 12px;
   }
 }
 // Date facets.
@@ -336,5 +339,25 @@
 .pane-dkan-sitewide-dkan-sitewide-resource-add {
   table {
     margin-top: 0;
+  }
+}
+
+.radix-layouts-sidebar {
+  .panel-panel-inner {
+    .panels-ipe-portlet-wrapper:first-child,
+    > div[class*="pane-facetapi"]:first-child {
+      h2.pane-title {
+        @include border-radius(5px 5px 0 0);
+      }
+    }
+    .panels-ipe-portlet-wrapper:last-child,
+    > div[class*="pane-facetapi"]:last-child {
+      .ctools-collapsed,
+      &.ctools-collapsed {
+        h2.pane-title {
+          @include border-radius(0 0 5px 5px);
+        }
+      }
+    }
   }
 }
