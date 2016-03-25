@@ -14,7 +14,7 @@ body.modal-open {
 .branding {
   position: relative;
   .logo {
-    margin: 20px 0;
+    margin: 20px  20px 15px 0;
   }
 }
 @media (max-width: 768px) {
@@ -24,8 +24,7 @@ body.modal-open {
 }
 
 .site-name {
-  display: inline-block;
-  float: left;
+  display: block;
   font-size: 2em;
   line-height: 1.15em;
   margin: 50px 20px 0;
@@ -34,9 +33,11 @@ body.modal-open {
     float: none;
     margin: 10px 20px 5px 0;
   }
+  &:hover {
+    text-decoration: none;
+  }
 }
 .site-slogan {
-  clear: left;
   margin-bottom: 20px;
 }
 h1 {

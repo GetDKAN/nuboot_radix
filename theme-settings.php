@@ -65,7 +65,7 @@ function nuboot_radix_form_system_theme_settings_alter(&$form, &$form_state) {
     '#title' => t('Upload an .svg version of your logo'),
     '#description' => t('<p>Be sure to also add a .png version of your logo with the <em>Upload logo image</em> field above for older browsers that do not support .svg files. Both files should have the same name, only the suffix should change (i.e. logo.png & logo.svg).</p>'),
     '#required' => FALSE,
-    '#upload_location' => file_default_scheme() . '://',
+    '#upload_location' => file_default_scheme() . '://theme/',
     '#default_value' => theme_get_setting('svg_logo', 'nuboot_radix'),
     '#upload_validators' => array(
       'file_validate_extensions' => array('svg'),
@@ -123,4 +123,6 @@ function _nuboot_radix_file_set_permanent($fid) {
   $file = file_load($fid);
   $file->status = FILE_STATUS_PERMANENT;
   file_save($file);
+  // https://www.drupal.org/node/979158. 
+  file_usage_add($file, 'theme', 'file', $fid);
 }
