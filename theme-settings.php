@@ -125,4 +125,14 @@ function _nuboot_radix_file_set_permanent($fid) {
   file_save($file);
   // https://www.drupal.org/node/979158. 
   file_usage_add($file, 'theme', 'file', $fid);
+  nuboot_file_insert($file);
+}
+
+/**
+ * Implements hook_file_insert().
+ */
+function nuboot_file_insert($file) {
+  $file->filename = str_replace(' ', '-', $file->filename);
+  $hash = 'public://' . $file->filename;
+   file_move($file, $hash, 'FILE_EXIST_REPLACE');
 }
