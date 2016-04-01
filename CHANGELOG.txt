@@ -1,5 +1,6 @@
 7.x-1.x
 --------------------------
+- Add managed file support to logo and hero image, plus support for spaces in filenames, which were broken.
 - Make date facets consistant with other facets styling
 - Upgraded to use Radix 3.3. See README.md for updated use instructions
 

@@ -9959,15 +9959,14 @@ body.modal-open {
 .branding {
   position: relative; }
   .branding .logo {
-    margin: 20px 0; }
+    margin: 20px  20px 15px 0; }
 
 @media (max-width: 768px) {
   .logo img {
     max-width: 100%; } }
 
 .site-name {
-  display: inline-block;
-  float: left;
+  display: block;
   font-size: 2em;
   line-height: 1.15em;
   margin: 50px 20px 0; }
@@ -9976,9 +9975,10 @@ body.modal-open {
       clear: left;
       float: none;
       margin: 10px 20px 5px 0; } }
+  .site-name:hover {
+    text-decoration: none; }
 
 .site-slogan {
-  clear: left;
   margin-bottom: 20px; }
 
 h1 {
