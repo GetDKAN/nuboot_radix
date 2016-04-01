@@ -42,7 +42,7 @@ function nuboot_radix_form_system_theme_settings_alter(&$form, &$form_state) {
       photo here and it will replace the default background image.</p><p>Max. file size: 2 MB
       <br>Recommended pixel size: 1920 x 400<br>Allowed extensions: .png .jpg .jpeg</p>'),
     '#required' => FALSE,
-    '#upload_location' => file_default_scheme() . '://theme/backgrounds/',
+    '#upload_location' => file_default_scheme() . '://theme/',
     '#default_value' => !empty($hero) ? $hero : NULL,
     '#upload_validators' => array(
       'file_validate_extensions' => array('gif png jpg jpeg'),
@@ -123,7 +123,6 @@ function _nuboot_radix_file_set_permanent($fid) {
   $file = file_load($fid);
   $file->status = FILE_STATUS_PERMANENT;
   file_save($file);
-  // https://www.drupal.org/node/979158. 
   file_usage_add($file, 'theme', 'file', $fid);
   nuboot_file_insert($file);
 }
@@ -133,6 +132,7 @@ function _nuboot_radix_file_set_permanent($fid) {
  */
 function nuboot_file_insert($file) {
   $file->filename = str_replace(' ', '-', $file->filename);
-  $hash = 'public://' . $file->filename;
-   file_move($file, $hash, 'FILE_EXIST_REPLACE');
+  $file->filename = preg_replace("/[^\-.a-zA-Z0-9]/", "", $file->filename);
+  $name = 'public://' . $file->filename;
+  file_move($file, $name, 'FILE_EXIST_REPLACE');
 }
