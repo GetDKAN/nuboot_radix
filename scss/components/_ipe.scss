@@ -37,52 +37,54 @@
   font-size: 1em;
   line-height: 1em;
   a {
-  	@include border-radius(4px);
-  	border: 1px solid #eee;
-  	display: block;
-  	padding: 8px 10px;
-  	margin: 3px 0;
-  	&:focus,
-  	&:hover {
-  		background: #eee;
-  		text-decoration: none;
-  	}
-  	&:before {
-  		font-family: "FontAwesome";
-  		margin-right: 5px;
-  	}
+    @include border-radius(4px);
+    border: 1px solid #eee;
+    display: block;
+    padding: 8px 10px;
+    margin: 3px 0;
+    &:focus,
+    &:hover {
+      background: #eee;
+      border-color: #ccc;
+      text-decoration: none;
+    }
+    &:before {
+      font-family: "FontAwesome";
+      font-size: 1.25em;
+      margin-right: 5px;
+    }
   }
 }
 
 .add-content-link-basic-file-icon-text-button:before {
-	content:"\f0f6";
+  content:"\f0f6";
 }
 .add-content-link-custom-icon-text-button:before {
-	content:"\f044";
+  content:"\f044";
 }
 .add-content-link-node-icon-text-button:before {
-	content:"\f24d";
+  content:"\f24d";
 }
 .add-content-link-image-icon-text-button:before {
-	content:"\f1c5";
+  content:"\f1c5";
 }
 .add-content-link-map-icon-text-button:before {
-	content:"\f278";
+  content:"\f278";
 }
 .add-content-link-quick-links-icon-text-button:before {
-	content:"\f0c1";
+  content:"\f0c1";
 }
 .add-content-link-table-icon-text-button:before {
-	content:"\f0ce";
+  content:"\f0ce";
 }
 .add-content-link-text-icon-text-button:before {
-	content:"\f036";
+  content:"\f036";
 }
 .add-content-link-video-icon-text-button:before {
-	content: "\f008";
+  content: "\f008";
 }
 .add-content-link-visualization-embed-icon-text-button:before {
-	content:"\f200";
+  content:"\f200";
 }
 .add-content-link-spotlight-icon-text-button:before {
   content:"\f16a";
