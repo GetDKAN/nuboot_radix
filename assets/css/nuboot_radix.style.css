@@ -8507,7 +8507,8 @@ body.maintenance-page .form-actions .btn:active:first-child {
 
 .page-admin-structure .main.container,
 .page-admin-structure .container-fluid,
-.page-admin-structure .row {
+.page-admin-structure .row,
+.page-admin-structure .panels-dnd .container {
   overflow: visible; }
 
 .page-admin .alert {
