@@ -184,3 +184,108 @@
 .field-name-field-related-content .field-item {
   @include item-list;
 }
+
+// Blog Teaser.
+.view-blog .node-teaser {
+  margin-bottom: 2em;
+  .blog-image {
+    background-position: 50% 50%;
+    background-size: cover !important;
+    overflow: hidden;
+    position: relative;
+    height: 200px;
+    margin-bottom: 1em;
+    @media all and (max-width:767px) {
+      margin: 0 15px 1em;
+    }
+  }
+  h2 {
+    font-size: 1.5em;
+    margin-top: 0;
+  }
+  .submitted {
+    @include submitted;
+    font-size: .8em;
+  }
+  .fa-clock-o {
+    padding-left: 1em;
+  }
+  .links {
+    margin: -.5em 0 2.5em 0;
+  }
+  .links li {
+    display: inline;
+    a {
+      @extend %button;
+      font-size: .8em;
+      padding: 1px 8px;
+    }
+  }
+  @media all and (max-width:767px) {
+    .blog-image {
+      margin: 0 15px 1em;
+    }
+    &.no-image {
+      padding-left: 15px;
+      padding-right: 15px;
+    } 
+  }
+}
+// Blog Page.
+.node-blog {
+  .submitted {
+    @include submitted;
+  }
+  .blog-image {
+    margin: 1em 0;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .fa-clock-o {
+    padding-left: 1em;
+  }
+  .field-name-field-tags {
+    margin: 1em 0;
+  }
+  .links li {
+    display: inline;
+    a {
+      @extend %button;
+      display: inline-block;
+      margin: 1em 0;
+    }
+  }
+  .field-name-field-tags .field-label {
+    display: none;
+  }
+  @media all and (min-width:768px) {
+    h1 {
+      width: 47%;
+      float: left;
+    }
+    .submitted {
+      width: 47%;
+      float: left;
+      clear: left;
+    }
+    .blog-image {
+      width: 47%;
+      float: right;
+      margin: 0 0 1em 1.5em;
+    }
+    .field-type-text-with-summary {
+      clear: left;
+    }
+    .no-image {
+      h1,
+      .submitted {
+        width: 100%;
+      }
+      .field-type-text-with-summary {
+        clear: both;
+      }
+    }
+  }
+}
