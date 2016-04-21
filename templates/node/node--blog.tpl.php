@@ -3,33 +3,38 @@
 /**
  * @file
  * Blog node.
+ * This template assumes that IF there is an image field on the blog node, the machine name is 'field_content_image'.
+ * This assumption is based on a client site using the debut_blog module, if you plan to implement the drupal core blog
+ * or a custom blog content type, simply create an image field with that machine name, or update the hook_preprocess_node function
+ * in the includes/node.inc file to use the image field of your choice.
  */
 hide($content['comments']);
 hide($content['links']);
 hide($content['field_content_image']);
 global $base_url;
-$user = user_load($node->uid);
-$img = !empty($content['field_content_image']['#items'][0]['uri']) ? $content['field_content_image']['#items'][0]['uri'] : NULL;
-$img_path = file_create_url($img);
-$name = !empty($user->name) ? $user->name : 'anonymous';
 ?>
 
 <?php if ($teaser || !$page): ?>
-  <?php if($img) : ?>
+
+  <?php if($blog_img) : ?>
     <article class="node-teaser">
-      <div class="blog-image col-md-3" <?php print ' style="background-image:url(' . $img_path . ');"' ?>></div>
+      <div class="blog-image col-sm-3">
+        <a href="<?php print $blog_url ?>">
+          <div style="background-image: url('<?php print $blog_img_path ?>')"></div>
+        </a>
+      </div>
   <?php else : ?>
     <article class="node-teaser no-image">
   <?php endif; ?>
 
-      <div class="content <?php if($img) { print 'col-md-9'; } ?>"<?php print $content_attributes ?>>
+      <div class="content <?php if($blog_img) { print 'col-sm-9'; } ?>"<?php print $content_attributes ?>>
         <?php print render($title_prefix); ?>
-          <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
+          <h2 class="blog-title"><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
         <?php print render($title_suffix); ?>
         <?php if ($display_submitted): ?>
           <div class="submitted">
-            <?php if(!empty($user->name)) { print ' Posted by <a href="' . $base_url . '/users/' . $name . '">' . $name . '</a> on ' . date('F j, Y', $node->created) . '  <i class="fa fa-clock-o" aria-hidden="true"></i> '  . date('g:ia', $node->created); }
-              else { print ' Posted by ' . $name . ' on ' . date('F j, Y', $node->created) . '  <i class="fa fa-clock-o" aria-hidden="true"></i> '  . date('g:ia', $node->created); }
+            <?php if(!empty($blog_author)) { print ' Posted by <a href="' . $base_url . '/users/' . $blog_author . '">' . $blog_author . '</a> on ' . date('F j, Y', $node->created) . '  <i class="fa fa-clock-o" aria-hidden="true"></i> '  . date('g:ia', $node->created); }
+              else { print ' Posted on ' . date('F j, Y', $node->created) . '  <i class="fa fa-clock-o" aria-hidden="true"></i> '  . date('g:ia', $node->created); }
             ?>
           </div>
         <?php endif; ?>
@@ -46,20 +51,22 @@ $name = !empty($user->name) ? $user->name : 'anonymous';
 <?php else: ?>
 
   <article class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-    <?php if($img) : ?>
+    <?php if($blog_img) : ?>
       <div class="content"<?php print $content_attributes; ?>>
         <div class="blog-image">
-          <?php print theme('image_style', array('path' => $content['field_content_image']['#items'][0]['uri'], 'style_name' => 'story_image_teaser')); ?>
+          <?php print theme('image_style', array('path' => $blog_img, 'style_name' => 'story_image_teaser')); ?>
         </div>
     <?php else : ?>
       <div class="content no-image"<?php print $content_attributes; ?>>
     <?php endif; ?>
       <?php print render($title_prefix); ?>
-        <h1<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h1>
+        <h1 <?php print $title_attributes; ?>><?php print $title; ?></h1>
       <?php print render($title_suffix); ?>
       <?php if ($display_submitted): ?>
         <div class="submitted">
-          <?php print ' Posted by <a href="users/' . $user->name . '">' . $user->name . '</a> on ' . date('F j, Y', $node->created) . '  <i class="fa fa-clock-o" aria-hidden="true"></i> '  . date('g:ia', $node->created); ?>
+          <?php if(!empty($blog_author)) { print ' Posted by <a href="' . $base_url . '/users/' . $blog_author . '">' . $blog_author . '</a> on ' . date('F j, Y', $node->created) . '  <i class="fa fa-clock-o" aria-hidden="true"></i> '  . date('g:ia', $node->created); }
+            else { print ' Posted on ' . date('F j, Y', $node->created) . '  <i class="fa fa-clock-o" aria-hidden="true"></i> '  . date('g:ia', $node->created); }
+          ?>
         </div>
       <?php endif; ?>
 

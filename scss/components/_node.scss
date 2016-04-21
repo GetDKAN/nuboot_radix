@@ -186,20 +186,19 @@
 }
 
 // Blog Teaser.
-.view-blog .node-teaser {
+.node-teaser {
   margin-bottom: 2em;
-  .blog-image {
-    background-position: 50% 50%;
+  .blog-image div {
     background-size: cover !important;
     overflow: hidden;
     position: relative;
     height: 200px;
     margin-bottom: 1em;
     @media all and (max-width:767px) {
-      margin: 0 15px 1em;
+      background-position: 50% 50%;
     }
   }
-  h2 {
+  h2.blog-title {
     font-size: 1.5em;
     margin-top: 0;
   }
@@ -221,15 +220,10 @@
       padding: 1px 8px;
     }
   }
-  @media all and (max-width:767px) {
-    .blog-image {
-      margin: 0 15px 1em;
-    }
-    &.no-image {
-      padding-left: 15px;
-      padding-right: 15px;
-    } 
-  }
+  &.no-image {
+    padding-left: 15px;
+    padding-right: 15px;
+  } 
 }
 // Blog Page.
 .node-blog {

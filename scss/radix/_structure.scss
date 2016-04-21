@@ -53,7 +53,7 @@
   list-style: none outside none;
   margin: 0 0 18px;
   padding: 0;
-  @extend %clearfix;
+  @extend %clearfix !optional;
 
   > li {
     float: left;
@@ -240,7 +240,7 @@ ul.dropdown-menu li {
 .calendar-calendar {
   @extend .col-md-12;
   table.mini {
-    @extend .table-bordered;
+   @extend .table-bordered;
     td {
       border: 1px solid $gray-lighter !important;
       padding: 5px;
