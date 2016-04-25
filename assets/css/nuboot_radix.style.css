@@ -9751,8 +9751,8 @@ ul.action-links {
     margin-top: 0; }
 
 .radix-layouts-content .pane-title {
-  font-size: 30px;
-  line-height: 36px;
+  font-size: 36px;
+  line-height: 42px;
   margin: 0 0 15px 0;
   padding: 0; }
 
@@ -10053,8 +10053,8 @@ body.modal-open {
   margin-bottom: 20px; }
 
 h1 {
-  font-size: 30px;
-  line-height: 36px;
+  font-size: 36px;
+  line-height: 42px;
   margin-bottom: 15px; }
 
 h1, h2, h3, h4 {
@@ -10400,7 +10400,7 @@ dd {
         color: #fff; }
 
 .view-content h2 {
-  font-size: 1.25em;
+  font-size: 1.5em;
   font-weight: bold;
   margin: 1em 0 .25em; }
 
