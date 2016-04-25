@@ -33,3 +33,57 @@
     padding-right: 5px;
   }
 }
+.recline-filter-editor {
+  fieldset {
+    @include border-radius(4px);
+    border-color: #ccc;
+    padding: 8px;
+    margin: 10px 0;
+  }
+  input, 
+  select {
+    width: auto;
+  }
+}
+
+@media all and (max-width:991px) {
+  .recline-query-editor {
+    border: none;
+    margin: .5em 0;
+    padding: 0;
+  }
+}
+@media all and (max-width:767px) {
+  .recline-data-explorer {
+    .query-editor-here {
+      clear: both;
+      display: block;
+      .recline-query-editor,
+      .form-group {
+        float: none;
+        display: inline-block;
+      }
+      button.btn {
+        float: none;
+        display: inline-block;
+        max-width: 50px;
+      }
+    }
+    .data-view-sidebar {
+      float: none;
+      margin-left: 0;
+      width: auto;
+    }
+  }
+}
+@media all and (max-width:660px) {
+  .recline-pager {
+    float: none;
+    display: block;
+    margin-left: 0;
+    clear: both;
+  }
+  .recline-data-explorer .header .menu-right {
+    padding-top: 8px;
+  }
+}

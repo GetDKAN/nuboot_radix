@@ -106,7 +106,7 @@
 
 @media all and (max-width:767px) {
   .nav > li {
-    clear: both;
+    display: inline;
   }
   .navbar-default .navbar-nav .open .dropdown-menu,
   .navbar-default .navbar-nav .dropdown-menu {

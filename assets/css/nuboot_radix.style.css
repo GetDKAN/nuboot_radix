@@ -5784,7 +5784,7 @@ button.close {
 
 .fa {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -7840,7 +7840,8 @@ form .description {
   color: #555555; }
 
 .media-widget > a {
-  margin: 0 10px 0 0; }
+  margin: 0 10px 0 0;
+  display: inline-block; }
 
 fieldset {
   padding: 0; }
@@ -7900,11 +7901,24 @@ html.js fieldset.collapsed {
   height: 45px;
   width: 90%; }
 
-#node-edit .form-item-path-alias label, #node-edit .form-item-path-alias input {
-  display: inline; }
+#node-edit .form-item-path-alias {
+  overflow: hidden;
+  *zoom: 1; }
+  #node-edit .form-item-path-alias label, #node-edit .form-item-path-alias input {
+    display: inline; }
 
 #node-edit .burr-flipped-sidebar .panel-pane {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  box-shadow: compact(inset 0 1px 1px rgba(0, 0, 0, 0.05), false, false, false, false, false, false, false, false, false);
   padding: 10px; }
+  #node-edit .burr-flipped-sidebar .panel-pane blockquote {
+    border-color: #ddd;
+    border-color: rgba(0, 0, 0, 0.15); }
   #node-edit .burr-flipped-sidebar .panel-pane .pane-title {
     margin-top: 0; }
 
@@ -7919,7 +7933,17 @@ html.js fieldset.collapsed {
   clear: both; }
 
 .filter-wrapper {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  box-shadow: compact(inset 0 1px 1px rgba(0, 0, 0, 0.05), false, false, false, false, false, false, false, false, false);
   margin-top: 10px; }
+  .filter-wrapper blockquote {
+    border-color: #ddd;
+    border-color: rgba(0, 0, 0, 0.15); }
   .filter-wrapper .form-item {
     margin: 0 0 10px;
     padding: 0; }
@@ -8295,7 +8319,9 @@ ul.panels-ipe-linkbar {
 .action-links {
   list-style: none outside none;
   margin: 0 0 18px;
-  padding: 0; }
+  padding: 0;
+  overflow: hidden;
+  *zoom: 1; }
   .action-links > li {
     float: left;
     margin: 0 10px 0 0; }
@@ -8979,6 +9005,9 @@ body.maintenance-page .form-actions .btn:active:first-child {
 
 .node-dataset .resource-list li {
   padding: 0 260px 0 45px; }
+  @media all and (max-width: 767px) {
+    .node-dataset .resource-list li {
+      padding-right: 0; } }
 
 p.dkan-profile-page-user-name {
   display: inline-block; }
@@ -9315,7 +9344,7 @@ section.col-sm-9 {
 
 @media all and (max-width: 767px) {
   .nav > li {
-    clear: both; }
+    display: inline; }
   .navbar-default .navbar-nav .open .dropdown-menu,
   .navbar-default .navbar-nav .dropdown-menu {
     box-shadow: compact(none, false, false, false, false, false, false, false, false, false);
@@ -9794,6 +9823,48 @@ ul.action-links {
   .dropdown-menu.slick-contextmenu li {
     padding-left: 5px;
     padding-right: 5px; }
+
+.recline-filter-editor fieldset {
+  border-radius: 4px;
+  border-color: #ccc;
+  padding: 8px;
+  margin: 10px 0; }
+
+.recline-filter-editor input,
+.recline-filter-editor select {
+  width: auto; }
+
+@media all and (max-width: 991px) {
+  .recline-query-editor {
+    border: none;
+    margin: .5em 0;
+    padding: 0; } }
+
+@media all and (max-width: 767px) {
+  .recline-data-explorer .query-editor-here {
+    clear: both;
+    display: block; }
+    .recline-data-explorer .query-editor-here .recline-query-editor,
+    .recline-data-explorer .query-editor-here .form-group {
+      float: none;
+      display: inline-block; }
+    .recline-data-explorer .query-editor-here button.btn {
+      float: none;
+      display: inline-block;
+      max-width: 50px; }
+  .recline-data-explorer .data-view-sidebar {
+    float: none;
+    margin-left: 0;
+    width: auto; } }
+
+@media all and (max-width: 660px) {
+  .recline-pager {
+    float: none;
+    display: block;
+    margin-left: 0;
+    clear: both; }
+  .recline-data-explorer .header .menu-right {
+    padding-top: 8px; } }
 
 @media all and (max-width: 767px) {
   aside[class|='col'],
