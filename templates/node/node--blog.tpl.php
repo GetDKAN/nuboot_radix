@@ -7,6 +7,8 @@
  * This assumption is based on a client site using the debut_blog module, if you plan to implement the drupal core blog
  * or a custom blog content type, simply create an image field with that machine name, or update the hook_preprocess_node function
  * in the includes/node.inc file to use the image field of your choice.
+ *
+ * If using the debut_blog module, update the blog view display format to use node teaser rather than fields.
  */
 hide($content['comments']);
 hide($content['links']);
