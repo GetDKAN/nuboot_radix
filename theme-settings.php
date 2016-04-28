@@ -8,19 +8,19 @@
  * Implements theme_settings().
  */
 function nuboot_radix_form_system_theme_settings_alter(&$form, &$form_state) {
+  global $theme;
   // Ensure this include file is loaded when the form is rebuilt from the cache.
   $form_state['build_info']['files']['form'] = drupal_get_path('theme', 'nuboot_radix') . '/theme-settings.php';
 
-  // Add theme settings here.
-  $form['nuboot_radix_theme_settings'] = array(
-    '#title' => t('Theme Settings'),
+  //Additional theme settings.
+  $form['copyright'] = array(
+    '#title' => t('Copyright'),
     '#type' => 'fieldset',
   );
 
-  // Copyright.
-  $copyright = theme_get_setting('copyright', 'nuboot_radix');
-  $form['nuboot_radix_theme_settings']['copyright'] = array(
-    '#title' => t('Copyright'),
+  $copyright = theme_get_setting('copyright', 'nutest');
+  $form['copyright']['copyright'] = array(
+    '#title' => t('Footer text'),
     '#type' => 'text_format',
     '#format' => 'html',
     '#default_value' => isset($copyright['value']) ? $copyright['value'] : t('Powered by <a href="http://nucivic.com/dkan">DKAN</a>, a project of <a href="http://nucivic.com">NuCivic</a>'),
@@ -72,7 +72,7 @@ function nuboot_radix_form_system_theme_settings_alter(&$form, &$form_state) {
     ),
   );
   
-  $form['#submit'][] = 'nuboot_radix_hero_system_theme_settings_form_submit';
+  $form['#submit'][] = $theme . '_hero_system_theme_settings_form_submit';
 
   // Return the additional form widgets.
   return $form;
