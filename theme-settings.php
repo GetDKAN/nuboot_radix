@@ -18,7 +18,7 @@ function nuboot_radix_form_system_theme_settings_alter(&$form, &$form_state) {
     '#type' => 'fieldset',
   );
 
-  $copyright = theme_get_setting('copyright', 'nutest');
+  $copyright = theme_get_setting('copyright', 'nuboot_radix');
   $form['copyright']['copyright'] = array(
     '#title' => t('Footer text'),
     '#type' => 'text_format',
