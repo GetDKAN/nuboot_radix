@@ -217,41 +217,41 @@ function nuboot_radix_file_widget($variables) {
 }
 
 /**
- * Overrides theme_user_picture().
+ * Overrides theme_user_picture(). --> NOT WORKING
  */
-function nuboot_radix_user_picture(&$variables) {
-  $variables['user_picture'] = '';
+// function nuboot_radix_user_picture(&$variables) {
+//   $variables['user_picture'] = '';
 
-  if (variable_get('user_pictures', 0)) {
-    // Load the full user object since it is not provided with nodes, comments,
-    // or views displays.
-    $account = module_exists('gravatar') ? _gravatar_load_account($variables['account']) : $variables['account'];
-    $filepath = module_exists('gravatar') ? _gravatar_get_account_user_picture($account) : '';
+//   if (variable_get('user_pictures', 0)) {
+//     // Load the full user object since it is not provided with nodes, comments,
+//     // or views displays.
+//     $account = module_exists('gravatar') ? _gravatar_load_account($variables['account']) : $variables['account'];
+//     $filepath = module_exists('gravatar') ? _gravatar_get_account_user_picture($account) : '';
 
-    if (!empty($filepath)) {
-      $alt = t("@user's picture", array('@user' => format_username($account)));
-      if (module_exists('image') && file_valid_uri($filepath) && $style = variable_get('user_picture_style', '')) {
-        $variables['user_picture'] = theme('image_style', array('style_name' => $style, 'path' => $filepath, 'alt' => $alt, 'title' => $alt));
-      }
-      else {
-        $variables['user_picture'] = theme('image', array('path' => $filepath, 'alt' => $alt, 'title' => $alt));
-      }
-      if ($account->uid && user_access('access user profiles')) {
-        // Create link to the user's profile.
-        $attributes = array('title' => t('View user profile.'));
-        $variables['user_picture'] = l($variables['user_picture'], 'user/' . $account->uid, array('attributes' => $attributes, 'html' => TRUE));
-      }
-      elseif (!empty($account->homepage)) {
-        // If user is anonymous, create link to the commenter's homepage.
-        $attributes = array(
-          'title' => t('View user website.'),
-          'rel' => 'external nofollow',
-        );
-        $variables['user_picture'] = l($variables['user_picture'], $account->homepage, array('attributes' => $attributes, 'html' => TRUE));
-      }
-    }
-  }
-}
+//     if (!empty($filepath)) {
+//       $alt = t("@user's picture", array('@user' => format_username($account)));
+//       if (module_exists('image') && file_valid_uri($filepath) && $style = variable_get('user_picture_style', '')) {
+//         $variables['user_picture'] = theme('image_style', array('style_name' => $style, 'path' => $filepath, 'alt' => $alt, 'title' => $alt));
+//       }
+//       else {
+//         $variables['user_picture'] = theme('image', array('path' => $filepath, 'alt' => $alt, 'title' => $alt));
+//       }
+//       if ($account->uid && user_access('access user profiles')) {
+//         // Create link to the user's profile.
+//         $attributes = array('title' => t('View user profile.'));
+//         $variables['user_picture'] = l($variables['user_picture'], 'user/' . $account->uid, array('attributes' => $attributes, 'html' => TRUE));
+//       }
+//       elseif (!empty($account->homepage)) {
+//         // If user is anonymous, create link to the commenter's homepage.
+//         $attributes = array(
+//           'title' => t('View user website.'),
+//           'rel' => 'external nofollow',
+//         );
+//         $variables['user_picture'] = l($variables['user_picture'], $account->homepage, array('attributes' => $attributes, 'html' => TRUE));
+//       }
+//     }
+//   }
+// }
 
 /**
  * Theme function implementation.
@@ -266,41 +266,4 @@ function nuboot_radix_facet_icons($variables) {
   $classes[] = 'icon-dkan-' .  $variables['type'];
   $classes = implode(' ', $classes);
   return '<span class="icon-dkan ' . $classes . '" '. drupal_attributes($attributes) .'></span>';
-}
-
-/**
- * Preprocess variables for node--search-result.tpl.php.
- *
- * Search results formatting for DKAN search page. Relies on facet_icons module.
- */
-function nuboot_radix_preprocess_node(&$variables) {
-  if ($variables['view_mode'] == 'search_result') {
-    $variables['result_icon'] = array(
-      '#theme' => 'facet_icons',
-      '#type' => $variables['type'],
-      '#class' => array('facet-icon'),
-    );
-    $wrapper = entity_metadata_wrapper('node', $variables['nid']);
-
-    $variables['dataset_list'] = '';
-    $variables['group_list'] = NULL;
-    $body_value = $wrapper->body->value();
-    $variables['body'] = empty($body_value) ? '' : $wrapper->body->value->value();
-    $variables['node_url'] = drupal_lookup_path('alias', "node/" . $wrapper->getIdentifier());
-    if ($variables['type'] == 'resource' && $wrapper->field_dataset_ref->count() > 0) { 
-      foreach ($wrapper->field_dataset_ref as $dataset) { 
-        $variables['dataset_list'] .= '<li>' . $dataset->label() . '</li>';
-      }
-    }
-
-    $groups = og_get_entity_groups('node', $wrapper->value());
-    if(!empty($groups['node'])) {
-      $groups = array_map(function($gid){
-        $g_wrapper = entity_metadata_wrapper('node', $gid);
-        return $g_wrapper->label();
-      }, array_values($groups['node']));
-      $group_list = implode(',', $groups);
-      $variables['group_list'] = $group_list;
-    }
-  }
 }
