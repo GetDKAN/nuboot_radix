@@ -1,6 +1,6 @@
 #modalContent {
   .modal-header { 
-    background: #0A77BD;
+    background: $brand-primary;
     h4 {
       color: #fff;
     }
@@ -55,7 +55,21 @@
     }
   }
 }
-
+#field-basic-table-table-und-0-tablefield {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.form-tablefield input.tablefield-rebuild {
+  background-color: $brand-primary;
+  border-color: $brand-primary;
+  &:hover,
+  &:focus,
+  &.active {
+    background-color: $link-hover-color;
+    border-color: $link-hover-color;
+  }
+}
 .add-content-link-basic-file-icon-text-button:before {
   content:"\f0f6";
 }

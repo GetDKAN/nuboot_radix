@@ -159,6 +159,17 @@ input.form-submit.features-refresh-button {
   background: @top;
 }
 
+.form-tablefield input.tablefield-rebuild {
+  background-color: @top !important;
+  border-color: @top;
+}
+.form-tablefield input.tablefield-rebuild:hover,
+.form-tablefield input.tablefield-rebuild:focus,
+.form-tablefield input.tablefield-rebuild.active {
+  background-color: @bottom !important;
+  border-color: @bottom;
+}
+
 .region-sidebar-first .block-facetapi ul li.leaf a:hover,
 .block-facetapi ul li.leaf a:hover {
   color:@top;
