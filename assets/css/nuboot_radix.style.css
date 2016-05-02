@@ -9253,9 +9253,11 @@ div.horizontal-tabs {
   border: none;
   margin: 0;
   padding: 0; }
+  #field-basic-table-table-und-0-tablefield fieldset {
+    padding-top: 0; }
 
 .form-tablefield input.tablefield-rebuild {
-  background-color: #0A77BD;
+  background-color: #0A77BD !important;
   border-color: #0A77BD; }
   .form-tablefield input.tablefield-rebuild:hover, .form-tablefield input.tablefield-rebuild:focus, .form-tablefield input.tablefield-rebuild.active {
     background-color: #23527c;

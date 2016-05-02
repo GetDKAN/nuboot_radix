@@ -59,9 +59,12 @@
   border: none;
   margin: 0;
   padding: 0;
+  fieldset {
+    padding-top: 0;
+  }
 }
 .form-tablefield input.tablefield-rebuild {
-  background-color: $brand-primary;
+  background-color: $brand-primary !important;
   border-color: $brand-primary;
   &:hover,
   &:focus,
