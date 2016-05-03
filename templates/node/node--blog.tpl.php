@@ -35,7 +35,7 @@ global $base_url;
         <?php print render($title_suffix); ?>
         <?php if ($display_submitted): ?>
           <div class="submitted">
-            <?php if(!empty($blog_author)) { print ' Posted by <a href="' . $base_url . '/users/' . $blog_author . '">' . $blog_author . '</a> on ' . date('F j, Y', $node->created) . '  <i class="fa fa-clock-o" aria-hidden="true"></i> '  . date('g:ia', $node->created); }
+            <?php if(!empty($blog_author)) { print ' Posted by <a href="' . $base_url . '/' . $blog_author_url . '">' . $blog_author . '</a> on ' . date('F j, Y', $node->created) . '  <i class="fa fa-clock-o" aria-hidden="true"></i> '  . date('g:ia', $node->created); }
               else { print ' Posted on ' . date('F j, Y', $node->created) . '  <i class="fa fa-clock-o" aria-hidden="true"></i> '  . date('g:ia', $node->created); }
             ?>
           </div>
@@ -66,7 +66,7 @@ global $base_url;
       <?php print render($title_suffix); ?>
       <?php if ($display_submitted): ?>
         <div class="submitted">
-          <?php if(!empty($blog_author)) { print ' Posted by <a href="' . $base_url . '/users/' . $blog_author . '">' . $blog_author . '</a> on ' . date('F j, Y', $node->created) . '  <i class="fa fa-clock-o" aria-hidden="true"></i> '  . date('g:ia', $node->created); }
+          <?php if(!empty($blog_author)) { print ' Posted by <a href="' . $base_url . '/' . $blog_author_url . '">' . $blog_author . '</a> on ' . date('F j, Y', $node->created) . '  <i class="fa fa-clock-o" aria-hidden="true"></i> '  . date('g:ia', $node->created); }
             else { print ' Posted on ' . date('F j, Y', $node->created) . '  <i class="fa fa-clock-o" aria-hidden="true"></i> '  . date('g:ia', $node->created); }
           ?>
         </div>
