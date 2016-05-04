@@ -5040,7 +5040,7 @@ button.list-group-item-danger {
 .embed-responsive-4by3 {
   padding-bottom: 75%; }
 
-.well, #node-edit .burr-flipped-sidebar .panel-pane, .filter-wrapper {
+.well {
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
@@ -5048,7 +5048,7 @@ button.list-group-item-danger {
   border: 1px solid #e3e3e3;
   border-radius: 4px;
   box-shadow: compact(inset 0 1px 1px rgba(0, 0, 0, 0.05), false, false, false, false, false, false, false, false, false); }
-  .well blockquote, #node-edit .burr-flipped-sidebar .panel-pane blockquote, .filter-wrapper blockquote {
+  .well blockquote {
     border-color: #ddd;
     border-color: rgba(0, 0, 0, 0.15); }
 
@@ -5605,7 +5605,7 @@ button.close {
   .carousel-indicators {
     bottom: 20px; } }
 
-.clearfix, #node-edit .form-item-path-alias, .action-links {
+.clearfix {
   overflow: hidden;
   *zoom: 1; }
 
@@ -7944,11 +7944,24 @@ html.js fieldset.collapsed {
   height: 45px;
   width: 90%; }
 
-#node-edit .form-item-path-alias label, #node-edit .form-item-path-alias input {
-  display: inline; }
+#node-edit .form-item-path-alias {
+  overflow: hidden;
+  *zoom: 1; }
+  #node-edit .form-item-path-alias label, #node-edit .form-item-path-alias input {
+    display: inline; }
 
 #node-edit .burr-flipped-sidebar .panel-pane {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  box-shadow: compact(inset 0 1px 1px rgba(0, 0, 0, 0.05), false, false, false, false, false, false, false, false, false);
   padding: 10px; }
+  #node-edit .burr-flipped-sidebar .panel-pane blockquote {
+    border-color: #ddd;
+    border-color: rgba(0, 0, 0, 0.15); }
   #node-edit .burr-flipped-sidebar .panel-pane .pane-title {
     margin-top: 0; }
 
@@ -7963,7 +7976,17 @@ html.js fieldset.collapsed {
   clear: both; }
 
 .filter-wrapper {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  box-shadow: compact(inset 0 1px 1px rgba(0, 0, 0, 0.05), false, false, false, false, false, false, false, false, false);
   margin-top: 10px; }
+  .filter-wrapper blockquote {
+    border-color: #ddd;
+    border-color: rgba(0, 0, 0, 0.15); }
   .filter-wrapper .form-item {
     margin: 0 0 10px;
     padding: 0; }
@@ -8339,7 +8362,9 @@ ul.panels-ipe-linkbar {
 .action-links {
   list-style: none outside none;
   margin: 0 0 18px;
-  padding: 0; }
+  padding: 0;
+  overflow: hidden;
+  *zoom: 1; }
   .action-links > li {
     float: left;
     margin: 0 10px 0 0; }
@@ -8484,7 +8509,7 @@ ul.dropdown-menu li {
 
 input[type="submit"],
 .btn-primary, body.maintenance-page .form-actions .btn:first-child, body.maintenance-page .form-actions .media-widget > a:first-child,
-.btn.btn-primary, .media-widget > a.btn-primary {
+.btn.btn-primary, .media-widget > a.btn-primary, .node-teaser .links li a, .node-blog .links li a {
   color: white;
   font-weight: normal;
   text-align: center;
@@ -8496,15 +8521,19 @@ input[type="submit"],
   border-radius: 4px; }
 
 input[type="submit"]:hover,
-.btn-primary:hover, body.maintenance-page .form-actions .btn:hover:first-child, body.maintenance-page .form-actions .media-widget > a:hover:first-child,
+.btn-primary:hover, body.maintenance-page .form-actions .btn:hover:first-child, body.maintenance-page .form-actions .media-widget > a:hover:first-child, .node-teaser .links li a:hover, .node-blog .links li a:hover,
 input[type="submit"]:focus,
 .btn-primary:focus,
 body.maintenance-page .form-actions .btn:focus:first-child,
 body.maintenance-page .form-actions .media-widget > a:focus:first-child,
+.node-teaser .links li a:focus,
+.node-blog .links li a:focus,
 input[type="submit"]:active,
 .btn-primary:active,
 body.maintenance-page .form-actions .btn:active:first-child,
-body.maintenance-page .form-actions .media-widget > a:active:first-child {
+body.maintenance-page .form-actions .media-widget > a:active:first-child,
+.node-teaser .links li a:active,
+.node-blog .links li a:active {
   color: white;
   text-decoration: none; }
 
@@ -8519,7 +8548,7 @@ body.maintenance-page .form-actions .media-widget > a:active:first-child {
   top: 0;
   left: -9999px; }
 
-.clearfix, #node-edit .form-item-path-alias, .action-links {
+.clearfix {
   overflow: visible; }
 
 .admin-list dt, .admin-list dd {
@@ -9799,6 +9828,88 @@ ul.action-links {
 .field-name-field-related-content .field-item:last-of-type a {
   border-radius: 0px 0px 4px 4px; }
 
+.node-teaser {
+  margin-bottom: 2em; }
+  .node-teaser .blog-image div {
+    background-size: cover !important;
+    overflow: hidden;
+    position: relative;
+    height: 200px;
+    margin-bottom: 1em; }
+    @media all and (max-width: 767px) {
+      .node-teaser .blog-image div {
+        background-position: 50% 50%; } }
+  .node-teaser h2.blog-title {
+    font-size: 1.5em;
+    margin-top: 0; }
+  .node-teaser .submitted {
+    color: #777;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin: 0 0 1em 0;
+    padding: .5em 0;
+    font-size: .8em; }
+  .node-teaser .fa-clock-o {
+    padding-left: 1em; }
+  .node-teaser .links {
+    margin: -.5em 0 2.5em 0; }
+  .node-teaser .links li {
+    display: inline; }
+    .node-teaser .links li a {
+      font-size: .8em;
+      padding: 1px 8px; }
+  .node-teaser.no-image {
+    padding-left: 15px;
+    padding-right: 15px; }
+
+.node-blog .submitted {
+  color: #777;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin: 0 0 1em 0;
+  padding: .5em 0; }
+
+.node-blog .blog-image {
+  margin: 1em 0; }
+  .node-blog .blog-image img {
+    max-width: 100%;
+    height: auto; }
+
+.node-blog .fa-clock-o {
+  padding-left: 1em; }
+
+.node-blog .field-name-field-tags {
+  margin: 1em 0; }
+
+.node-blog .links li {
+  display: inline; }
+  .node-blog .links li a {
+    display: inline-block;
+    margin: 1em 0; }
+
+.node-blog .field-name-field-tags .field-label {
+  display: none; }
+
+@media all and (min-width: 768px) {
+  .node-blog h1 {
+    width: 47%;
+    float: left; }
+  .node-blog .submitted {
+    width: 47%;
+    float: left;
+    clear: left; }
+  .node-blog .blog-image {
+    width: 47%;
+    float: right;
+    margin: 0 0 1em 1.5em; }
+  .node-blog .field-type-text-with-summary {
+    clear: left; }
+  .node-blog .no-image h1,
+  .node-blog .no-image .submitted {
+    width: 100%; }
+  .node-blog .no-image .field-type-text-with-summary {
+    clear: both; } }
+
 .page-header {
   border: none; }
 
@@ -10253,7 +10364,11 @@ table.group_additional {
     white-space: normal; } }
 
 .field-name-field-additional-info .field-label {
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 2em;
+  margin-bottom: .5em; }
 
 .group_additional,
 .field-name-field-additional-info table,
@@ -10288,33 +10403,33 @@ table.group_additional {
     /* IE 5+ */
     word-break: break-word; }
   @media all and (min-width: 768px) {
-    .group_additional th:nth-of-type(1n),
-    .group_additional td:nth-of-type(1n),
-    .group_additional th:nth-of-type(4n),
-    .group_additional td:nth-of-type(4n),
-    .field-name-field-additional-info table th:nth-of-type(1n),
-    .field-name-field-additional-info table td:nth-of-type(1n),
-    .field-name-field-additional-info table th:nth-of-type(4n),
-    .field-name-field-additional-info table td:nth-of-type(4n),
-    .field-name-field-additional-info .table-responsive th:nth-of-type(1n),
-    .field-name-field-additional-info .table-responsive td:nth-of-type(1n),
-    .field-name-field-additional-info .table-responsive th:nth-of-type(4n),
-    .field-name-field-additional-info .table-responsive td:nth-of-type(4n) {
+    .group_additional .form-item th:nth-of-type(1n),
+    .group_additional .form-item td:nth-of-type(1n),
+    .group_additional .form-item th:nth-of-type(4n),
+    .group_additional .form-item td:nth-of-type(4n),
+    .field-name-field-additional-info table .form-item th:nth-of-type(1n),
+    .field-name-field-additional-info table .form-item td:nth-of-type(1n),
+    .field-name-field-additional-info table .form-item th:nth-of-type(4n),
+    .field-name-field-additional-info table .form-item td:nth-of-type(4n),
+    .field-name-field-additional-info .table-responsive .form-item th:nth-of-type(1n),
+    .field-name-field-additional-info .table-responsive .form-item td:nth-of-type(1n),
+    .field-name-field-additional-info .table-responsive .form-item th:nth-of-type(4n),
+    .field-name-field-additional-info .table-responsive .form-item td:nth-of-type(4n) {
       width: 5%;
       border-right: 1px solid #ddd; }
-    .group_additional th:nth-of-type(2n),
-    .group_additional td:nth-of-type(2n),
-    .field-name-field-additional-info table th:nth-of-type(2n),
-    .field-name-field-additional-info table td:nth-of-type(2n),
-    .field-name-field-additional-info .table-responsive th:nth-of-type(2n),
-    .field-name-field-additional-info .table-responsive td:nth-of-type(2n) {
+    .group_additional .form-item th:nth-of-type(2n),
+    .group_additional .form-item td:nth-of-type(2n),
+    .field-name-field-additional-info table .form-item th:nth-of-type(2n),
+    .field-name-field-additional-info table .form-item td:nth-of-type(2n),
+    .field-name-field-additional-info .table-responsive .form-item th:nth-of-type(2n),
+    .field-name-field-additional-info .table-responsive .form-item td:nth-of-type(2n) {
       width: 90%; }
-      .group_additional th:nth-of-type(2n) .form-control,
-      .group_additional td:nth-of-type(2n) .form-control,
-      .field-name-field-additional-info table th:nth-of-type(2n) .form-control,
-      .field-name-field-additional-info table td:nth-of-type(2n) .form-control,
-      .field-name-field-additional-info .table-responsive th:nth-of-type(2n) .form-control,
-      .field-name-field-additional-info .table-responsive td:nth-of-type(2n) .form-control {
+      .group_additional .form-item th:nth-of-type(2n) .form-control,
+      .group_additional .form-item td:nth-of-type(2n) .form-control,
+      .field-name-field-additional-info table .form-item th:nth-of-type(2n) .form-control,
+      .field-name-field-additional-info table .form-item td:nth-of-type(2n) .form-control,
+      .field-name-field-additional-info .table-responsive .form-item th:nth-of-type(2n) .form-control,
+      .field-name-field-additional-info .table-responsive .form-item td:nth-of-type(2n) .form-control {
         min-width: 40%; } }
 
 table.group_additional,
@@ -10642,5 +10757,8 @@ dd {
 
 .view-admin-content table {
   margin-top: 0; }
+
+.view-blog .views-row ul.links.inline {
+  margin: -.5em 0 1.75em; }
 
 /*# sourceMappingURL=nuboot_radix.style.css.map */
