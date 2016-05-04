@@ -10255,7 +10255,11 @@ table.group_additional {
     white-space: normal; } }
 
 .field-name-field-additional-info .field-label {
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 2em;
+  margin-bottom: .5em; }
 
 .group_additional,
 .field-name-field-additional-info table,
@@ -10290,33 +10294,33 @@ table.group_additional {
     /* IE 5+ */
     word-break: break-word; }
   @media all and (min-width: 768px) {
-    .group_additional th:nth-of-type(1n),
-    .group_additional td:nth-of-type(1n),
-    .group_additional th:nth-of-type(4n),
-    .group_additional td:nth-of-type(4n),
-    .field-name-field-additional-info table th:nth-of-type(1n),
-    .field-name-field-additional-info table td:nth-of-type(1n),
-    .field-name-field-additional-info table th:nth-of-type(4n),
-    .field-name-field-additional-info table td:nth-of-type(4n),
-    .field-name-field-additional-info .table-responsive th:nth-of-type(1n),
-    .field-name-field-additional-info .table-responsive td:nth-of-type(1n),
-    .field-name-field-additional-info .table-responsive th:nth-of-type(4n),
-    .field-name-field-additional-info .table-responsive td:nth-of-type(4n) {
+    .group_additional .form-item th:nth-of-type(1n),
+    .group_additional .form-item td:nth-of-type(1n),
+    .group_additional .form-item th:nth-of-type(4n),
+    .group_additional .form-item td:nth-of-type(4n),
+    .field-name-field-additional-info table .form-item th:nth-of-type(1n),
+    .field-name-field-additional-info table .form-item td:nth-of-type(1n),
+    .field-name-field-additional-info table .form-item th:nth-of-type(4n),
+    .field-name-field-additional-info table .form-item td:nth-of-type(4n),
+    .field-name-field-additional-info .table-responsive .form-item th:nth-of-type(1n),
+    .field-name-field-additional-info .table-responsive .form-item td:nth-of-type(1n),
+    .field-name-field-additional-info .table-responsive .form-item th:nth-of-type(4n),
+    .field-name-field-additional-info .table-responsive .form-item td:nth-of-type(4n) {
       width: 5%;
       border-right: 1px solid #ddd; }
-    .group_additional th:nth-of-type(2n),
-    .group_additional td:nth-of-type(2n),
-    .field-name-field-additional-info table th:nth-of-type(2n),
-    .field-name-field-additional-info table td:nth-of-type(2n),
-    .field-name-field-additional-info .table-responsive th:nth-of-type(2n),
-    .field-name-field-additional-info .table-responsive td:nth-of-type(2n) {
+    .group_additional .form-item th:nth-of-type(2n),
+    .group_additional .form-item td:nth-of-type(2n),
+    .field-name-field-additional-info table .form-item th:nth-of-type(2n),
+    .field-name-field-additional-info table .form-item td:nth-of-type(2n),
+    .field-name-field-additional-info .table-responsive .form-item th:nth-of-type(2n),
+    .field-name-field-additional-info .table-responsive .form-item td:nth-of-type(2n) {
       width: 90%; }
-      .group_additional th:nth-of-type(2n) .form-control,
-      .group_additional td:nth-of-type(2n) .form-control,
-      .field-name-field-additional-info table th:nth-of-type(2n) .form-control,
-      .field-name-field-additional-info table td:nth-of-type(2n) .form-control,
-      .field-name-field-additional-info .table-responsive th:nth-of-type(2n) .form-control,
-      .field-name-field-additional-info .table-responsive td:nth-of-type(2n) .form-control {
+      .group_additional .form-item th:nth-of-type(2n) .form-control,
+      .group_additional .form-item td:nth-of-type(2n) .form-control,
+      .field-name-field-additional-info table .form-item th:nth-of-type(2n) .form-control,
+      .field-name-field-additional-info table .form-item td:nth-of-type(2n) .form-control,
+      .field-name-field-additional-info .table-responsive .form-item th:nth-of-type(2n) .form-control,
+      .field-name-field-additional-info .table-responsive .form-item td:nth-of-type(2n) .form-control {
         min-width: 40%; } }
 
 table.group_additional,
