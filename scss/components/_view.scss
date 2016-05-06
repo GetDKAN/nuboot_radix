@@ -161,3 +161,9 @@
 .view-admin-content table {
   margin-top: 0;
 }
+
+.view-blog {
+  .views-row ul.links.inline {
+    margin: -.5em 0 1.75em;
+  }
+}

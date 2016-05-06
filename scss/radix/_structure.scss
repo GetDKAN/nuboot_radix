@@ -240,7 +240,7 @@ ul.dropdown-menu li {
 .calendar-calendar {
   @extend .col-md-12;
   table.mini {
-    @extend .table-bordered;
+   @extend .table-bordered;
     td {
       border: 1px solid $gray-lighter !important;
       padding: 5px;

@@ -168,8 +168,10 @@ table.group_additional {
     white-space: normal;
   }
 }
+
 .field-name-field-additional-info .field-label {
   margin-bottom: 1em;
+  @include h4;
 }
 .group_additional,
 .field-name-field-additional-info table,
@@ -184,18 +186,20 @@ table.group_additional {
     @include wrap;
   }
   @media all and (min-width:768px) {
-    th:nth-of-type(1n),
-    td:nth-of-type(1n),
-    th:nth-of-type(4n),
-    td:nth-of-type(4n) {
-      width: 5%;
-      border-right: 1px solid $border;
-    }
-    th:nth-of-type(2n),
-    td:nth-of-type(2n) {
-      width: 90%;
-      .form-control {
-        min-width: 40%;
+    .form-item {
+      th:nth-of-type(1n),
+      td:nth-of-type(1n),
+      th:nth-of-type(4n),
+      td:nth-of-type(4n) {
+        width: 5%;
+        border-right: 1px solid $border;
+      }
+      th:nth-of-type(2n),
+      td:nth-of-type(2n) {
+        width: 90%;
+        .form-control {
+          min-width: 40%;
+        }
       }
     }
   }

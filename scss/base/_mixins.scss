@@ -163,3 +163,11 @@
   right: -15px;
   top: 0;
 }
+
+@mixin submitted {
+  color: #777;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin: 0 0 1em 0;
+  padding: .5em 0;
+}

@@ -116,6 +116,9 @@
 
 .panel-full-width .panel-top {
 	margin-bottom: 15px;
+	.pane-content {
+		margin: 25px 0;
+	}
 }
 @media (max-width: 768px) {
 	.panel-full-width .panel-bottom {
