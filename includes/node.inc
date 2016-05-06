@@ -40,11 +40,15 @@ function nuboot_radix_preprocess_node(&$variables) {
   }
   // Blog variables.
   if ($variables['type'] == 'blog') {
-  	$node = node_load($variables['nid']);
-		$user = user_load($node->uid);
-		$variables['blog_author'] = !empty($user->name) ? $user->name : '';
-		$variables['blog_img'] = !empty($node->field_content_image['und'][0]['uri']) ? $node->field_content_image['und'][0]['uri'] : NULL;
-		$variables['blog_img_path'] = file_create_url($variables['blog_img']);
-		$variables['blog_url'] = drupal_get_path_alias('node/' . $node->nid);
+    $node = node_load($variables['nid']);
+    $user = user_load($node->uid);
+    if($node->uid > 0) {
+      $user_link = drupal_get_path_alias('user/' . $node->uid);
+    }
+    $variables['blog_author'] = !empty($user->name) ? $user->name : '';
+    $variables['blog_img'] = !empty($node->field_content_image['und'][0]['uri']) ? $node->field_content_image['und'][0]['uri'] : NULL;
+    $variables['blog_img_path'] = file_create_url($variables['blog_img']);
+    $variables['blog_author_url'] = !empty($user_link) ? $user_link : '';
+    $variables['blog_url'] = drupal_get_path_alias('node/' . $node->nid);
   }
 }
