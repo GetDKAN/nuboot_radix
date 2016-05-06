@@ -46,7 +46,8 @@
 .page-admin-structure {
 	.main.container,
 	.container-fluid,
-	.row {
+	.row,
+  .panels-dnd .container {
 		overflow: visible;
 	}
 }
