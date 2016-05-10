@@ -9062,6 +9062,9 @@ body.maintenance-page .form-actions .media-widget > a:active:first-child,
 
 .node-dataset .resource-list li {
   padding: 0 260px 0 45px; }
+  @media all and (max-width: 767px) {
+    .node-dataset .resource-list li {
+      padding-right: 0; } }
 
 p.dkan-profile-page-user-name {
   display: inline-block; }
@@ -9507,7 +9510,7 @@ section.col-sm-9 {
 
 @media all and (max-width: 767px) {
   .nav > li {
-    clear: both; }
+    display: inline; }
   .navbar-default .navbar-nav .open .dropdown-menu,
   .navbar-default .navbar-nav .dropdown-menu {
     box-shadow: compact(none, false, false, false, false, false, false, false, false, false);
@@ -10000,8 +10003,8 @@ ul.action-links {
     margin-top: 0; }
 
 .radix-layouts-content .pane-title {
-  font-size: 30px;
-  line-height: 36px;
+  font-size: 36px;
+  line-height: 42px;
   margin: 0 0 15px 0;
   padding: 0; }
 
@@ -10074,6 +10077,48 @@ ul.action-links {
   .dropdown-menu.slick-contextmenu li {
     padding-left: 5px;
     padding-right: 5px; }
+
+.recline-filter-editor fieldset {
+  border-radius: 4px;
+  border-color: #ccc;
+  padding: 8px;
+  margin: 10px 0; }
+
+.recline-filter-editor input,
+.recline-filter-editor select {
+  width: auto; }
+
+@media all and (max-width: 991px) {
+  .recline-query-editor {
+    border: none;
+    margin: .5em 0;
+    padding: 0; } }
+
+@media all and (max-width: 767px) {
+  .recline-data-explorer .query-editor-here {
+    clear: both;
+    display: block; }
+    .recline-data-explorer .query-editor-here .recline-query-editor,
+    .recline-data-explorer .query-editor-here .form-group {
+      float: none;
+      display: inline-block; }
+    .recline-data-explorer .query-editor-here button.btn {
+      float: none;
+      display: inline-block;
+      max-width: 50px; }
+  .recline-data-explorer .data-view-sidebar {
+    float: none;
+    margin-left: 0;
+    width: auto; } }
+
+@media all and (max-width: 660px) {
+  .recline-pager {
+    float: none;
+    display: block;
+    margin-left: 0;
+    clear: both; }
+  .recline-data-explorer .header .menu-right {
+    padding-top: 8px; } }
 
 @media all and (max-width: 767px) {
   aside[class|='col'],
@@ -10262,8 +10307,8 @@ body.modal-open {
   margin-bottom: 20px; }
 
 h1 {
-  font-size: 30px;
-  line-height: 36px;
+  font-size: 36px;
+  line-height: 42px;
   margin-bottom: 15px; }
 
 h1, h2, h3, h4 {
@@ -10613,7 +10658,7 @@ dd {
         color: #fff; }
 
 .view-content h2 {
-  font-size: 1.25em;
+  font-size: 1.5em;
   font-weight: bold;
   margin: 1em 0 .25em; }
 
