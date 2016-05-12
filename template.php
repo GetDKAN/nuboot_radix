@@ -293,7 +293,12 @@ function nuboot_radix_preprocess_node(&$variables) {
       }
     }
 
-    $groups = og_get_entity_groups('node', $wrapper->value());
+    if(module_exists(og)) {
+      $groups = og_get_entity_groups('node', $wrapper->value());
+    }
+    else {
+      $groups = 0;
+    }
     if(!empty($groups['node'])) {
       $groups = array_map(function($gid){
         $g_wrapper = entity_metadata_wrapper('node', $gid);
