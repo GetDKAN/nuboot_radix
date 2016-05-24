@@ -52,13 +52,16 @@
               <?php print render($main_menu); ?>
             </ul>
           <?php endif; ?>
-          
+
           <!-- user menu -->
           <?php
-            $block = block_load('dkan_sitewide', 'dkan_sitewide_user_menu');
-            if($block):
-              $user_menu = _block_get_renderable_array(_block_render_blocks(array($block)));
-              print render($user_menu);
+            $display_login_menu = (theme_get_setting('display_login_menu', 'nuboot_radix') === NULL) ? 1 : theme_get_setting('display_login_menu', 'nuboot_radix');
+            if($display_login_menu):
+              $block = block_load('dkan_sitewide', 'dkan_sitewide_user_menu');
+              if($block):
+                $user_menu = _block_get_renderable_array(_block_render_blocks(array($block)));
+                print render($user_menu);
+              endif;
             endif;
           ?>
         </div><!-- /.navbar-collapse -->
@@ -79,7 +82,7 @@
 
     <div class="main-row">
 
-      <section> 
+      <section>
         <a id="main-content"></a>
         <?php print render($title_prefix); ?>
         <?php if (!empty($title) && (arg(0) == 'admin' || arg(1) == 'add' || arg(1) == 'edit')): ?>
