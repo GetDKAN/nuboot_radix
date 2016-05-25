@@ -26,6 +26,14 @@ function nuboot_radix_form_system_theme_settings_alter(&$form, &$form_state) {
     '#default_value' => isset($copyright['value']) ? $copyright['value'] : t('Powered by <a href="http://nucivic.com/dkan">DKAN</a>, a project of <a href="http://nucivic.com">NuCivic</a>'),
   );
 
+  $display_login_menu = (theme_get_setting('display_login_menu', 'nuboot_radix') === NULL) ? 1 : theme_get_setting('display_login_menu', 'nuboot_radix');
+
+  $form['theme_settings']['display_login_menu'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Display login menu'),
+    '#default_value' => $display_login_menu,
+  );
+
   // Hero fieldset.
   $form['hero'] = array(
     '#type' => 'fieldset',

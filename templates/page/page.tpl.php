@@ -60,10 +60,13 @@
 
           <!-- user menu -->
           <?php
-            $block = block_load('dkan_sitewide', 'dkan_sitewide_user_menu');
-            if($block):
-              $user_menu = _block_get_renderable_array(_block_render_blocks(array($block)));
-              print render($user_menu);
+            $display_login_menu = (theme_get_setting('display_login_menu', 'nuboot_radix') === NULL) ? 1 : theme_get_setting('display_login_menu', 'nuboot_radix');
+            if($display_login_menu):
+              $block = block_load('dkan_sitewide', 'dkan_sitewide_user_menu');
+              if($block):
+                $user_menu = _block_get_renderable_array(_block_render_blocks(array($block)));
+                print render($user_menu);
+              endif;
             endif;
           ?>
         </div><!-- /.navbar-collapse -->
