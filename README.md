@@ -2,16 +2,6 @@
 
 This is the default theme for DKAN 1.0 -> https://github.com/NuCivic/dkan
 
-## Using Drush
-To start a new Nuboot Radix subtheme, run this command
-
-```drush radix "MyThemeName" --kit=https://github.com/NuCivic/radix-kit-nuboot/archive/master.zip```
-
-The new subtheme will be placed in to the /sites/all/themes/ directory, it will contain a few  files to get you started.
-
-
-To upgrade an older NuBoot Radix subtheme to use the new Radix 7.x-3.3 compiling process, it will need to be done manually, follow the steps outlined here:
-http://www.radixtheme.org/articles/update-rc4-to-3/
 
 ## Installation and Use
 
@@ -34,19 +24,28 @@ Update `browserSyncProxy` in **config.json**.
 Edit the files under the **scss** and **js** directory, these will be compiled into the **assets** directory.
 Run the following command to compile Sass and watch for changes: `gulp`.
 
-## Creating a new subtheme
+## Using Drush to Create a New Subtheme
 
 When you need more control over the theme or prefer to keep customizations in code without using overrides, creating a subtheme of NuBoot Radix is an easy win. The subtheme will pick up all styles from the chain in cascading order: Radix > NuBoot Radix > Your Subtheme
 
 So you only need to add styles where you want to override the upstream css, and add custom templates if you need specific changes to the layout.
 
-To start a new Nuboot Radix subtheme, run this command
+To create a Nuboot Radix subtheme, run these command
 
-```
-drush radix "MyThemeName" --kit=https://github.com/NuCivic/radix-kit-nuboot/archive/master.zip
-```
+```drush vset theme_default radix```
 
-The new subtheme will be placed in to the /sites/all/themes/ directory, it will appear to have a lot of files but it is mostly just file structure to get you started.
+```drush radix "MyThemeName" --kit=https://github.com/NuCivic/radix-kit-nuboot/archive/master.zip```
+
+```drush vset theme_default MyThemeName```
+
+The new subtheme will be placed in to the /sites/all/themes/ directory, it will contain the proper directory structure to get you started.
+
+
+## Updating subthemes that were based on Radix 7.x-rc4
+
+To upgrade an older NuBoot Radix subtheme to use the new Radix 7.x-3.3 compiling process, it will need to be done manually, follow the steps outlined here:
+http://www.radixtheme.org/articles/update-rc4-to-3/
+
 
 ## Contributing
 
