@@ -1,4 +1,5 @@
 # Nuboot Radix theme
+**Do not submit Pull Requests against this repo, the code has been moved into the DKAN repo: https://github.com/NuCivic/dkan/themes/nuboot_radix**
 
 This is the default theme for DKAN 1.0 -> https://github.com/NuCivic/dkan
 
