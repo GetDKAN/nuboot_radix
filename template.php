@@ -28,7 +28,7 @@ function nuboot_radix_preprocess_field(&$variables) {
     );
     $count = array_reduce($resource_fields, function($result, $field){
       if(!empty($field)) {
-        $result = $result count($field);  
+        $result = count($field);  
       }
       return $result;
     }, 0);
