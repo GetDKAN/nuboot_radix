@@ -13,35 +13,6 @@ require_once dirname(__FILE__) . '/includes/panel.inc';
 require_once dirname(__FILE__) . '/includes/user.inc';
 require_once dirname(__FILE__) . '/includes/view.inc';
 
-/*
- * Hides the link to API (URL) iframe when either the field
- * upload or the remote field are also present.
- */
-function nuboot_radix_preprocess_field(&$variables) {  
-  $field_name = $variables['element']['#field_name'];
-  if ($field_name == 'field_link_api') {
-    $node = $variables['element']['#object'];
-    $resource_fields = array(
-      $node->field_link_api, 
-      $node->field_link_remote_file, 
-      $node->field_upload
-    );
-    $count = array_reduce($resource_fields, function($result, $field){
-      if(!empty($field)) {
-        $result = count($field);  
-      }
-      return $result;
-    }, 0);
-    
-    // If there is more than type of resource linked we have to be sure
-    // link to URL resource is not being displayed.
-    if($count > 1 && $node->field_link_api) {
-      unset($variables['element'][0]['iframe']);
-      unset($variables['items'][0]['iframe']);      
-    }
-  }
-}
-
 /**
  * Theme function for iframe link.
  */
@@ -324,8 +295,8 @@ function nuboot_radix_preprocess_node(&$variables) {
     $body_value = $wrapper->body->value();
     $variables['body'] = empty($body_value) ? '' : $wrapper->body->value->value();
     $variables['node_url'] = drupal_lookup_path('alias', "node/" . $wrapper->getIdentifier());
-    if ($variables['type'] == 'resource' && $wrapper->field_dataset_ref->count() > 0) { 
-      foreach ($wrapper->field_dataset_ref as $dataset) { 
+    if ($variables['type'] == 'resource' && $wrapper->field_dataset_ref->count() > 0) {
+      foreach ($wrapper->field_dataset_ref as $dataset) {
         $variables['dataset_list'] .= '<li>' . $dataset->label() . '</li>';
       }
     }
