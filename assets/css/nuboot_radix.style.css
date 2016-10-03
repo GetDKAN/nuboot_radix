@@ -10450,6 +10450,8 @@ img {
     margin: .75em 0; }
   .view-dkan-groups .node-teaser .btn-primary, .view-dkan-groups .node-teaser body.maintenance-page .form-actions .btn:first-child, body.maintenance-page .form-actions .view-dkan-groups .node-teaser .btn:first-child, .view-dkan-groups .node-teaser body.maintenance-page .form-actions .media-widget > a:first-child, body.maintenance-page .form-actions .view-dkan-groups .node-teaser .media-widget > a:first-child {
     margin: 0 auto 1.5em; }
+  .view-dkan-groups .node-teaser .field-name-field-image {
+    text-align: center; }
 
 .view-groups-page .views-column {
   float: left;
@@ -10458,6 +10460,9 @@ img {
 
 .view-group-block .views-field-title {
   font-size: 1.2em; }
+
+.view-group-block .views-field-field-image {
+  text-align: center; }
 
 .view-group-block .views-field-nid a {
   background: #0A77BD;
