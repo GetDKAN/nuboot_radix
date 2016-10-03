@@ -8502,7 +8502,13 @@ body.maintenance-page .form-actions .media-widget > a:active:first-child {
   padding-right: 10px; }
 
 #dkan-sitewide-dataset-search-form label,
-#dkan-sitewide-dataset-search-form--2 label, #region-branding #block-dkan-sitewide-dkan-sitewide-search-bar label {
+#dkan-sitewide-dataset-search-form--2 label, #region-branding #block-dkan-sitewide-dkan-sitewide-search-bar label, .screenreader {
+  position: absolute;
+  top: 0;
+  left: -9999px; }
+
+#dkan-sitewide-dataset-search-form label,
+#dkan-sitewide-dataset-search-form--2 label, #region-branding #block-dkan-sitewide-dkan-sitewide-search-bar label, .screenreader {
   position: absolute;
   top: 0;
   left: -9999px; }
