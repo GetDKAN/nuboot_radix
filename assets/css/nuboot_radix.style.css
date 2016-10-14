@@ -9740,7 +9740,7 @@ ul.action-links {
   line-height: 2em; }
 
 .main .panel-pane {
-  margin-bottom: 3em; }
+  margin-bottom: 0em; }
 
 h2.pane-title {
   border-bottom: 1px solid #ddd;
@@ -9782,7 +9782,7 @@ h2.pane-title {
 
 .radix-layouts-content .pane-content {
   padding: 20px 0;
-  margin-bottom: 1em; }
+  margin-bottom: 0em; }
 
 .radix-layouts-content .pane-node-field-topic .pane-content {
   padding: 0; }
