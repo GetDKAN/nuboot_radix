@@ -260,10 +260,18 @@ function nuboot_radix_user_picture(&$variables) {
  * assets/stylesheets/dkan-topics.css
  */
 function nuboot_radix_facet_icons($variables) {
+   // Filter for values that are allowed for machine names of content types.
+  $attributes = (isset($variables['attributes']))? $variables['attributes'] : array();
+  // Uses same regex for content type validation.
+  $variables['type'] = trim(preg_replace("/[^a-zA-Z0-9_]+/", " ", $variables['type']));
+  // Reject if original input wasn't valid machine name for a content type.
+  if (strrpos($variables['type'], ' ')) {
+    $variables['type'] = '';
+  }
   // Icon styles variables.
   $attributes = (isset($variables['attributes']))? $variables['attributes'] : array();
   $classes = (isset($variables['class']))? $variables['class'] : array();
-  $classes[] = 'icon-dkan-' .  $variables['type'];
+  $classes[] = 'icon-dkan-' .  check_plain($variables['type']);
   $classes = implode(' ', $classes);
   return '<span class="icon-dkan ' . $classes . '" '. drupal_attributes($attributes) .'></span>';
 }
@@ -287,8 +295,8 @@ function nuboot_radix_preprocess_node(&$variables) {
     $body_value = $wrapper->body->value();
     $variables['body'] = empty($body_value) ? '' : $wrapper->body->value->value();
     $variables['node_url'] = drupal_lookup_path('alias', "node/" . $wrapper->getIdentifier());
-    if ($variables['type'] == 'resource' && $wrapper->field_dataset_ref->count() > 0) { 
-      foreach ($wrapper->field_dataset_ref as $dataset) { 
+    if ($variables['type'] == 'resource' && $wrapper->field_dataset_ref->count() > 0) {
+      foreach ($wrapper->field_dataset_ref as $dataset) {
         $variables['dataset_list'] .= '<li>' . $dataset->label() . '</li>';
       }
     }
