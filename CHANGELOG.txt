@@ -1,8 +1,9 @@
 7.x-1.x
 --------------------------
+- Update copyright with new Granicus branding.
 - Add managed file support to logo and hero image
 - Add check on filenames to remove spaces and special characters that can break functionality.
-- Make date facets consistant with other facets styling
+- Make date facets consistent with other facets styling
 - Upgraded to use Radix 3.3. See README.md for updated use instructions
 - Fix node--search-result.tpl.php file to check the $group_list variable before printing markup
 - Fix resource list css on mobile. 
