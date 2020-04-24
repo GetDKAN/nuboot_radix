@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * region--navigation.tpl.php
@@ -27,15 +28,17 @@
 ?>
 <div id="nav-wrapper">
   <header<?php print $attributes; ?>>
-    <?php if ($content_attributes): ?><div<?php print $content_attributes; ?>><?php endif; ?>
+    <?php if ($content_attributes): ?>
+      <div<?php print $content_attributes; ?>>
+    <?php endif; ?>
     <div class="navbar-header">
       <?php if ($page['logo']): ?>
-        <a class="logo navbar-btn pull-left" href="<?php print $page['front_page']; ?>" title="<?php print t('Home'); ?>">
+        <a class="logo navbar-btn pull-left" href="<?php print url($page['front_page']); ?>" title="<?php print t('Home'); ?>">
           <img src="<?php print $page['logo']; ?>" alt="<?php print t('Home'); ?>" />
         </a>
       <?php endif; ?>
       <?php if ($page['site_name']): ?>
-        <a class="name navbar-brand" href="<?php print $page['front_page']; ?>" title="<?php print t('Home'); ?>"><?php print $page['site_name']; ?></a>
+        <a class="name navbar-brand" href="<?php print url($page['front_page']); ?>" title="<?php print t('Home'); ?>"><?php print $page['site_name']; ?></a>
       <?php endif; ?>
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
@@ -49,6 +52,8 @@
         <?php print $content; ?>
       </nav>
     </div>
-    <?php if ($content_attributes): ?></div><?php endif; ?>
+    <?php if ($content_attributes): ?>
+    </div>
+    <?php endif; ?>
   </header>
 </div>

@@ -20,38 +20,38 @@
 }
 .view-content h2 {
   font-size: 1.5em;
-  font-weight:bold;
-  margin:1em 0 .25em;
+  margin:1em 0 0.5em;
 }
 .view-groups-search .views-row {
   border-bottom:1px dotted $smoke;
   padding:1em 0;
 }
 
-.views-field-field-image img {
-  display:block;
-  height:auto;
-  margin:0 auto 5px;
-  max-width:220px;
-  width:100%;
+.view-front-page-group-list {
+  .views-row {
+    position: relative;
+    padding-left: 120px;
+    min-height: 110px;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
 }
 
 .view-user-profile-fields img {
   height:auto;
   margin:0 auto;
   max-width:190px;
-  width:100%;  
+  width:100%;
 }
 
 .view-front-page-group-grid {
   .row {
     span {
-      @include card;
       display:block;
-      overflow:hidden;
-      padding:10px;
       margin:15px 0;
-      min-height: 130px;
       .media-content {
         padding:0 10px 10px 120px;
       }
@@ -82,7 +82,17 @@
 
 .view-dkan-groups {
   .node-teaser {
-    @include card;
+    min-height: 365px;
+    margin-bottom: 20px;
+    h2.node-title {
+      margin: .75em 0;
+    }
+    .btn-primary {
+      margin: 0 auto 1.5em;
+    }
+    .field-name-field-image {
+      text-align: center;
+    }
   }
 }
 .view-groups-page {
@@ -95,7 +105,6 @@
 .view-group-block {
   .views-field-title {
     font-size:1.2em;
-    font-weight:bold;
   }
   .views-field-nid a {
     background: $brand-primary;
@@ -103,6 +112,9 @@
     display: block;
     margin:1em 0 0 0;
     padding:5px 8px;
+    text-align: center;
+  }
+  .views-field-field-image {
     text-align: center;
   }
 }
@@ -146,8 +158,6 @@
   }
 }
 
-#views-exposed-form-dkan-datasets-panel-pane-1 .views-exposed-form .description { display: none;}
-
 .view-dkan-groups-featured,
 .pane-dkan-groups-featured {
   .row {
@@ -166,4 +176,49 @@
   .views-row ul.links.inline {
     margin: -.5em 0 1.75em;
   }
+}
+
+#views-exposed-form-dkan-datasets-panel-pane-1 .views-exposed-form .description { display: none;}
+
+#views-exposed-form-dkan-administration-nodes-page,
+#views-exposed-form-dkan-administration-files-page {
+  .views-widget-filter-uid,
+  .views-widget-filter-filename,
+  .views-widget-filter-filemime,
+  .form-item-title,
+  .form-item-author {
+    .help-block {
+      font-size: .85em;
+      max-width: 15em;
+      line-height: 1em;
+    }
+    input {
+      width: 15em;
+      max-width: 15em;
+    }
+  }
+  .views-widget-filter-date_filter {
+    #edit-date-filter-min-wrapper,
+    #edit-date-filter-max-wrapper {
+      display: inline-block;
+    }
+    input {
+      width: 100px;
+      margin-right: 0;
+    }
+    label,
+    .help-block {
+      display: none;
+    }
+    .views-widget label {
+      display: block;
+    }
+  }
+}
+// Responsive grid.
+.views-responsive-grid .views-row {
+  clear: both;
+}
+.view-header {
+  margin-bottom: 1em;
 }

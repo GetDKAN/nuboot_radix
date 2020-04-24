@@ -1,9 +1,12 @@
 // Menu
 // Styles for Menus and Navs
 // --------------------------------------------------
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 .navigation-wrapper .container {
   overflow: visible;
-  padding: 0;
   .navbar-collapse {
     overflow: visible;
   }
@@ -13,7 +16,7 @@
   margin-left: 10px;
   margin-right: 10px;
 }
-.navbar-default .navbar-collapse, 
+.navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
   padding: 0;
   vertical-align: top;
@@ -30,7 +33,7 @@
   margin: 0;
   overflow: visible !important;
   position:relative;
-  z-index:1;
+  z-index:3;
 
   .navbar-nav,
   .user-menu {
@@ -47,16 +50,20 @@
       display: block;
       line-height: 20px;
       padding:15px;
+      &.dropdown-toggle:hover,
       &:active,
       &:hover,
       &:focus {
-        background: $brand-secondary;
         color: #FFFFFF;
         text-decoration:none;
       }
+      &.dropdown-toggle:focus,
+      &.dropdown-toggle:active {
+        background-color: transparent;
+      }
     }
     .dropdown-menu {
-      background: $brand-primary;
+      border: none;
       padding: 0;
       li {
         display: block;
@@ -64,6 +71,9 @@
           display: block;
           color: #ffffff;
         }
+      }
+      li.last a:hover {
+        border-radius: 0 0 4px 4px;
       }
     }
   }
@@ -122,7 +132,6 @@
       &:hover,
       &:focus,
       &:active {
-        background: $brand-secondary;
         color: #ffffff;
         clear: both;
       }
@@ -138,7 +147,6 @@
     padding:15px;
     &:hover,
     &:focus {
-      background: $brand-secondary;
       color: #FFFFFF;
       text-decoration:none;
     }
@@ -178,47 +186,25 @@
     margin:1px;
   }
   li a {
-    background: #fff;
-    border:1px solid #fff;
     padding:6px 15px;
     &:hover {
-      border:1px solid $brand-secondary;
-      background:$brand-secondary;
       color:#fff;
     }
     &.active {
-      border:1px solid $brand-primary;
-      background:$brand-primary;
       color:#fff;
     }
   }
 }
 
-.nav-tabs {
-  li a {
-    color:$brand-primary;
-  }
+.front .tabs--primary {
+  display: none;
 }
-
 .tabs--primary {
   .nav-pills li a.active,
   .nav-pills li.active a:hover,
   .nav-pills li.active a:focus {
-    border:1px solid $brand-primary;
-    background: $brand-primary;
     color:#ffffff;
   }
-}
-.btn-primary {
-  background:$brand-primary;
-  border-color:$brand-primary;
-}
-.btn-primary:hover, 
-.btn-primary:focus, 
-.btn-primary:active, 
-.btn-primary.active {
-  background:$brand-secondary;
-  border-color:$brand-secondary;
 }
 
 .form-actions #edit-submit {
@@ -235,7 +221,6 @@
 
 a.embed-link {
   @include border-radius(4px);
-  //background:$brand-primary;
   color: #fff;
   display: inline-block;
   padding:5px 15px 5px 35px;
@@ -243,10 +228,9 @@ a.embed-link {
   margin:1em 0;
   text-decoration: none;
 }
-a.embed-link:hover, 
-a.embed-link:focus, 
+a.embed-link:hover,
+a.embed-link:focus,
 a.embed-link:active {
-  //background:$brand-secondary;
   color:#fff;
   text-decoration:none;
 }
@@ -272,7 +256,7 @@ ul.action-links {
   }
 }
 
-.btn:active, 
+.btn:active,
 .btn.active {
   @include box-shadow(none);
 }

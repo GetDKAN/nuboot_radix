@@ -1,3 +1,8 @@
+// License block.
+.pane-dkan-sitewide-dkan-sitewide-license .pane-content {
+  word-break: break-word;
+}
+
 // OTHER ACCESS
 .pane-dkan-sitewide-dkan-sitewide-other-access,
 #block-dkan-sitewide-dkan-sitewide-other-access {
@@ -54,7 +59,7 @@
 }
 
 // FACET Blocks
-.radix-layouts-sidebar {
+.panel-region-sidebar .radix-layouts-sidebar {
   .ctools-collapsible-container,
   div[class*="pane-facetapi"],
   .block-facetapi {
@@ -77,12 +82,13 @@
     }
     h2.pane-title {
       @include border-radius(0);
+      border: none;
       color: #fff;
       font-size: 16px;
       font-weight: normal;
       position: relative;
       padding: 9px 21px 9px 12px;
-      border-bottom-color: rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       &:after {
         font-family: "fontawesome";
         content: "\f077";
@@ -188,13 +194,6 @@
       content:"\f151";
     }
   }
-  // Corners.
-  // div[class*="pane-facetapi"]:first-of-type h2.pane-title {
-  //   @include border-radius(5px 5px 0 0);
-  // }
-  // div[class*="pane-facetapi"]:last-of-type .item-list {
-  //   @include border-radius(0 0 5px 5px);
-  // }
   .ctools-collapsible-container .ctools-toggle {
     width: 12px;
   }
@@ -269,8 +268,8 @@
 }
 
 // Dataset page Group block.
-.radix-layouts-sidebar .pane-block.pane-views-group-block-block .pane-content {
-  padding: 0 15px;
+.node-type-group .radix-bryant .radix-layouts-sidebar .pane-block.pane-views-group-block-block .pane-content {
+  padding: 15px 15px 0;
 }
 
 #block-dkan-dataset-dkan-dataset-dataset-help {
@@ -296,7 +295,7 @@
 }
 
 // Front page hero blocks.
-.pane-dkan-sitewide-demo-front-dkan-demo-front,
+.pane-dkan-sitewide-dkan-demo-front,
 #block-dkan-sitewide-demo-front-dkan-demo-front {
   -webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.5);
   -moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.5);
@@ -342,7 +341,8 @@
   }
 }
 
-.radix-layouts-sidebar {
+// Rounded facet corners.
+.panel-region-sidebar .radix-layouts-sidebar {
   .panel-panel-inner {
     .panels-ipe-portlet-wrapper:first-child,
     > div[class*="pane-facetapi"]:first-child {
