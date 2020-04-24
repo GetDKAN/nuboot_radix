@@ -1,5 +1,5 @@
 //
-// Styles for Tabs, Messages, ..etc
+// Styles for headings, links, lists, tables, general, ..etc
 // --------------------------------------------------
 body {
   font-family:$font-base;
@@ -27,7 +27,7 @@ body.modal-open {
   display: block;
   font-size: 2em;
   line-height: 1.15em;
-  margin: 50px 20px 0;
+  margin: 50px 20px 0 0;
   @media(max-width:460px) {
     clear: left;
     float: none;
@@ -47,7 +47,7 @@ h1 {
 }
 h1,h2,h3,h4 {
   color:$gray-dark;
-  font-weight:bold;
+  font-weight:300;
 }
 h3.media-heading {
   margin:.5em 0;
@@ -104,6 +104,10 @@ p:last-child {
   &.alert-warning {
     background: #FFE285;//$brand-warning;
   }
+  &.alert-completed {
+    background: #dff0d8;
+    color: #3c763d;
+  }
   &:before {
     font-family: $icon-fa;
     font-size: 1.5em;
@@ -119,6 +123,7 @@ p:last-child {
     content: '\f05a';
     color: #8a6d3b;
   }
+  &.alert-completed:before,
   &.alert-success:before {
     content: '\f058';
     color: $brand-success;
@@ -158,6 +163,9 @@ table.group_additional {
   }
 }
 
+.table-responsive {
+  overflow: visible;
+}
 @media screen and (max-width: 1024px) {
   .table-responsive > .table > thead > tr > th,
   .table-responsive > .table > thead > tr > td,
@@ -267,7 +275,14 @@ dt,
 dd {
   border-top: 1px solid $border;
 }
-
+.datastore-status {
+  dt {
+    padding: 8px 5px 8px 25px;
+  }
+  dl {
+    border-bottom: 1px solid $border;
+  }
+}
 .item-list .pagination {
   li:first-child > span,
   li:first-child > a {
@@ -301,4 +316,17 @@ dd {
       border-bottom: none;
     }
   }
+}
+// Keep images inside their containers.
+img {
+  max-width: 100%;
+  height: auto;
+}
+// Bootstrap/Radix Overrides.
+.thumbnail {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
 }

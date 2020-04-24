@@ -1,4 +1,8 @@
 // @file
+// DO NOT add styles to this file.
+// This file determines the order in which the theme files are compiled.
+//**********************************************************************
+//
 // SASS partials import
 // -----------------------------------------------------------------------------
 
@@ -99,9 +103,9 @@
 @import "base/variables";
 @import "base/mixins";
 @import "base/helpers";
-@import "base/typography"
+@import "base/typography";
 
-// NuBoot Radix partials
+// NuBoot Radix partials.
 // --------------------------------------------------
-@import "layout/**/*";
+//@import "layout/**/*";
 @import "components/**/*";
